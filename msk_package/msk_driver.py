@@ -7,15 +7,11 @@ desired_caps = {
     "deviceName": "127.0.0.1:62001",
     "appPackage": "com.guideclasspad",
     "appActivity": "com.guideclasspad.MainActivity",
-    'unicodeKeyboard': 'true',
-    'resetKeyboard': 'true',
-    "noReset": True
+    "unicodeKeyboard": "true",
+    "resetKeyboard": "true",
+    "noReset": "true"
 }
 
-try:
-    driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)  # 连接Appium
-except:
-    print("init driver error")
-else:
-    driver.implicitly_wait(8)  # 隐式等待3秒
-    print("start guideclasspad")
+driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
+driver.implicitly_wait(8)  # 隐式等待3秒
+print("start guideclasspad")

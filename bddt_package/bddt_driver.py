@@ -6,8 +6,8 @@ desired_caps = {
     "platformName": "Android",
     "platformVersion": "5.1.1",
     "deviceName": "127.0.0.1:62001",
-    "appPackage": "com.jiandan.mobilelesson",
-    "appActivity": "com.jiandan.mobilelesson.InstallOpenActivity",
+    "appPackage": "com.baidu.BaiduMap",
+    "appActivity": "com.baidu.baidumaps.WelcomeScreen",
     "unicodeKeyboard": "true",
     "resetKeyboard": "true",
     "automationName": "uiautomator2",  # 启动device失败时，使用管理员运行appium
