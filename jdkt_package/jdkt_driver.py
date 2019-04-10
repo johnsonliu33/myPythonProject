@@ -1,4 +1,5 @@
 # coding=utf-8
+
 from appium import webdriver
 
 print("init myDriver")
@@ -10,7 +11,7 @@ desired_caps = {
     "appActivity": "com.jiandan.mobilelesson.InstallOpenActivity",
     "unicodeKeyboard": "true",
     "resetKeyboard": "true",
-    "automationName": "uiautomator2",  # 启动device失败时，使用管理员运行appium
+    "automationName": "uiautomator2",
     "noReset": "true"
 }
 driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)  # 连接Appium

@@ -1,0 +1,10 @@
+platformName: Android
+platformVersion: 5.1.1
+appPackage: com.jiandan.mobilelesson
+appActivity: com.jiandan.mobilelesson.InstallOpenActivity
+unicodeKeyboard: true
+resetKeyboard: true
+noReset: true
+deviceName: 127.0.0.1:62001
+ip: "127.0.0.1"
+port: "4723"
