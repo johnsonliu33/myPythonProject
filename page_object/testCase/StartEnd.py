@@ -1,7 +1,7 @@
 # coding:utf-8
 
 import unittest
-from page_object.testCase.Desired_caps import appium_desired
+from page_object.testCase.desired_caps import appium_desired
 import logging.config
 from time import sleep
 
@@ -19,5 +19,5 @@ class StartEnd(unittest.TestCase):
 
     def tearDown(self):
         logs.info("======tearDown=========")
-        sleep(5)
-        self.driver.close_app()
+        sleep(8)
+        self.driver.close()

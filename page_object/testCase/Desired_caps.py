@@ -11,9 +11,9 @@ file_logs = logging.getLogger("fileLogger")
 
 
 def appium_desired():
-    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(".")))  # 获取当前文件所在目录的上一级目录
-    stream = open(root_dir + "/config/desired_caps.yaml", "r")
-    data = yaml.load(stream, Loader=yaml.FullLoader)
+    root_dir = os.path.dirname(os.path.dirname(__file__))
+    with open(root_dir + "/config/desired_caps.yaml", "r") as file:
+        data = yaml.load(file, Loader=yaml.FullLoader)
 
     desired_caps = {
         "platformName": data["platformName"],

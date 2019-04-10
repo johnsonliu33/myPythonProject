@@ -1,6 +1,6 @@
 # coding:utf-8
-from page_object.testCase.LoginView import LoginView
-from page_object.testCase.StartEnd import StartEnd
+from page_object.testCase.loginView import LoginView
+from page_object.testCase.startEnd import StartEnd
 import unittest
 import logging.config
 
