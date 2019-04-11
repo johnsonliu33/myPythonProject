@@ -29,5 +29,6 @@ def appium_desired():
     logs.info("====== start run app ======")
     return driver
 
+
 if __name__ == '__main__':
     appium_desired()

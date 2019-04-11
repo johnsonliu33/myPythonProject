@@ -14,3 +14,15 @@
 [INFO ] - 2019-04-11 00:11:11 - desired_caps.py[line:29] : ====== start run app ======
 [INFO ] - 2019-04-11 00:11:11 - common_class.py[line:12] : ====== common_function ======
 [INFO ] - 2019-04-11 00:11:11 - jdkt_login.py[line:19] : login username:https005
+[INFO] - 2019-04-11 22:49:22 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-11 22:50:05 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-11 22:50:05 - app_common.py[line:13] : ====== common_function ======
+[INFO] - 2019-04-11 22:50:05 - app_login.py[line:19] : login username:https005
+[INFO] - 2019-04-11 22:50:13 - app_login.py[line:21] : login password:11111
+[INFO] - 2019-04-11 22:53:32 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-11 22:53:32 - app_common.py[line:13] : *** common_function ***
+[INFO] - 2019-04-11 22:53:32 - app_login.py[line:19] : login username:https005
+[INFO] - 2019-04-11 22:54:53 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-11 22:54:53 - app_common.py[line:13] : *** common_function ***
+[INFO] - 2019-04-11 22:54:53 - app_login.py[line:19] : login username:https005
+[INFO] - 2019-04-11 22:55:00 - app_login.py[line:21] : login password:11111

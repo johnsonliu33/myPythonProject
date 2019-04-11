@@ -10,7 +10,7 @@ logs = logging.getLogger()
 class Common(BaseDriver):
 
     def common_fun(self):
-        logs.info("====== common_function ======")
+        logs.info("*** common_function ***")
 
 
 if __name__ == '__main__':
