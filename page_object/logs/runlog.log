@@ -1,31 +1,10 @@
-[INFO] - 2019-04-09 23:30:43,858 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-09 23:56:12 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-09 23:56:43 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 00:10:31 Desired_caps.py[line:32] : ====== start run app ======
-[INFO] - 2019-04-10 00:11:55 Desired_caps.py[line:32] : ====== start run app ======
-[INFO] - 2019-04-10 00:12:18 Desired_caps.py[line:32] : ====== start run app ======
-[INFO] - 2019-04-10 00:13:29 Desired_caps.py[line:32] : ====== start run app ======
-[INFO] - 2019-04-10 00:13:53 Desired_caps.py[line:32] : ====== start run app ======
-[INFO] - 2019-04-10 00:17:53 Desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 00:21:41 Desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 00:22:05 Desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 00:22:29 Desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 22:27:11 Desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 22:27:36 Desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 22:28:02 Desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 22:50:21 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 22:52:05 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 22:55:27 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 22:56:19 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 22:58:14 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:02:55 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:04:45 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:05:52 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:06:27 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:12:14 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:18:29 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:19:00 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:19:39 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:20:05 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:20:31 desired_caps.py[line:31] : ====== start run app ======
-[INFO] - 2019-04-10 23:21:00 desired_caps.py[line:31] : ====== start run app ======
+[INFO] - 2019-04-11 22:42:00 desired_caps.py[line:31] : start run app
+[INFO] - 2019-04-11 22:42:08 common.py[line:27] : cancel upgrade
+[INFO] - 2019-04-11 22:42:15 loginView.py[line:22] : username:https005
+[INFO] - 2019-04-11 22:42:20 loginView.py[line:25] : passwords:11111
+[INFO] - 2019-04-11 22:43:08 desired_caps.py[line:31] : start run app
+[INFO] - 2019-04-11 22:43:18 common.py[line:27] : cancel upgrade
+[INFO] - 2019-04-11 22:43:32 loginView.py[line:22] : username:https006
+[INFO] - 2019-04-11 22:44:14 desired_caps.py[line:31] : start run app
+[INFO] - 2019-04-11 22:44:23 common.py[line:27] : cancel upgrade
+[INFO] - 2019-04-11 22:44:38 loginView.py[line:22] : username:https007

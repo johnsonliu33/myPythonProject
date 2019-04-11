@@ -11,21 +11,19 @@ file_logs = logging.getLogger("fileLogger")
 
 
 class LoginView(Common):
-    username_type = (By.ID, "com.jiandan.mobilelesson:id/account_et")
-    password_type = (By.ID, "com.jiandan.mobilelesson:id/password_et")
-    login_btn = (By.ID, "com.jiandan.mobilelesson:id/login_btn")
+    imput_type = (By.CLASS_NAME, "android.widget.EditText")
+    login_btn = (By.CLASS_NAME, "android.widget.TextView")
 
     def login_action(self, usernames, passwords):
         self.isUpgrade()
 
-        username = self.driver.find_element(*self.username_type)
-        logs.info("===username===:" + usernames)
-        file_logs.info("===username===:" + usernames)
-        username.send_keys(usernames)
-        password = self.driver.find_element(*self.password_type)
-        logs.info("===passwords===:" + passwords)
-        file_logs.info("===passwords===:" + passwords)
-        password.send_keys(passwords)
+        imputs = self.driver.find_elements(*self.imput_type)
+        logs.info("username:" + usernames)
+        file_logs.info("username:" + usernames)
+        imputs[0].send_keys(usernames)
+        logs.info("passwords:" + passwords)
+        file_logs.info("passwords:" + passwords)
+        imputs[1].send_keys(passwords)
         button = self.driver.find_element(*self.login_btn)
         button.click()
 

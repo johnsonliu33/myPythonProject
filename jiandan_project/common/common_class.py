@@ -8,7 +8,8 @@ logs = logging.getLogger()
 
 
 class Common(BaseDriver):
-    def common_function(self):
+
+    def common_fun(self):
         logs.info("====== common_function ======")
 
 

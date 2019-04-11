@@ -4,6 +4,7 @@ from page_object.testCase.baseDriver import BaseDriver
 import logging.config
 from selenium.common.exceptions import NoSuchElementException
 from time import sleep
+from selenium.webdriver.support.ui import WebDriverWait
 
 CON_LOG = "../config/log.conf"
 logging.config.fileConfig(CON_LOG)
@@ -16,14 +17,15 @@ class Common(BaseDriver):
 
     def isUpgrade(self):
         try:
-            element = self.driver.find_element(*self.upgrade)
+            # element = self.driver.find_element(*self.upgrade)
+            element = WebDriverWait(self.driver, 12).until(lambda x: self.driver.find_element(*self.upgrade))
         except NoSuchElementException:
-            logs.info("=== element is not find===")
-            file_logs.info("=== element is not find===")
+            logs.info("element is not find")
+            file_logs.info("element is not find")
         else:
-            logs.info("=== Undo the upgrade===")
-            file_logs.info("=== Undo the upgrade===")
-            sleep(5)
+            logs.info("cancel upgrade")
+            file_logs.info("cancel upgrade")
+            sleep(3)
             element.click()
 
 

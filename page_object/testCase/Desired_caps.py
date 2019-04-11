@@ -27,8 +27,9 @@ def appium_desired():
     }
     driver = webdriver.Remote("http://" + data["ip"] + ":" + data["port"] + "/wd/hub", desired_caps)
     driver.implicitly_wait(8)
-    logs.info("====== start run app ======")
-    file_logs.info("====== start run app ======")
+    logs.info("start run app")
+    file_logs.info("start run app")
+    return driver
 
 
 if __name__ == '__main__':
