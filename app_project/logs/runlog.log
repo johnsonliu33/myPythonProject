@@ -65,3 +65,36 @@
 [INFO] - 2019-04-17 23:34:50 - app_common.py[line:29] : cancel upgrade
 [INFO] - 2019-04-17 23:34:56 - app_common.py[line:38] : get_screen_shot
 [INFO] - 2019-04-17 23:34:58 - app_common.py[line:49] : swipe_up
+[INFO] - 2019-04-17 23:40:37 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:40:37 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:40:45 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:41:29 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:41:29 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:41:42 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:41:48 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:41:50 - app_login.py[line:21] : login username: jianeryou1
+[INFO] - 2019-04-17 23:44:26 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:44:26 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:44:43 - app_common.py[line:27] :  find element timeout
+[INFO] - 2019-04-17 23:44:43 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:44:47 - app_login.py[line:21] : login username: jianeryou1
+[INFO] - 2019-04-17 23:45:44 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:45:44 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:46:02 - app_common.py[line:27] :  find element timeout
+[INFO] - 2019-04-17 23:46:02 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:46:03 - app_login.py[line:21] : login username: jianeryou1
+[INFO] - 2019-04-17 23:46:08 - app_login.py[line:23] : login password: abc123
+[INFO] - 2019-04-17 23:47:55 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:47:55 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:48:13 - app_common.py[line:27] :  find element timeout
+[INFO] - 2019-04-17 23:48:13 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:48:14 - app_login.py[line:20] : login username: jianeryou1
+[INFO] - 2019-04-17 23:48:20 - app_login.py[line:22] : login password: abc123
+[INFO] - 2019-04-17 23:48:30 - app_common.py[line:49] : swipe_up
+[INFO] - 2019-04-17 23:49:34 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:49:34 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:49:51 - app_common.py[line:27] :  find element timeout
+[INFO] - 2019-04-17 23:49:51 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:49:53 - app_login.py[line:20] : login username: jianeryou1
+[INFO] - 2019-04-17 23:49:58 - app_login.py[line:22] : login password: abc123
+[INFO] - 2019-04-17 23:50:10 - app_common.py[line:49] : swipe_up

@@ -6,8 +6,8 @@ platformVersion: 5.1.1
 #udid: 750BBKL22GDN
 #deviceName: MX4
 
-appPackage: com.guideclasspad
-appActivity: com.guideclasspad.MainActivity
+appPackage: com.jiandan.mobilelesson
+appActivity: com.jiandan.mobilelesson.InstallOpenActivity
 unicodeKeyboard: true
 resetKeyboard: true
 noReset: true

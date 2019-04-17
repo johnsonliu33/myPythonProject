@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a75edeb3-8090-4d0e-b6b6-b6623f30aadc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_project/baseView/baseDriver.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/jiandan_project/baseView/baseDriver.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jiandan_project/baseView/desired_caps.py" afterPath="$PROJECT_DIR$/app_project/baseView/desired_caps.py" />
-      <change beforePath="$PROJECT_DIR$/jiandan_project/businessView/app_login.py" afterPath="$PROJECT_DIR$/app_project/businessView/app_login.py" />
-      <change beforePath="$PROJECT_DIR$/jiandan_project/businessView/app_regediter.py" afterPath="$PROJECT_DIR$/app_project/businessView/app_regediter.py" />
-      <change beforePath="$PROJECT_DIR$/jiandan_project/common/app_common.py" afterPath="$PROJECT_DIR$/app_project/common/app_common.py" />
-      <change beforePath="$PROJECT_DIR$/jiandan_project/config/desired_caps.yaml" afterPath="$PROJECT_DIR$/app_project/config/desired_caps.yaml" />
-      <change beforePath="$PROJECT_DIR$/jiandan_project/config/log.conf" afterPath="$PROJECT_DIR$/app_project/config/log.conf" />
-      <change beforePath="$PROJECT_DIR$/jiandan_project/logs/runlog.log" afterPath="$PROJECT_DIR$/app_project/logs/runlog.log" />
-      <change beforePath="$PROJECT_DIR$/jiandan_project/testRun/startEnd.py" afterPath="$PROJECT_DIR$/app_project/testRun/startEnd.py" />
+      <change beforePath="$PROJECT_DIR$/app_project/businessView/app_login.py" afterPath="$PROJECT_DIR$/app_project/businessView/app_login.py" />
+      <change beforePath="$PROJECT_DIR$/app_project/config/desired_caps.yaml" afterPath="$PROJECT_DIR$/app_project/config/desired_caps.yaml" />
+      <change beforePath="$PROJECT_DIR$/app_project/logs/runlog.log" afterPath="$PROJECT_DIR$/app_project/logs/runlog.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,10 +19,22 @@
       <file leaf-file-name="app_login.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_project/businessView/app_login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+            <state relative-caret-position="360">
+              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="msk_login.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/msk_package/msk_login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,7 +43,7 @@
       <file leaf-file-name="runlog.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_project/logs/runlog.log">
           <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="-971">
+            <state relative-caret-position="-876">
               <caret line="14" column="70" lean-forward="true" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
             </state>
           </provider>
@@ -47,8 +52,8 @@
       <file leaf-file-name="app_common.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_project/common/app_common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="210">
+              <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="42" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -56,31 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseDriver.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_project/baseView/baseDriver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="desired_caps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_project/baseView/desired_caps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="desired_caps.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_project/config/desired_caps.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,11 +132,11 @@
         <option value="$PROJECT_DIR$/other/test.py" />
         <option value="$PROJECT_DIR$/jiandan_project/baseView/baseDriver.py" />
         <option value="$PROJECT_DIR$/app_project/logs/runlog.log" />
-        <option value="$PROJECT_DIR$/app_project/config/desired_caps.yaml" />
         <option value="$PROJECT_DIR$/app_project/baseView/desired_caps.py" />
-        <option value="$PROJECT_DIR$/app_project/businessView/app_login.py" />
         <option value="$PROJECT_DIR$/app_project/baseView/baseDriver.py" />
         <option value="$PROJECT_DIR$/app_project/common/app_common.py" />
+        <option value="$PROJECT_DIR$/app_project/config/desired_caps.yaml" />
+        <option value="$PROJECT_DIR$/app_project/businessView/app_login.py" />
       </list>
     </option>
   </component>
@@ -220,6 +205,17 @@
               <item name="app_project" type="462c0819:PsiDirectoryNode" />
               <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
+              <item name="app_project" type="462c0819:PsiDirectoryNode" />
+              <item name="screenShots" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
+              <item name="jdkt_package" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -256,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.app_common">
+  <component name="RunManager" selected="Python.app_login (1)">
     <configuration name="app_common" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,6 +271,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="app_login (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app_project/businessView" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appiumTest" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app_project/businessView/app_login.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="app_login" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -288,24 +302,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="appiumTest" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jiandan_project/businessView/app_login.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="common" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/page_object/testCase" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="appiumTest" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/page_object/testCase/common.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -345,18 +341,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Twisted Trial in testLogin.py" />
-      <item index="1" class="java.lang.String" itemvalue="Python.common" />
-      <item index="2" class="java.lang.String" itemvalue="Python.app_login" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.app_common" />
+      <item index="1" class="java.lang.String" itemvalue="Python.app_login" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.app_common" />
+      <item index="4" class="java.lang.String" itemvalue="Python.app_login (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.app_common" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.app_login" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Twisted Trial in testLogin.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python.common" />
+        <item index="0" class="java.lang.String" itemvalue="Python.app_login (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.app_common" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.app_login" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Twisted Trial in testLogin.py" />
       </list>
     </recent_temporary>
   </component>
@@ -477,33 +473,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/msk_package/msk_driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jdkt_package/jdkt_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jdkt_package/image/toast2.png" />
-    <entry file="file://$PROJECT_DIR$/jdkt_package/image/toast_succes.png" />
-    <entry file="file://$PROJECT_DIR$/jdkt_package/image/valid_succes.png" />
     <entry file="file://C:/Python36/Lib/site-packages/appium/webdriver/common/touch_action.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -562,13 +531,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page_object/testCase/_trial_temp/test.log" />
-    <entry file="file://$PROJECT_DIR$/jdkt_package/jdkt_driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python36/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -667,14 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/msk_package/msk_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jdkt_package/jdkt_login.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -711,26 +665,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/baseView/desired_caps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page_object/testCase/loginView.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/config/desired_caps.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -743,16 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/businessView/app_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python36/Lib/site-packages/selenium/webdriver/support/wait.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -761,9 +689,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/upgrade_2019-04-17 23_34_56.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_project/baseView/baseDriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
+        <state relative-caret-position="330">
           <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding />
         </state>
@@ -771,15 +704,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_project/logs/runlog.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-971">
+        <state relative-caret-position="-876">
           <caret line="14" column="70" lean-forward="true" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msk_package/msk_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/config/desired_caps.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkt_package/jdkt_driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/baseView/desired_caps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_44_43.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_46_02.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_48_13.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_49_51.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_41_48.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/businessView/app_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_project/common/app_common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="42" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
