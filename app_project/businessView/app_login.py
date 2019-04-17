@@ -26,4 +26,4 @@ class LoginView(Common):
 if __name__ == '__main__':
     driver = appium_desired()
     on = LoginView(driver)
-    on.login_action("https005", "11111")
+    on.login_action("jianeryou1", "abc123")

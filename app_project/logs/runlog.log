@@ -1,0 +1,67 @@
+[INFO] - 2019-04-17 23:13:36 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:13:36 - app_common.py[line:17] : is_upgrade
+[INFO] - 2019-04-17 23:16:08 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:16:08 - app_common.py[line:19] : is_upgrade
+[INFO] - 2019-04-17 23:16:19 - app_common.py[line:26] : cancel upgrade
+[INFO] - 2019-04-17 23:16:23 - app_common.py[line:35] : get_screen_shot
+[INFO] - 2019-04-17 23:17:04 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:17:04 - app_common.py[line:19] : is_upgrade
+[INFO] - 2019-04-17 23:17:14 - app_common.py[line:26] : cancel upgrade
+[INFO] - 2019-04-17 23:17:18 - app_common.py[line:35] : get_screen_shot
+[INFO] - 2019-04-17 23:18:11 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:18:11 - app_common.py[line:19] : is_upgrade
+[INFO] - 2019-04-17 23:21:17 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:21:17 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:21:28 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:21:34 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:21:37 - app_common.py[line:49] : swipe_up
+[INFO] - 2019-04-17 23:23:34 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:23:34 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:23:42 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:23:48 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:23:50 - app_common.py[line:52] : swipe_up
+[INFO] - 2019-04-17 23:23:50 - app_common.py[line:48] : get window size false
+[INFO] - 2019-04-17 23:25:10 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:25:10 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:25:24 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:25:31 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:25:33 - app_common.py[line:54] : swipe_up
+[INFO] - 2019-04-17 23:25:33 - app_common.py[line:48] : get window size false
+[INFO] - 2019-04-17 23:26:16 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:26:16 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:26:24 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:26:30 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:26:32 - app_common.py[line:54] : swipe_up
+[INFO] - 2019-04-17 23:26:32 - app_common.py[line:48] : get window size false
+[INFO] - 2019-04-17 23:26:56 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:26:56 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:27:06 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:27:13 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:27:15 - app_common.py[line:54] : swipe_up
+[INFO] - 2019-04-17 23:27:15 - app_common.py[line:48] : get window size false
+[INFO] - 2019-04-17 23:29:01 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:29:01 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:29:09 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:29:15 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:29:17 - app_common.py[line:55] : swipe_up
+[INFO] - 2019-04-17 23:29:17 - app_common.py[line:49] : get window size false
+[INFO] - 2019-04-17 23:30:04 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:30:04 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:30:14 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:30:20 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:30:22 - app_common.py[line:49] : swipe_up
+[INFO] - 2019-04-17 23:31:42 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:31:42 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:31:50 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:31:56 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:31:58 - app_common.py[line:49] : swipe_up
+[INFO] - 2019-04-17 23:33:47 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:33:47 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:33:56 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:34:02 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:34:04 - app_common.py[line:49] : swipe_up
+[INFO] - 2019-04-17 23:34:42 - desired_caps.py[line:29] : ====== start run app ======
+[INFO] - 2019-04-17 23:34:42 - app_common.py[line:20] : is_upgrade
+[INFO] - 2019-04-17 23:34:50 - app_common.py[line:29] : cancel upgrade
+[INFO] - 2019-04-17 23:34:56 - app_common.py[line:38] : get_screen_shot
+[INFO] - 2019-04-17 23:34:58 - app_common.py[line:49] : swipe_up

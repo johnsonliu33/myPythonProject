@@ -11,7 +11,7 @@ logs = logging.getLogger()
 
 def appium_desired():
     root_dir = os.path.dirname(os.path.dirname(__file__))
-    with open(root_dir + "/config/desired_caps.yaml", "r") as file:
+    with open(root_dir + "/config/desired_caps.yaml", "r", encoding="utf-8") as file:
         data = yaml.load(file, Loader=yaml.FullLoader)
 
     desired_caps = {
