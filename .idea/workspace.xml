@@ -2,79 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a75edeb3-8090-4d0e-b6b6-b6623f30aadc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/appiumTest.iml" afterPath="$PROJECT_DIR$/.idea/myPython.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_41_48.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_44_43.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_46_02.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_48_13.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_49_51.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/Pycharm的debug模式.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/Pycharm的安装配置和基本使用.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/Python内置模块.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/Python的下载和安装.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/Python的基本语法.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/assert, else和finally.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/break和continue.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/for循环.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/if __name__ == '__main__'.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/if条件语句.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/input和print.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/lambda匿名函数.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/python的版本选择.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/syspath的用处.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/try-except处理异常.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/type和isinstance的使用.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/while循环.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/什么是包.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/什么是异常.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/什么是模块.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/元组的创建和访问.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/元组的基本操作.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/关于import语句.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/关于pypi.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/关于虚拟环境.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/内置模块os.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/函数的定义和调用.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/列表和元组的比较.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/列表的创建和访问.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/列表的基本操作.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/列表解析.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/单元测试的写法演示.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/参数默认值.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/变量的作用域.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/可变参数-args.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/可变参数-wargs.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/字典的创建和访问.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/字典的基本操作.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/字符串.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/字符串的格式化.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/完善装饰器.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/布尔值和空值.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/带参数的装饰器.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/序列化Python对象.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/整数和浮点数.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/文件的写操作.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/文件的读操作.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/文档测试doctest.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/用户自定义异常.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/私有属性和受保护属性.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/第三方模块和包.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/类和对象的基本概念.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/类属性和实例属性.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/类方法和实例方法.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/类的property怎么用.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/继承和多态.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/装饰器.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/读写二进制文件.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/递归的实现.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/通过pdb来debug.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/通过print调试.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/集合的创建和访问.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/集合的基本操作.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/高阶函数.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/高阶函数filter.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/高阶函数map和reduce.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/other/test.py" afterPath="$PROJECT_DIR$/other/test.py" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,7 +19,7 @@
       <file leaf-file-name="app_login.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_project/businessView/app_login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="600">
               <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
@@ -132,8 +63,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/other/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            <state relative-caret-position="480">
+              <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -141,18 +72,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2_Python的下载和安装.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zfile/2_Python的下载和安装.py">
+      <file leaf-file-name="3_Python的下载和安装.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zfile/3_Python的下载和安装.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+            <state relative-caret-position="240">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="0_python介绍.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zfile/0_python介绍.py">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="120">
+                <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1_python介绍.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zfile/1_python介绍.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1530">
               <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
@@ -161,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1_python的版本选择.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zfile/1_python的版本选择.py">
+      <file leaf-file-name="2_python的版本选择.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zfile/2_python的版本选择.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -174,18 +118,8 @@
       <file leaf-file-name="4_Python的基本语法.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zfile/4_Python的基本语法.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3_Pycharm的安装配置和基本使用.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zfile/3_Pycharm的安装配置和基本使用.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1350">
+              <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -266,6 +200,7 @@
         <option value="$PROJECT_DIR$/zfile/2_Python的下载和安装.py" />
         <option value="$PROJECT_DIR$/zfile/0_课程介绍.py" />
         <option value="$PROJECT_DIR$/zfile/1_python的版本选择.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -291,79 +226,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="baseView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="businessView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="screenShots" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="jdkt_package" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="other" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appiumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appiumTest" type="462c0819:PsiDirectoryNode" />
-              <item name="zfile" type="462c0819:PsiDirectoryNode" />
+              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myPython" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -484,6 +364,79 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appiumTest" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appiumTest" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appiumTest" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appiumTest" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appiumTest" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.app_login" />
       <item index="1" class="java.lang.String" itemvalue="Python.test" />
@@ -560,15 +513,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16122234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21443625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36413044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7111835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6043478" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984799" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -617,13 +571,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bddt_package/bddt_driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page_object/testCase/ospath.py" />
     <entry file="file://C:/Python36/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -678,14 +625,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page_object/logs/runlog.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -732,13 +679,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file/python的版本选择.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/file/python的版本选择.txt" />
     <entry file="file://$PROJECT_DIR$/jdkt_package/jdkt_login.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -797,9 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="17" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,38 +752,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_44_43.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_46_02.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_48_13.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_49_51.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_41_48.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_44_43.png" />
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_46_02.png" />
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_48_13.png" />
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_49_51.png" />
+    <entry file="file://$PROJECT_DIR$/app_project/screenShots/login_2019-04-17 23_41_48.png" />
     <entry file="file://$PROJECT_DIR$/app_project/businessView/app_login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="600">
           <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
@@ -879,57 +796,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zfile/if __name__ == '__main__'.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file/Pycharm的安装配置和基本使用.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/zfile/if __name__ == '__main__'.py" />
+    <entry file="file://$PROJECT_DIR$/file/Pycharm的安装配置和基本使用.py" />
     <entry file="file://$PROJECT_DIR$/other/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        <state relative-caret-position="480">
+          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/other/Python的安装.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/Python的基本语法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zfile/1_python的版本选择.py">
+    <entry file="file://$PROJECT_DIR$/other/Python的安装.py" />
+    <entry file="file://$PROJECT_DIR$/other/Python的基本语法.py" />
+    <entry file="file://$PROJECT_DIR$/zfile/2_python的版本选择.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zfile/0_python介绍.py">
+    <entry file="file://$PROJECT_DIR$/zfile/1_python介绍.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
@@ -939,25 +828,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zfile/4_Python的基本语法.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        <state relative-caret-position="1350">
+          <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zfile/3_Pycharm的安装配置和基本使用.py">
+    <entry file="file://$PROJECT_DIR$/zfile/3_Pycharm的安装配置和基本使用.py" />
+    <entry file="file://$PROJECT_DIR$/zfile/3_Python的下载和安装.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zfile/2_Python的下载和安装.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="120">
+            <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
