@@ -7,7 +7,7 @@
 # git pull
 
 # 克隆
-# git clone https://github.com/song-black/pyhton.git
+# git clone https://github.com/song-black/Pyhton.git
 
 # 删除 remote
 # git remote -v
