@@ -11,9 +11,11 @@ resp = requests.get(url)
 cont = resp.text
 key = '<p class="video-name" title="(.+?)">.+?</p>'
 tempList = re.findall(key, cont)
+i = 0
 for temp in tempList:
     print(temp.split("章：")[1])
     t = temp.split("章：")[1]
-    filename = "../file/%s.txt" % t
+    filename = "../zfile/%d_%s.py" % (i, t)
     with open(filename, "a")as file:
         file.write("")
+    i += 1
