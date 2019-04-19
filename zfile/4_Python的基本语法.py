@@ -22,10 +22,10 @@ print("hello world")
 #
 #
 # 一些细节区别：
-# 1.数据类型
+# 1.数
 #
 #     python只有四种数据：整数，长整数、浮点数和复数
-#     java则有char，short,byte，int，long，float,double类型
+#     java则有char，short, byte，int，long，float, double类型
 #
 # 2. 字符串
 # 2.1. 字符串表示
