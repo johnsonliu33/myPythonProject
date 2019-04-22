@@ -3,7 +3,7 @@ from appium import webdriver
 print("init myDriver")
 desired_caps = {
     "platformName": "Android",
-    "platformVersion": "5.1.1",
+    "platformVersion": "7.1.2",
     "deviceName": "127.0.0.1:62001",
     "appPackage": "com.guideclasspad",
     "appActivity": "com.guideclasspad.MainActivity",

@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 import time
 import os
+import csv
 
 CON_LOG = "../config/log.conf"
 logging.config.fileConfig(CON_LOG)
@@ -52,6 +53,13 @@ class Common(BaseDriver):
         y1 = int(s[1] * 0.8)
         y2 = int(s[1] * 0.2)
         self.swipes(x1, y1, x1, y2, 1000)
+
+    def get_csv_data(file_name, line):
+        with open(file_name, 'r', encoding='utf-8-sig')as file:
+            read = csv.reader(file)
+            for index, row in enumerate(read, 1):
+                if index == line:
+                    return row
 
 
 if __name__ == '__main__':

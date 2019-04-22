@@ -98,3 +98,15 @@
 [INFO] - 2019-04-17 23:49:53 - app_login.py[line:20] : login username: jianeryou1
 [INFO] - 2019-04-17 23:49:58 - app_login.py[line:22] : login password: abc123
 [INFO] - 2019-04-17 23:50:10 - app_common.py[line:49] : swipe_up
+[INFO] - 2019-04-23 00:04:02 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:04:07 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:04:32 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:04:37 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:05:40 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:05:45 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:06:03 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:06:04 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:07:02 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:07:02 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:08:36 - startEnd.py[line:16] : ======setUp=========
+[INFO] - 2019-04-23 00:08:36 - startEnd.py[line:16] : ======setUp=========
