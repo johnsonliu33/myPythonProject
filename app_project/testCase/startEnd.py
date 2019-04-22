@@ -1,7 +1,7 @@
 # coding:utf-8
 
 import unittest
-from page_object.testCase.desired_caps import appium_desired
+from app_project.baseView.desired_caps import appium_desired
 import logging.config
 from time import sleep
 
