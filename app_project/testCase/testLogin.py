@@ -1,6 +1,6 @@
 # coding:utf-8
 from app_project.businessView.app_login import LoginView
-from app_project.testCase.startEnd import StartEnd
+from app_project.common.startEnd import StartEnd
 import unittest
 import logging.config
 
