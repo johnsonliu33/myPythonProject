@@ -7122,12 +7122,12 @@
 </script>
 <script type="text/javascript">
     var resultData = {
-    "testPass": 3,
+    "testPass": 4,
     "testResult": [
         {
-            "className": "Testing",
+            "className": "Testing1",
             "methodName": "test_case1",
-            "description": "ceshi",
+            "description": "ceshi1",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
@@ -7136,20 +7136,25 @@
             ]
         },
         {
-            "className": "Testing",
+            "className": "Testing1",
             "methodName": "test_case2",
-            "description": null,
-            "spendTime": "0.0 s",
-            "status": "成功",
+            "description": "ceshi2",
+            "spendTime": "0.001 s",
+            "status": "失败",
             "log": [
-                "test2",
-                ""
+                "test2\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
+                "  File \"D:\\myPythonPorjrct\\myPython\\app_project\\testCase\\caseDemo1.py\", line 14, in test_case2\n    self.assertTrue(False)\n",
+                "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 682, in assertTrue\n    raise self.failureException(msg)\n",
+                "AssertionError: False is not true\n"
             ]
         },
         {
-            "className": "Testing",
+            "className": "Testing1",
             "methodName": "test_case3",
-            "description": null,
+            "description": "ceshi3",
             "spendTime": "0.0 s",
             "status": "跳过",
             "log": [
@@ -7157,16 +7162,16 @@
             ]
         },
         {
-            "className": "Testing",
+            "className": "Testing1",
             "methodName": "test_case4",
-            "description": null,
+            "description": "ceshi4",
             "spendTime": "0.001 s",
             "status": "失败",
             "log": [
                 "test2\n",
                 "Traceback (most recent call last):\n",
                 "  File \"C:\\Python36\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 416, in __wrap\n    result = func(*args, **kwargs)\n",
-                "  File \"D:\\myPythonPorjrct\\myPython\\app_project\\testCase\\testReport.py\", line 23, in test_case4\n    self.assertTrue(False)\n",
+                "  File \"D:\\myPythonPorjrct\\myPython\\app_project\\testCase\\caseDemo1.py\", line 26, in test_case4\n    self.assertTrue(False)\n",
                 "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 682, in assertTrue\n    raise self.failureException(msg)\n",
                 "AssertionError: False is not true\n",
                 "\nDuring handling of the above exception, another exception occurred:\n\n",
@@ -7178,9 +7183,78 @@
             ]
         },
         {
-            "className": "Testing",
+            "className": "Testing1",
             "methodName": "test_case5",
-            "description": null,
+            "description": "ceshi5",
+            "spendTime": "0.0 s",
+            "status": "成功",
+            "log": [
+                "test2",
+                ""
+            ]
+        },
+        {
+            "className": "Testing2",
+            "methodName": "test_case1",
+            "description": "ceshi1",
+            "spendTime": "0.0 s",
+            "status": "成功",
+            "log": [
+                "test1",
+                ""
+            ]
+        },
+        {
+            "className": "Testing2",
+            "methodName": "test_case2",
+            "description": "ceshi2",
+            "spendTime": "0.0 s",
+            "status": "失败",
+            "log": [
+                "test2\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
+                "  File \"D:\\myPythonPorjrct\\myPython\\app_project\\testCase\\caseDemo2.py\", line 14, in test_case2\n    self.assertTrue(False)\n",
+                "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 682, in assertTrue\n    raise self.failureException(msg)\n",
+                "AssertionError: False is not true\n"
+            ]
+        },
+        {
+            "className": "Testing2",
+            "methodName": "test_case3",
+            "description": "ceshi3",
+            "spendTime": "0.0 s",
+            "status": "跳过",
+            "log": [
+                "test_case3"
+            ]
+        },
+        {
+            "className": "Testing2",
+            "methodName": "test_case4",
+            "description": "ceshi4",
+            "spendTime": "0.0 s",
+            "status": "失败",
+            "log": [
+                "test2\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Python36\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 416, in __wrap\n    result = func(*args, **kwargs)\n",
+                "  File \"D:\\myPythonPorjrct\\myPython\\app_project\\testCase\\caseDemo2.py\", line 26, in test_case4\n    self.assertTrue(False)\n",
+                "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 682, in assertTrue\n    raise self.failureException(msg)\n",
+                "AssertionError: False is not true\n",
+                "\nDuring handling of the above exception, another exception occurred:\n\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Python36\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
+                "  File \"C:\\Python36\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 423, in __wrap\n    sys.exit(0)\n",
+                "SystemExit: 0\n"
+            ]
+        },
+        {
+            "className": "Testing2",
+            "methodName": "test_case5",
+            "description": "ceshi5",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
@@ -7189,12 +7263,12 @@
             ]
         }
     ],
-    "testName": "定制名师课",
-    "testAll": 5,
-    "testFail": 1,
-    "beginTime": "2019-04-24 00:11:08",
+    "testName": "beatifulReportDemo",
+    "testAll": 10,
+    "testFail": 4,
+    "beginTime": "2019-04-24 23:49:05",
     "totalTime": "0s",
-    "testSkip": 1,
+    "testSkip": 2,
     "testError": 0
 };
 

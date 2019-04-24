@@ -55,7 +55,7 @@ class Common(BaseDriver):
         self.swipes(x1, y1, x1, y2, 1000)
 
     def get_csv_data(file_name, line):
-        with open(file_name, 'r', encoding='utf-8-sig')as file:
+        with open(file_name, 'r', encoding='utf-8-sig') as file:
             read = csv.reader(file)
             for index, row in enumerate(read, 1):
                 if index == line:

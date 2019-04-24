@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a75edeb3-8090-4d0e-b6b6-b6623f30aadc" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app_project/testCase/caseDemo2.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/zfile/17_列表_元组_字典_集合.py" afterPath="$PROJECT_DIR$/zfile/17_列表_元组_字典_集合.py" />
-      <change beforePath="$PROJECT_DIR$/zfile/19_while循环.py" afterPath="$PROJECT_DIR$/zfile/19_while循环.py" />
-      <change beforePath="$PROJECT_DIR$/zfile/20_for循环.py" afterPath="$PROJECT_DIR$/zfile/20_for循环.py" />
-      <change beforePath="$PROJECT_DIR$/zfile/21_break和continue.py" afterPath="$PROJECT_DIR$/zfile/21_break和continue.py" />
-      <change beforePath="$PROJECT_DIR$/zfile/5_整数和浮点数.py" afterPath="$PROJECT_DIR$/zfile/5_整数和浮点数.py" />
+      <change beforePath="$PROJECT_DIR$/app_project/common/app_common.py" afterPath="$PROJECT_DIR$/app_project/common/app_common.py" />
+      <change beforePath="$PROJECT_DIR$/app_project/report/2019_04_24 00_11_report.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app_project/testCase/testReport.py" afterPath="$PROJECT_DIR$/app_project/testCase/caseDemo1.py" />
+      <change beforePath="$PROJECT_DIR$/app_project/testRun/runReport.py" afterPath="$PROJECT_DIR$/app_project/testRun/runDemo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,42 +18,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="19_while循环.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zfile/19_while循环.py">
+      <file leaf-file-name="app_common.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_project/common/app_common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="21_break和continue.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zfile/21_break和continue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="22_练习.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zfile/22_练习.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="17_列表_元组_字典_集合.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zfile/17_列表_元组_字典_集合.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="240">
+              <caret line="59" column="49" lean-forward="true" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,10 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app_project/logs/runlog.log" />
-        <option value="$PROJECT_DIR$/app_project/baseView/desired_caps.py" />
-        <option value="$PROJECT_DIR$/file/Python的下载和安装.py" />
-        <option value="$PROJECT_DIR$/zfile/Python的基本语法.py" />
         <option value="$PROJECT_DIR$/zfile/Python的安装.py" />
         <option value="$PROJECT_DIR$/other/test.py" />
         <option value="$PROJECT_DIR$/other/Python的安装.py" />
@@ -120,7 +88,6 @@
         <option value="$PROJECT_DIR$/app_project/data/get_csv_data" />
         <option value="$PROJECT_DIR$/app_project/baseView/baseDriver.py" />
         <option value="$PROJECT_DIR$/app_project/businessView/app_login.py" />
-        <option value="$PROJECT_DIR$/app_project/common/app_common.py" />
         <option value="$PROJECT_DIR$/app_project/config/desired_caps.yaml" />
         <option value="$PROJECT_DIR$/app_project/testCase/startEnd.py" />
         <option value="$PROJECT_DIR$/app_project/businessView/app_regediter.py" />
@@ -142,6 +109,11 @@
         <option value="$PROJECT_DIR$/zfile/20_for循环.py" />
         <option value="$PROJECT_DIR$/zfile/5_整数和浮点数.py" />
         <option value="$PROJECT_DIR$/zfile/21_break和continue.py" />
+        <option value="$PROJECT_DIR$/app_project/testRun/runDemo.py" />
+        <option value="$PROJECT_DIR$/app_project/testCase/caseDemo1.py" />
+        <option value="$PROJECT_DIR$/app_project/testCase/caseDemo2.py" />
+        <option value="$PROJECT_DIR$/app_project/report/2019_04_24 23_50_21-report.html" />
+        <option value="$PROJECT_DIR$/app_project/common/app_common.py" />
       </list>
     </option>
   </component>
@@ -178,12 +150,37 @@
             <path>
               <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
+              <item name="app_project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="zfile" type="462c0819:PsiDirectoryNode" />
+              <item name="app_project" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myPython" type="462c0819:PsiDirectoryNode" />
+              <item name="app_project" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myPython" type="462c0819:PsiDirectoryNode" />
+              <item name="app_project" type="462c0819:PsiDirectoryNode" />
+              <item name="screenShots" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myPython" type="462c0819:PsiDirectoryNode" />
+              <item name="app_project" type="462c0819:PsiDirectoryNode" />
+              <item name="testCase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myPython" type="462c0819:PsiDirectoryNode" />
+              <item name="app_project" type="462c0819:PsiDirectoryNode" />
+              <item name="testRun" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -206,11 +203,11 @@
       <recent name="D:\myPythonPorjrct\appiumTest\other" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myPythonPorjrct\myPython\app_project\testCase" />
       <recent name="D:\myPythonPorjrct\myPython\temp" />
       <recent name="D:\myPythonPorjrct\myPython" />
       <recent name="D:\myPythonPorjrct\myPython\page_object\testCase" />
       <recent name="D:\myPythonPorjrct\appiumTest\jiandan_project\testRun" />
-      <recent name="D:\myPythonPorjrct\appiumTest\jiandan_project\baseView" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -225,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.21_break和continue">
+  <component name="RunManager" selected="Python.runDemo">
     <configuration name="19_while循环" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -280,7 +277,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="runDemo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -292,7 +289,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="myPython" />
-      <option name="SCRIPT_NAME" value="D:\myPythonPorjrct\myPython\app_project\testRun\runReport.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app_project/testRun/runDemo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -310,7 +307,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="myPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app_project/testRun/runReport.py" />
+      <option name="SCRIPT_NAME" value="D:\myPythonPorjrct\myPython\app_project\testRun\runDemo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -390,19 +387,19 @@
       <option name="USE_PATTERN" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.run" />
-      <item index="1" class="java.lang.String" itemvalue="Python.runReport" />
-      <item index="2" class="java.lang.String" itemvalue="Python.19_while循环" />
-      <item index="3" class="java.lang.String" itemvalue="Python.20_for循环" />
-      <item index="4" class="java.lang.String" itemvalue="Python.21_break和continue" />
+      <item index="0" class="java.lang.String" itemvalue="Python.runReport" />
+      <item index="1" class="java.lang.String" itemvalue="Python.19_while循环" />
+      <item index="2" class="java.lang.String" itemvalue="Python.20_for循环" />
+      <item index="3" class="java.lang.String" itemvalue="Python.21_break和continue" />
+      <item index="4" class="java.lang.String" itemvalue="Python.runDemo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.21_break和continue" />
-        <item index="1" class="java.lang.String" itemvalue="Python.20_for循环" />
-        <item index="2" class="java.lang.String" itemvalue="Python.19_while循环" />
-        <item index="3" class="java.lang.String" itemvalue="Python.runReport" />
-        <item index="4" class="java.lang.String" itemvalue="Python.run" />
+        <item index="0" class="java.lang.String" itemvalue="Python.runDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Python.21_break和continue" />
+        <item index="2" class="java.lang.String" itemvalue="Python.20_for循环" />
+        <item index="3" class="java.lang.String" itemvalue="Python.19_while循环" />
+        <item index="4" class="java.lang.String" itemvalue="Python.runReport" />
       </list>
     </recent_temporary>
   </component>
@@ -474,7 +471,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3728261" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.542617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5423913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984799" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -523,45 +520,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zfile/10_列表的基本操作.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zfile/12_元组的基本操作.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/data/loginUser.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/data/loginUser.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_project/config/desired_caps.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/common/app_common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -669,6 +631,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3356">
           <caret line="168" column="4" lean-forward="false" selection-start-line="168" selection-start-column="4" selection-end-line="168" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -740,26 +703,6 @@
         <state relative-caret-position="300">
           <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/testRun/runReport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/testCase/testReport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,11 +794,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/report/2019_04_24 23_48_37-report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/report/2019_04_24 23_49_05-report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="74" lean-forward="true" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/report/2019_04_24 23_50_21-report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/testRun/runDemo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/testCase/caseDemo1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/testCase/caseDemo2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zfile/22_练习.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_project/common/app_common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="59" column="49" lean-forward="true" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
