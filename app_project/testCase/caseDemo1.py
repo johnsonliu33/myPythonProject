@@ -1,6 +1,8 @@
 import unittest
 from BeautifulReport import BeautifulReport
 from time import sleep
+
+
 class Testing1(unittest.TestCase):
 
     def test_case1(self):

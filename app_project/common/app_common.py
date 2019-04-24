@@ -31,20 +31,22 @@ class Common(BaseDriver):
             time.sleep(3)
             element.click()
 
-    def getTimes(self):
+    @staticmethod
+    def now_data():
         now = time.strftime("%Y-%m-%d %H_%M_%S")
         return now
 
     def get_screen_shot(self, moudle):
         logs.info("get_screen_shot")
-        times = self.getTimes()
+        times = self.now_data()
         image_file = os.path.dirname(os.path.dirname(__file__)) + "/screenShots/%s_%s.png" % (moudle, times)
         self.driver.get_screenshot_as_file(image_file)
 
     def get_window(self):
         x = self.get_win_size()["width"]
         y = self.get_win_size()["height"]
-        return (x, y)
+        z = (x, y)
+        return z
 
     def swipe_up(self):
         logs.info("swipe_up")
@@ -55,14 +57,14 @@ class Common(BaseDriver):
         self.swipes(x1, y1, x1, y2, 1000)
 
     def get_csv_data(file_name, line):
-        with open(file_name, 'r', encoding='utf-8-sig') as file:
+        with open(file_name, "r", encoding="utf-8-sig") as file:
             read = csv.reader(file)
             for index, row in enumerate(read, 1):
                 if index == line:
                     return row
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     driver = appium_desired()
     c = Common(driver)
     c.is_upgrade()

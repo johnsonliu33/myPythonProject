@@ -30,5 +30,5 @@ def appium_desired():
     return driver
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     appium_desired()

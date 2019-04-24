@@ -26,7 +26,7 @@ class LoginView(Common):
         self.swipe_up()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     driver = appium_desired()
     on = LoginView(driver)
     on.login_action("jianeryou1", "abc123")
