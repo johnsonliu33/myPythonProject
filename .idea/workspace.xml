@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a75edeb3-8090-4d0e-b6b6-b6623f30aadc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/zfile/22_练习.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/zfile/23_函数的定义和调用.py" afterPath="$PROJECT_DIR$/zfile/23_函数的定义和调用.py" />
-      <change beforePath="$PROJECT_DIR$/zfile/24_变量的作用域.py" afterPath="$PROJECT_DIR$/zfile/24_变量的作用域.py" />
-      <change beforePath="$PROJECT_DIR$/zfile/25_可变参数-args.py" afterPath="$PROJECT_DIR$/zfile/25_可变参数-args.py" />
+      <change beforePath="$PROJECT_DIR$/zfile/26_可变参数-wargs.py" afterPath="$PROJECT_DIR$/zfile/26_可变参数-wargs.py" />
+      <change beforePath="$PROJECT_DIR$/zfile/27_参数默认值.py" afterPath="$PROJECT_DIR$/zfile/27_参数默认值.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,28 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="24_变量的作用域.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zfile/24_变量的作用域.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="25_可变参数-args.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zfile/25_可变参数-args.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,8 +48,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/zfile/2_Python的下载和安装.py" />
-        <option value="$PROJECT_DIR$/zfile/0_课程介绍.py" />
         <option value="$PROJECT_DIR$/zfile/1_python的版本选择.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/zfile/4_Python的基本语法.py" />
@@ -122,14 +97,16 @@
         <option value="$PROJECT_DIR$/zfile/23_函数的定义和调用.py" />
         <option value="$PROJECT_DIR$/zfile/24_变量的作用域.py" />
         <option value="$PROJECT_DIR$/zfile/25_可变参数-args.py" />
+        <option value="$PROJECT_DIR$/zfile/26_可变参数-wargs.py" />
+        <option value="$PROJECT_DIR$/zfile/27_参数默认值.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1000" />
-    <option name="y" value="162" />
+    <option name="x" value="671" />
+    <option name="y" value="31" />
     <option name="width" value="960" />
-    <option name="height" value="1100" />
+    <option name="height" value="1023" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -147,7 +124,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,77 +134,19 @@
             <path>
               <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="baseView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="businessView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="screenShots" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="testCase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myPython" type="462c0819:PsiDirectoryNode" />
-              <item name="app_project" type="462c0819:PsiDirectoryNode" />
-              <item name="testRun" type="462c0819:PsiDirectoryNode" />
+              <item name="zfile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="myPython" type="462c0819:PsiDirectoryNode" />
               <item name="zfile" type="462c0819:PsiDirectoryNode" />
+              <item name="_trial_temp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -265,43 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.25_可变参数-args">
-    <configuration name="21_break和continue" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zfile" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="myPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zfile/21_break和continue.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="23_函数的定义和调用" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zfile" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="myPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zfile/23_函数的定义和调用.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.27_参数默认值">
     <configuration name="24_变量的作用域" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -338,19 +220,37 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="runDemo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="26_可变参数-wargs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app_project/testRun" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zfile" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="myPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app_project/testRun/runDemo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zfile/26_可变参数-wargs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="27_参数默认值" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zfile" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="myPython" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zfile/27_参数默认值.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -366,21 +266,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="appiumTest" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="appiumTest" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -429,20 +314,33 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.21_break和continue" />
-      <item index="1" class="java.lang.String" itemvalue="Python.runDemo" />
-      <item index="2" class="java.lang.String" itemvalue="Python.23_函数的定义和调用" />
-      <item index="3" class="java.lang.String" itemvalue="Python.24_变量的作用域" />
-      <item index="4" class="java.lang.String" itemvalue="Python.25_可变参数-args" />
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appiumTest" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Python.24_变量的作用域" />
+      <item index="1" class="java.lang.String" itemvalue="Python.25_可变参数-args" />
+      <item index="2" class="java.lang.String" itemvalue="Python.26_可变参数-wargs" />
+      <item index="3" class="java.lang.String" itemvalue="Python.27_参数默认值" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.25_可变参数-args" />
-        <item index="1" class="java.lang.String" itemvalue="Python.24_变量的作用域" />
-        <item index="2" class="java.lang.String" itemvalue="Python.23_函数的定义和调用" />
-        <item index="3" class="java.lang.String" itemvalue="Python.runDemo" />
-        <item index="4" class="java.lang.String" itemvalue="Python.21_break和continue" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.27_参数默认值" />
+        <item index="1" class="java.lang.String" itemvalue="Python.26_可变参数-wargs" />
+        <item index="2" class="java.lang.String" itemvalue="Python.25_可变参数-args" />
+        <item index="3" class="java.lang.String" itemvalue="Python.24_变量的作用域" />
       </list>
     </recent_temporary>
   </component>
@@ -463,35 +361,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Twisted_Trial_for_testLogin_TestLogin_test_login_https005 - 2019.04.23 at 00h 28m 27s.xml">
-      <configuration name="Twisted Trial for testLogin.TestLogin.test_login_https005" configurationId="tests" />
+    <history-entry file="Twisted_Trial_for_27_参数默认值_test - 2019.04.26 at 23h 27m 27s.xml">
+      <configuration name="Twisted Trial for 27_参数默认值.test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Twisted_Trial_in_testLogin_py - 2019.04.23 at 00h 03m 02s.xml">
-      <configuration name="Twisted Trial in testLogin.py" configurationId="tests" />
+    <history-entry file="Twisted_Trial_in_27_参数默认值_py - 2019.04.26 at 23h 26m 45s.xml">
+      <configuration name="Twisted Trial in 27_参数默认值.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Twisted_Trial_in_testLogin_py - 2019.04.23 at 00h 04m 12s.xml">
-      <configuration name="Twisted Trial in testLogin.py" configurationId="tests" />
+    <history-entry file="Twisted_Trial_in_27_参数默认值_py - 2019.04.26 at 23h 27m 57s.xml">
+      <configuration name="Twisted Trial in 27_参数默认值.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Twisted_Trial_in_testLogin_py - 2019.04.23 at 00h 04m 42s.xml">
-      <configuration name="Twisted Trial in testLogin.py" configurationId="tests" />
+    <history-entry file="Twisted_Trial_in_27_参数默认值_py - 2019.04.26 at 23h 28m 06s.xml">
+      <configuration name="Twisted Trial in 27_参数默认值.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Twisted_Trial_in_testLogin_py - 2019.04.23 at 00h 05m 50s.xml">
-      <configuration name="Twisted Trial in testLogin.py" configurationId="tests" />
+    <history-entry file="Twisted_Trial_in_27_参数默认值_py - 2019.04.26 at 23h 28m 12s.xml">
+      <configuration name="Twisted Trial in 27_参数默认值.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Twisted_Trial_in_testLogin_py - 2019.04.23 at 00h 06m 05s.xml">
-      <configuration name="Twisted Trial in testLogin.py" configurationId="tests" />
+    <history-entry file="Twisted_Trial_in_27_参数默认值_py - 2019.04.26 at 23h 28m 55s.xml">
+      <configuration name="Twisted Trial in 27_参数默认值.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Twisted_Trial_in_testLogin_py - 2019.04.23 at 00h 07m 03s.xml">
-      <configuration name="Twisted Trial in testLogin.py" configurationId="tests" />
+    <history-entry file="Twisted_Trial_in_27_参数默认值_py - 2019.04.26 at 23h 29m 19s.xml">
+      <configuration name="Twisted Trial in 27_参数默认值.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Twisted_Trial_in_testLogin_py - 2019.04.23 at 00h 08m 37s.xml">
-      <configuration name="Twisted Trial in testLogin.py" configurationId="tests" />
+    <history-entry file="Twisted_Trial_in_27_参数默认值_py - 2019.04.26 at 23h 29m 30s.xml">
+      <configuration name="Twisted Trial in 27_参数默认值.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Twisted_Trial_in_testLogin_py - 2019.04.23 at 00h 30m 34s.xml">
-      <configuration name="Twisted Trial in testLogin.py" configurationId="tests" />
+    <history-entry file="Twisted_Trial_in_27_参数默认值_py - 2019.04.26 at 23h 30m 08s.xml">
+      <configuration name="Twisted Trial in 27_参数默认值.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Twisted_Trial_in_testLogin_py - 2019.04.23 at 00h 32m 18s.xml">
-      <configuration name="Twisted Trial in testLogin.py" configurationId="tests" />
+    <history-entry file="Twisted_Trial_in_27_参数默认值_py - 2019.04.26 at 23h 30m 15s.xml">
+      <configuration name="Twisted Trial in 27_参数默认值.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -504,19 +402,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1000" y="162" width="960" height="1100" extended-state="0" />
-    <editor active="true" />
+    <frame x="671" y="31" width="960" height="1023" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29826465" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29826465" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35580912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38669673" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5423913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39834026" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41630435" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -561,54 +458,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zfile/17_集合的基本操作.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zfile/13_列表和元组的比较.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zfile/15_字典的基本操作.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_project/report/测试报告.html" />
-    <entry file="file://$PROJECT_DIR$/temp/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/get_csv_data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_object/testCase/loginView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page_object/testCase/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-790">
@@ -820,13 +674,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zfile/24_变量的作用域.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
+        <state relative-caret-position="480">
           <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
           <folding />
         </state>
@@ -835,8 +688,63 @@
     <entry file="file://$PROJECT_DIR$/zfile/25_可变参数-args.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zfile/26_可变参数-wargs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zfile/6_字符串.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zfile/7_字符串的格式化.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zfile/28_递归的实现.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zfile/27_参数默认值.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zfile/_trial_temp/_trial_marker">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zfile/_trial_temp/test.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
