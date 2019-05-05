@@ -27,11 +27,6 @@ print (collection.find_one())
 worktimes=[
 { 
     "_id" : "", 
-    "date" : ISODate("2018-10-23T00:00:00.000+0000"), 
-    "guider" : "https003", 
-    "__v" : NumberInt(0), 
-    "createdAt" : ISODate("2018-10-22T11:03:13.983+0000"), 
-    "time" : "8:00-22:00", 
-    "updatedAt" : ISODate("2018-10-22T07:08:59.487+0000")
+    "guider" : "https003",
 }
     ]
