@@ -24,9 +24,4 @@ for rows in item:
 #访问表的一行数据
 print (collection.find_one())
 
-worktimes=[
-{ 
-    "_id" : "", 
-    "guider" : "https003",
-}
-    ]
+

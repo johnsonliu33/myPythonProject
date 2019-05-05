@@ -13,8 +13,10 @@ From = "songqianqian@jiandan100.cn"
 # 多个收件人用逗号隔开
 To = "779446928@qq.com, 1220688565@qq.com"
 
-cc = 'dd@dd.com, eeg@ee.com'
-file_name = "report.html"
+cc = '1220688565@qq.com, 1220688565@qq.com'
+# file_name = "report.html"
+file_name = "output.avi"
+
 
 server = smtplib.SMTP("mail.jiandan100.cn")
 server.login("songqianqian@jiandan100.cn","Mm9842")   # 仅smtp服务器需要验证时

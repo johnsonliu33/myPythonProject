@@ -8,7 +8,7 @@ conn=pymysql.connect(host="192.168.20.156",port=3306,user="test_user",passwd="te
 #创建游标
 cursor=conn.cursor()
 #执行mysql语句，并返回执行的结果
-sql="SELECT * FROM `W_SectionInfo` WHERE `guid` = '%s' " % sectionId
+sql="SELECT * FROM `W_SectionInfo` WHERE `guid` = %s " % 4321432
 res=cursor.execute(sql)
 print(res)
 #把要执行的语句提交，否则无法保存新建或者修改数据

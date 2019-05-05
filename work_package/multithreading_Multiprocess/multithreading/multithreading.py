@@ -1,4 +1,3 @@
-import threading
 # 线程
 #
 # 1.什么是线程
