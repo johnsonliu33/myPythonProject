@@ -2,7 +2,7 @@
 # git status
 # git add README.md
 # git commit -m "first commit"
-# git remote add origin https://github.com/song-black/pyhton.git
+# git remote add origin https://github.com/song-black/myPythonProject.git
 # git push -u origin master
 # git pull
 
