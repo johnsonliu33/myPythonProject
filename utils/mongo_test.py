@@ -20,49 +20,58 @@ def collec_mongo2():
     # collection2= client["guideclass_ceshi"]["users"]
     database2 = client2["guideclass_ceshi"]
     collection2 = database2.users
-    user_list=collection2.find()
+    user_list = collection2.find()
     for item in user_list:
         print(item)
 
+
 class TestMongo:
     def __init__(self):
-        client=MongoClient("mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi")
-        self.collection=client["guideclass_ceshi"]["test"]
+        client = MongoClient("mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi")
+        self.collection = client["guideclass_ceshi"]["test"]
+
     def test_insert_one(self):
-        #insert接收字典，返回object
-        result=self.collection.insert_one({"username":"test01","age":33})
+        # insert接收字典，返回object
+        result = self.collection.insert_one({"username": "test01", "age": 33})
         print("insert_one: {}".format(result))
 
     def test_insert_many(self):
-        item_list=[{"username":"test0{}".format(i)} for i in range(9)]
+        item_list = [{"username": "test0{}".format(i)} for i in range(9)]
         # insert_many接收一个列表，列表中为所有要插入的字典
-        results=self.collection.insert_many(item_list)
+        results = self.collection.insert_many(item_list)
         # result2.insert_ids为所有插入的ID
         for item in results.inserted_ids:
             print("insert_many: {}".format(item))
+
     def test_find_one(self):
-        #find_one查找并返回一个结果，接收一个字典形式的条件
-        res_one=self.collection.find_one({"username":"test01"})
+        # find_one查找并返回一个结果，接收一个字典形式的条件
+        res_one = self.collection.find_one({"username": "test01"})
         print("find_one: {}".format(res_one))
+
     def test_find_many(self):
-        #find返回所有满足条件的结果，如果条件为空，则返回数据库的所有
-        res_list=self.collection.find({"username":"test01"})
+        # find返回所有满足条件的结果，如果条件为空，则返回数据库的所有
+        res_list = self.collection.find({"username": "test01"})
         # 结果是一个Cursor游标对象，是一个可迭代对象，可以类似读文件的指针
         for i in res_list:
             print("find+: {}".format(i))
-        for i in res_list:  #此时res_list中没有内容
+        for i in res_list:  # 此时res_list中没有内容
             print("find-: {}".format(i))
-    def test_update_one(self):
-        self.collection.update_one({"username":"test01"},{"$set":{"username":"new_test01"}})
-    def test_update_many(self):
-        self.collection.update_many({"username":"test02"},{"$set":{"username":"new_test02"}})
-    def test_delete_one(self):
-         self.collection.delete_one({"username":"test03"})
-    def test_delete_many(self):
-         self.collection.delete_many({"username":"test04"})
+
+    def test_update_one(self):  # 只修改第一个符合条件的数据
+        self.collection.update_one({"username": "test01"}, {"$set": {"username": "new_test01"}})
+
+    def test_update_many(self):  # 修改所有符合条件的数据
+        self.collection.update_many({"username": "test02"}, {"$set": {"username": "new_test02"}})
+
+    def test_delete_one(self):  # 只删除第一个符合条件的数据
+        self.collection.delete_one({"username": "test03"})
+
+    def test_delete_many(self):  # 删除所有符合条件的数据
+        self.collection.delete_many({"username": "test04"})
+
 
 # insert() 和 save() 已弃用
-coll=TestMongo()
+coll = TestMongo()
 coll.test_insert_one()
 coll.test_insert_many()
 coll.test_find_one()
