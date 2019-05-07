@@ -1,0 +1,18 @@
+
+(node:1548) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
+(node:1548) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:1548) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:1548) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
+(node:1548) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+
+(node:10084) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
+(node:10084) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:10084) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:10084) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
+(node:10084) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+
+(node:7608) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
+(node:7608) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:7608) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:7608) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
+(node:7608) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
