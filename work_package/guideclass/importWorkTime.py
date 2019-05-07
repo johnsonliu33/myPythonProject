@@ -6,7 +6,7 @@ import datetime
 def get_mongo():
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi"
     client = MongoClient(uri)
-    collection = client["guideclass_ceshi"]["test"]
+    collection = client["guideclass_ceshi"]["guiderworktimes"]
     return collection
 
 
