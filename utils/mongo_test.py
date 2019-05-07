@@ -17,12 +17,17 @@ def collec_mongo2():
     ##链接MongoDB
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi"
     client2 = MongoClient(uri)
-    # collection2= client["guideclass_ceshi"]["users"]
+    # A
     database2 = client2["guideclass_ceshi"]
     collection2 = database2.users
-    user_list = collection2.find()
-    for item in user_list:
-        print(item)
+    user_list1 = collection2.find()
+    for item1 in user_list1:
+        print(item1)
+    # B
+    collection3 = client2["guideclass_ceshi"]["users"]
+    user_list2 = collection3.find()
+    for item2 in user_list2:
+        print(item2)
 
 
 class TestMongo:
