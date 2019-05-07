@@ -1,44 +1,40 @@
+[35m[Appium][39m Welcome to Appium v1.13.0
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   address: 127.0.0.1
+[35m[Appium][39m Appium REST http interface listener started on 127.0.0.1:4723
 
-(node:5068) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:5068) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:5068) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:5068) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:5068) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+D:\myPythonProject\app_project\baseView>.0
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   address: 127.0.0.1
+[35m[HTTP][39m Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+Fatal Error: listen EADDRINUSE: address already in use 127.0.0.1:4723
+    at Server.setupListenHandle [as _listen2] (net.js:1270:14)
+    at listenInCluster (net.js:1318:12)
+    at doListen (net.js:1451:7)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
 
-(node:5564) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:5564) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:5564) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:5564) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:5564) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+D:\myPythonProject\app_project\baseView>[35m[Appium][39m Welcome to Appium v1.13.0
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   address: 127.0.0.1
+[35m[HTTP][39m Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+Fatal Error: listen EADDRINUSE: address already in use 127.0.0.1:4723
+    at Server.setupListenHandle [as _listen2] (net.js:1270:14)
+    at listenInCluster (net.js:1318:12)
+    at doListen (net.js:1451:7)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
 
-(node:8348) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:8348) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:8348) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:8348) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:8348) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+D:\myPythonProject\app_project\baseView>[35m[Appium][39m Welcome to Appium v1.13.0
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   address: 127.0.0.1
+[35m[Appium][39m Appium REST http interface listener started on 127.0.0.1:4723
+[35m[Appium][39m Welcome to Appium v1.13.0
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   address: 127.0.0.1
+[35m[HTTP][39m Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+Fatal Error: listen EADDRINUSE: address already in use 127.0.0.1:4723
+    at Server.setupListenHandle [as _listen2] (net.js:1270:14)
+    at listenInCluster (net.js:1318:12)
+    at doListen (net.js:1451:7)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
 
-(node:8920) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:8920) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:8920) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:8920) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:8920) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
-
-(node:256) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:256) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:256) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:256) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:256) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
-
-(node:8600) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:8600) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:8600) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:8600) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:8600) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
-
-(node:9744) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:9744) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:9744) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:9744) UnhandledPromiseRejectionWarning: Error: EPERM: operation not permitted, rename 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings-tmp' -> 'C:\Users\Lenovo\AppData\Roaming\appium-desktop\Settings'
-(node:9744) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
-[35m[Appium][39m Welcome to Appium v1.11.1
-[35m[Appium][39m Appium REST http interface listener started on 0.0.0.0:4723
+D:\myPythonProject\app_project\baseView>
