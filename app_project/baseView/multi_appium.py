@@ -19,3 +19,5 @@ if __name__ == '__main__':
     for i in range(2):
         port = 4723 + 2 * i
         appium_start(host, port)
+
+
