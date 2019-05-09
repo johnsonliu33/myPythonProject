@@ -44,5 +44,5 @@ def release_port(port):
 if __name__ == '__main__':
     host = "127.0.0.1"
     port = 4723
-    # check_port(host, port)
+    check_port(host, port)
     release_port(port)
