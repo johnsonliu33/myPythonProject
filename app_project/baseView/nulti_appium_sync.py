@@ -1,19 +1,23 @@
 import subprocess
 from time import ctime
 import multiprocessing
-from app_project.baseView.check_port import check_port
+from app_project.baseView.check_port import check_port, release_port
 
 
 def appium_start(host, port):
-    ischeck = check_port(host, port)
-    if ischeck:
+    checkPort = check_port(host, port)
+
+    if checkPort:
         bootstrap_port = str(port + 1)
         cmd = "start /b appium -a " + host + " -p " + str(port) + " -bp " + str(bootstrap_port)
         print("{} at {}".format(cmd, ctime()))
         subprocess.Popen(cmd, shell=True, stdout=open("./appium_log/" + str(port) + ".log", "a"),
                          stderr=subprocess.STDOUT)
     else:
-        print("port %s is used" % port)
+        killPort = release_port(port)
+        if killPort:
+            appium_start(host, port)
+
 
 
 appium_process = []

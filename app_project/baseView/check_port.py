@@ -10,7 +10,7 @@ def check_port(host, port):
         sock.shutdown(2)
     except OSError as msg:
         print("port %s is availible!" % port)
-        print(msg)
+        # print(msg)
         return True
     else:
         print("port %s is use!" % port)
@@ -32,11 +32,12 @@ def release_port(port):
         pid = str_list[4]
         # 关闭被占用端口的pid
         cmd_kill = "taskkill -f -pid %s" % pid
-        print(cmd_kill)
+        # print(cmd_kill)
         os.popen(cmd_kill)
+        return True
     else:
-        print("port %s is available!" % port)
-
+        print("port %s is taskkill failed!" % port)
+        return False
 
 # Python strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列。
 # 注意：该方法只能删除开头或是结尾的字符，不能删除中间部分的字符。
