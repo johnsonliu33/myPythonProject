@@ -25,7 +25,7 @@ def get_id(collect, user, init=123):
     # upsert=true时，匹配不到数据会插入一条新数据
     getRes = collect.find_one_and_update({"_id": user}, {"$inc": {"seq": 1}, "$set": {
         "updatedAt": datetime.datetime.utcnow()}}, new=True, upsert=True, setDefaultsOnInsert=True)
-    print("getRes===",getRes)
+    print("getRes===", getRes)
     if getRes and (getRes["seq"] < init):
         getRes = collect.find_one_and_update({"_id": user},
                                              {"$inc": {"seq": init}, "$set": {"updatedAt": datetime.datetime.utcnow()}},
@@ -36,6 +36,7 @@ def get_id(collect, user, init=123):
 
 def create_id(sid):
     return "mt_" + str(sid)
+
 
 # exec()用来执行储存在字符串或文件中的Python语句,支持Python代码的动态执行
 def exec(meetingtimes_collect, seqidgens_collect):
