@@ -74,8 +74,12 @@ class TestMongo:
     def test_delete_many(self):  # 删除所有符合条件的数据
         self.collection.delete_many({"username": "test04"})
 
+    def test_clear_collection(self):  # 删除所有数据
+        self.collection.delete_many({})
 
-# insert() 和 save() 已弃用
+
+# insert(),save(),update(),remove()已启用
+
 coll = TestMongo()
 coll.test_insert_one()
 coll.test_insert_many()
@@ -85,3 +89,4 @@ coll.test_update_one()
 coll.test_update_many()
 coll.test_delete_one()
 coll.test_delete_many()
+coll.test_clear_collection()
