@@ -2,7 +2,6 @@
 
 """暴力破解zip文件"""
 
-
 from optparse import OptionParser
 import zipfile
 from threading import Thread
@@ -11,7 +10,7 @@ from threading import Thread
 def extractFile(zip_file, password):
     try:
         zip_file.extractall(pwd=password)
-        print ("[+] Found Password : " + password)
+        print("[+] Found Password : " + password)
     except:
         pass
 
@@ -23,7 +22,7 @@ def main():
     parse.add_option("-d", dest="dname", type="string", help="specify password file")
     (options, args) = parse.parse_args()
     if (options.zname is None) | (options.dname is None):
-        print (parse.usage)
+        print(parse.usage)
         exit(0)
     zip_file = options.zname
     password_file = options.dname
