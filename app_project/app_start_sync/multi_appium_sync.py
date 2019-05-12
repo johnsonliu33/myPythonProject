@@ -1,8 +1,7 @@
 # -*-coding:utf-8-*-
-
 import subprocess
 from time import strftime
-import multiprocessing
+from multiprocessing import Process
 from app_project.app_start_sync.appium_port import check_port, release_port
 from app_project.common.app_log import my_log
 
@@ -32,7 +31,7 @@ def multi_appium(host, devices_list):
     appium_pocess = []
     for i in range(len(devices_list)):
         port = 4723 + 2 * i
-        appium = multiprocessing.Process(target=appium_start, args=(host, port,))
+        appium = Process(target=appium_start, args=(host, port,))
         appium_pocess.append(appium)
     for app in appium_pocess:
         app.start()

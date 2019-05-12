@@ -34,7 +34,7 @@ def devices_start(uuid):
                                                                       strftime("%Y-%m-%d %H:%M:%S")))
             driver = webdriver.Remote("http://" + desired["host"] + ":" + desired["port"] + "/wd/hub", _desired_caps)
             driver.implicitly_wait(8)
-            logger.info("====== start run app ======")
+            logger.info("====== start run app : {}======".format(desired["deviceName"]))
             isupg = IsUpgrade(driver)
             isupg.is_upgrade()
             return driver

@@ -3,7 +3,7 @@
 import yaml, os
 from appium import webdriver
 from time import strftime
-import multiprocessing
+from multiprocessing import Process
 from app_project.common.app_log import my_log
 from app_project.app_start_sync.multi_appium import appium_start
 
@@ -34,7 +34,7 @@ def devices_start(devices):
                                                                       strftime("%Y-%m-%d %H:%M:%S")))
             driver = webdriver.Remote("http://" + desired["host"] + ":" + desired["port"] + "/wd/hub", _desired_caps)
             driver.implicitly_wait(8)
-            logger.info("====== start run app ======")
+            logger.info("====== start run app : {}======".format(desired["deviceName"]))
             return driver
         except:
             logger.error("appium port : {} start Failed {} at {} ".format(desired["port"], desired["deviceName"],
@@ -47,7 +47,7 @@ def multi_devices(devices_list):
     # 加载desired进程
     for i in range(len(devices_list)):
         # port = 4723 + 2 * i
-        devices = multiprocessing.Process(target=devices_start, args=(devices_list[i],))
+        devices = Process(target=devices_start, args=(devices_list[i],))
         devices_pocess.append(devices)
     for dps in devices_pocess:
         dps.start()

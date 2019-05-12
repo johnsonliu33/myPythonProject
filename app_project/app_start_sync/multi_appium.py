@@ -1,6 +1,7 @@
 import subprocess
 from time import strftime
 from app_project.app_start_sync.appium_port import check_port, release_port
+from app_project.common.app_log import my_log
 
 
 def check_stats(host, port):
@@ -12,6 +13,7 @@ def check_stats(host, port):
 
 
 def appium_start(host, port):
+    logger = my_log()
     if check_stats(host, port):  # 注释掉，不会每次都重启appium
         bootstrap_port = str(port + 1)
         # 启动多个appium服务时，不要安装客户端
@@ -19,7 +21,7 @@ def appium_start(host, port):
         # cnpm install -g appium
         cmd = "start /b appium -a " + host + " -p " + str(port) + " -bp " + str(bootstrap_port)
         # 说明：/b 不打开命令窗口; bp端口（ --bootstrap-port）是appium和设备之间通信的端口，如果不指定到时无法操作多台设备运行脚本。
-        print("{} at {}".format(cmd, strftime("%Y-%m-%d %H:%M:%S")))
+        logger.info("{} at {}".format(cmd, strftime("%Y-%m-%d %H:%M:%S")))
         subprocess.Popen(cmd, shell=True, stdout=open("./appium_log/" + str(port) + ".log", "a"),
                          stderr=subprocess.STDOUT)
         return True

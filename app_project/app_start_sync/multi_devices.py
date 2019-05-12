@@ -4,7 +4,6 @@ import yaml, os
 from appium import webdriver
 from app_project.common.app_log import my_log
 from time import strftime
-from app_project.common.testUpgrade import IsUpgrade
 from app_project.app_start_sync.multi_appium import appium_start
 
 

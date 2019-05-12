@@ -1,5 +1,5 @@
 from app_project.baseView.baseDriver import BaseDriver
-from app_project.baseView.desired_caps import appium_desired
+from app_project.baseView.desired_caps import devices_start
 import time, os, csv
 from app_project.common.app_log import my_log
 
@@ -43,10 +43,9 @@ class Common(BaseDriver):
 
 
 if __name__ == "__main__":
-    driver = appium_desired()
-    c = Common(driver)
-    c.is_upgrade()
-    c.get_screen_shot("upgrade")
-    c.swipe_up()
+    driver = devices_start()
+    comm = Common(driver)
+    comm.get_screen_shot("upgrade")
+    comm.swipe_up()
     csv_file = "../data/loginUser.csv"
-    c.get_csv_data(csv_file, 3)
+    comm.get_csv_data(csv_file, 3)

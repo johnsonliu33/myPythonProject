@@ -147,4 +147,258 @@ D:\myPythonProject\app_project\app_start_sync>,"appium:unicodeKeyboard":true,"ap
 [35m[ADB][39m Getting device platform version
 [debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62001 shell getprop ro.build.version.release'
 
+D:\myPythonProject\app_project\app_start_sync>[35m[Appium][39m Welcome to Appium v1.13.0
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   address: 127.0.0.1
+[35m[Appium][39m   port: 4725
+[35m[Appium][39m   bootstrapPort: 4726
+[35m[Appium][39m Appium REST http interface listener started on 127.0.0.1:4725
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m
+[35m[HTTP][39m [90m{"capabilities":{"firstMatch":[{"platformName":"Android","appium:platformVersion":"5.1.1","appium:deviceName":"127.0.0.1:62025","appium:appPackage":"com.jiandan.mobilelesson","appium:appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]},"desiredCapabilities":{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62025","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true}}[39m
+[debug] [35m[W3C][39m Calling AppiumDriver.createSession() with args: [{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62025","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true},null,{"firstMatch":[{"platformName":"Android","appium:platformVersion":"5.1.1","appium:deviceName":"127.0.0.1:62025","appium:appPackage":"com.jiandan.mobilelesson","appium:appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]}]
+[debug] [35m[BaseDriver][39m Event 'newSessionRequested' logged at 1557672705732 (22:51:45 GMT+0800 (GMT+08:00))
+[35m[Appium][39m 
+[35m[Appium][39m ======================================================================
+[35m[Appium][39m   DEPRECATION WARNING:
+[35m[Appium][39m 
+[35m[Appium][39m   The 'automationName' capability was not provided in the desired 
+[35m[Appium][39m   capabilities for this Android session
+[35m[Appium][39m 
+[35m[Appium][39m   Setting 'automationName=UiAutomator1' by default and using the 
+[35m[Appium][39m   UiAutomator1 Driver
+[35m[Appium][39m 
+[35m[Appium][39m   The next minor version of Appium (1.14.x) will set 
+[35m[Appium][39m   'automationName=UiAutomator2' by default and use the UiAutomator2 
+[35m[Appium][39m   Driver
+[35m[Appium][39m 
+[35m[Appium][39m   The next major version of Appium (2.x) will **require** the 
+[35m[Appium][39m   'automationName' capability to be set for all sessions on all 
+[35m[Appium][39m   platforms
+[35m[Appium][39m 
+[35m[Appium][39m   If you are happy with 'UiAutomator1' and do not wish to upgrade 
+[35m[Appium][39m   Android drivers, please add 'automationName=UiAutomator1' to your 
+[35m[Appium][39m   desired capabilities
+[35m[Appium][39m 
+[35m[Appium][39m   For more information about drivers, please visit 
+[35m[Appium][39m   http://appium.io/docs/en/about-appium/intro/ and explore the 
+[35m[Appium][39m   'Drivers' menu
+[35m[Appium][39m 
+[35m[Appium][39m ======================================================================
+[35m[Appium][39m 
+[35m[Appium][39m Setting automation to 'UiAutomator1'. 
+[35m[Appium][39m Appium v1.13.0 creating new AndroidDriver (v4.16.0) session
+[35m[Appium][39m Capabilities:
+[35m[Appium][39m   platformName: Android
+[35m[Appium][39m   platformVersion: 5.1.1
+[35m[Appium][39m   deviceName: 127.0.0.1:62025
+[35m[Appium][39m   appPackage: com.jiandan.mobilelesson
+[35m[Appium][39m   appActivity: com.jiandan.mobilelesson.InstallOpenActivity
+[35m[Appium][39m   unicodeKeyboard: true
+[35m[Appium][39m   resetKeyboard: true
+[35m[Appium][39m   noReset: true
+[debug] [35m[BaseDriver][39m W3C capabilities {"alwaysMatch":{"platformNa... and MJSONWP desired capabilities {"platformName":"Android","... were provided
+[debug] [35m[BaseDriver][39m Creating session with W3C capabilities: {"alwaysMatch":{"platformNa...
+[35m[BaseDriver][39m Session created with session id: 6400fd2b-5c9f-49ad-9847-fed1b61b467b
+[35m[ADB][39m The ANDROID_HOME environment variable is not set to the Android SDK root directory path. ANDROID_HOME is required for compatibility with SDK 23+. Checking along PATH for adb.
+[35m[ADB][39m Using 'adb.exe' from 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe'
+[35m[AndroidDriver][39m Retrieving device list
+[debug] [35m[ADB][39m Trying to find a connected android device
+[debug] [35m[ADB][39m Getting connected devices...
+[debug] [35m[ADB][39m 2 device(s) connected
+[35m[AndroidDriver][39m Looking for a device with Android '5.1.1'
+[debug] [35m[ADB][39m Setting device id to 127.0.0.1:62025
+[35m[ADB][39m Getting device platform version
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell getprop ro.build.version.release'
+[debug] [35m[ADB][39m Current device property 'ro.build.version.release': 5.1.1
+[35m[AndroidDriver][39m Using device: 127.0.0.1:62025
+[35m[ADB][39m The ANDROID_HOME environment variable is not set to the Android SDK root directory path. ANDROID_HOME is required for compatibility with SDK 23+. Checking along PATH for adb.
+[35m[ADB][39m Using 'adb.exe' from 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe'
+[debug] [35m[ADB][39m Setting device id to 127.0.0.1:62025
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell getprop ro.build.version.sdk'
+[debug] [35m[ADB][39m Current device property 'ro.build.version.sdk': 22
+[debug] [35m[ADB][39m Device API level: 22
+[35m[AndroidDriver][39m App file was not listed, instead we're going to run com.jiandan.mobilelesson directly on the device
+[debug] [35m[AndroidDriver][39m Checking whether package is present on the device
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell pm list packages com.jiandan.mobilelesson'
+[35m[AndroidDriver][39m Starting Android session
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 wait-for-device'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell echo ping'
+[debug] [35m[AndroidDriver][39m Pushing settings apk to device...
+[debug] [35m[ADB][39m Getting install status for io.appium.settings
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell dumpsys package io.appium.settings'
+[debug] [35m[ADB][39m 'io.appium.settings' is not installed
+[debug] [35m[ADB][39m App 'C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\_io.appium.settings@2.14.0@io.appium.settings\apks\settings_apk-debug.apk' is not installed
+[debug] [35m[ADB][39m Installing 'C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\_io.appium.settings@2.14.0@io.appium.settings\apks\settings_apk-debug.apk'
+[debug] [35m[ADB][39m Skipping permissions grant option, since the current API level 22 does not support applications permissions customization
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell 'ls -t -1 /data/local/tmp/appium_cache 2>&1 || echo _ERROR_''
+[debug] [35m[ADB][39m The current Android API does not support extended ls options. Defaulting to no-options call
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell 'ls /data/local/tmp/appium_cache 2>&1 || echo _ERROR_''
+[debug] [35m[ADB][39m Got an error '/data/local/tmp/appium_cache: No such file or directory' while getting the list of files in the cache. Assuming the cache does not exist yet
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell mkdir -p /data/local/tmp/appium_cache'
+[debug] [35m[ADB][39m The count of applications in the cache: 0
+[35m[ADB][39m Caching the application at 'C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\_io.appium.settings@2.14.0@io.appium.settings\apks\settings_apk-debug.apk' to '/data/local/tmp/appium_cache/728413456b86856a2003edeb524d6bd577ca6418.apk'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell mkdir -p /data/local/tmp/appium_cache'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 push C\:\\Users\\Lenovo\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\_io.appium.settings\@2.14.0\@io.appium.settings\\apks\\settings_apk-debug.apk /data/local/tmp/appium_cache/728413456b86856a2003edeb524d6bd577ca6418.apk'
+[35m[ADB][39m The upload of 'settings_apk-debug.apk' (1.16 MB) took 0.762s
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell pm install /data/local/tmp/appium_cache/728413456b86856a2003edeb524d6bd577ca6418.apk'
+[35m[ADB][39m The installation of 'settings_apk-debug.apk' took 1.924s
+[debug] [35m[ADB][39m Install command stdout: pkg: /data/local/tmp/appium_cache/728413456b86856a2003edeb524d6bd577ca6418.apk
+[debug] [35m[ADB][39m Failure [INSTALL_FAILED_ALREADY_EXISTS]
+[debug] [35m[ADB][39m Application 'C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\_io.appium.settings@2.14.0@io.appium.settings\apks\settings_apk-debug.apk' already installed. Continuing.
+[debug] [35m[ADB][39m Getting IDs of all 'io.appium.settings' processes
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell 'pgrep --help; echo $?''
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell 'pidof --help > /dev/null; echo $?''
+[debug] [35m[ADB][39m Using ps-based PID detection
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell ps'
+[35m[AndroidDriver][39m Granting android.permission.SET_ANIMATION_SCALE, CHANGE_CONFIGURATION, ACCESS_FINE_LOCATION by pm grant
+[debug] [35m[ADB][39m Granting permissions ["android.permission.SET_ANIMATION_SCALE","android.permission.CHANGE_CONFIGURATION","android.permission.ACCESS_FINE_LOCATION"] to 'io.appium.settings'
+[debug] [35m[ADB][39m Got the following command chunks to execute: [["pm","grant","io.appium.settings","android.permission.SET_ANIMATION_SCALE",";","pm","grant","io.appium.settings","android.permission.CHANGE_CONFIGURATION",";","pm","grant","io.appium.settings","android.permission.ACCESS_FINE_LOCATION",";"]]
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell pm grant io.appium.settings android.permission.SET_ANIMATION_SCALE \; pm grant io.appium.settings android.permission.CHANGE_CONFIGURATION \; pm grant io.appium.settings android.permission.ACCESS_FINE_LOCATION \;'
+[debug] [35m[AndroidDriver][39m Activating 'io.appium.settings'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell monkey -p io.appium.settings -c android.intent.category.LAUNCHER 1'
+[debug] [35m[AndroidDriver][39m Command stdout: Events injected: 1
+[debug] [35m[AndroidDriver][39m ## Network stats: elapsed time=223ms (0ms mobile, 0ms wifi, 223ms not connected)
+[debug] [35m[ADB][39m Getting IDs of all 'io.appium.settings' processes
+[debug] [35m[ADB][39m Using ps-based PID detection
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell ps'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell settings put secure mock_location 1'
+[debug] [35m[Logcat][39m Starting logcat capture
+[debug] [35m[AndroidDriver][39m Enabling Unicode keyboard support
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell settings get secure default_input_method'
+[debug] [35m[AndroidDriver][39m Unsetting previous IME com.android.inputservice/.InputService
+[debug] [35m[AndroidDriver][39m Setting IME to 'io.appium.settings/.UnicodeIME'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell ime enable io.appium.settings/.UnicodeIME'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell ime set io.appium.settings/.UnicodeIME'
+[35m[ADB][39m Getting device platform version
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell getprop ro.build.version.release'
+[debug] [35m[ADB][39m Current device property 'ro.build.version.release': 5.1.1
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell wm size'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell getprop ro.product.model'
+[debug] [35m[ADB][39m Current device property 'ro.product.model': MI 6
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell getprop ro.product.manufacturer'
+[debug] [35m[ADB][39m Current device property 'ro.product.manufacturer': Xiaomi
+[35m[AndroidDriver][39m No app sent in, not parsing package/activity
+[debug] [35m[AndroidDriver][39m No app capability. Assuming it is already on the device
+[debug] [35m[AndroidBootstrap][39m Watching for bootstrap disconnect
+[debug] [35m[ADB][39m Forwarding system: 4726 to device: 4724
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 forward tcp\:4726 tcp\:4724'
+[debug] [35m[UiAutomator][39m Starting UiAutomator
+[debug] [35m[UiAutomator][39m Moving to state 'starting'
+[debug] [35m[UiAutomator][39m Parsing uiautomator jar
+[debug] [35m[UiAutomator][39m Found jar name: 'AppiumBootstrap.jar'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell mkdir -p /data/local'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 push C\:\\Users\\Lenovo\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\_appium-android-driver\@4.16.0\@appium-android-driver\\bootstrap\\bin\\AppiumBootstrap.jar /data/local/tmp/'
+[debug] [35m[ADB][39m Attempting to kill all uiautomator processes
+[debug] [35m[ADB][39m Getting IDs of all 'uiautomator' processes
+[debug] [35m[ADB][39m Using ps-based PID detection
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell ps'
+[35m[ADB][39m No 'uiautomator' process has been found
+[debug] [35m[UiAutomator][39m Starting UIAutomator
+[debug] [35m[ADB][39m Creating ADB subprocess with args: ["-P",5037,"-s","127.0.0.1:62025","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.jiandan.mobilelesson","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+[debug] [35m[UiAutomator][39m Moving to state 'online'
+[debug] [35m[AndroidBootstrap][39m [BOOTSTRAP LOG] [debug] Loading json...
+[debug] [35m[AndroidBootstrap][39m [BOOTSTRAP LOG] [debug] Registered crash watchers.
+[35m[AndroidBootstrap][39m Android bootstrap socket is now connected
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell dumpsys window'
+[debug] [35m[AndroidBootstrap][39m [BOOTSTRAP LOG] [debug] Client connected
+[35m[AndroidDriver][39m Screen already unlocked, doing nothing
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell am start -W -n com.jiandan.mobilelesson/com.jiandan.mobilelesson.InstallOpenActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
+[35m[Appium][39m New AndroidDriver session created successfully, session 6400fd2b-5c9f-49ad-9847-fed1b61b467b added to master session list
+[debug] [35m[BaseDriver][39m Event 'newSessionStarted' logged at 1557672730773 (22:52:10 GMT+0800 (GMT+08:00))
+[debug] [35m[W3C (6400fd2b)][39m Cached the protocol value 'W3C' for the new session 6400fd2b-5c9f-49ad-9847-fed1b61b467b
+[debug] [35m[W3C (6400fd2b)][39m Responding to client with driver.createSession() result: {"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62025","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true},"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62025","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true,"deviceUDID":"127.0.0.1:62025","deviceScreenSize":"720x1280","deviceModel":"MI 6","deviceManufacturer":"Xiaomi"}}
+[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[32m200[39m [90m25048 ms - 881[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/6400fd2b-5c9f-49ad-9847-fed1b61b467b/timeouts[39m
+[35m[HTTP][39m [90m{"implicit":8000,"sessionId":"6400fd2b-5c9f-49ad-9847-fed1b61b467b"}[39m
+[debug] [35m[W3C (6400fd2b)][39m Calling AppiumDriver.timeouts() with args: [null,null,null,null,8000,"6400fd2b-5c9f-49ad-9847-fed1b61b467b"]
+[debug] [35m[BaseDriver][39m W3C timeout argument: {"implicit":8000}}
+[debug] [35m[BaseDriver][39m Set implicit wait to 8000ms
+[debug] [35m[W3C (6400fd2b)][39m Responding to client with driver.timeouts() result: null
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/6400fd2b-5c9f-49ad-9847-fed1b61b467b/timeouts [39m[32m200[39m [90m52 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[BaseDriver][39m Shutting down because we waited 60 seconds for a command
+[debug] [35m[AndroidDriver][39m Shutting down Android driver
+[35m[Appium][39m Closing session, cause was 'New Command Timeout of 60 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+[35m[Appium][39m Removing session 6400fd2b-5c9f-49ad-9847-fed1b61b467b from our master session list
+[debug] [35m[AndroidDriver][39m Resetting IME to com.android.inputservice/.InputService
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell ime set com.android.inputservice/.InputService'
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell am force-stop com.jiandan.mobilelesson'
+[debug] [35m[ADB][39m Pressing the HOME button
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell input keyevent 3'
+[debug] [35m[AndroidBootstrap][39m Sending command to android: {"cmd":"shutdown"}
+[debug] [35m[AndroidBootstrap][39m [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"shutdown"}
+[debug] [35m[AndroidBootstrap][39m [BOOTSTRAP LOG] [debug] Got command of type SHUTDOWN
+[debug] [35m[AndroidBootstrap][39m [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
+[debug] [35m[AndroidBootstrap][39m Received command result from bootstrap
+[debug] [35m[UiAutomator][39m Shutting down UiAutomator
+[debug] [35m[UiAutomator][39m Moving to state 'stopping'
+[debug] [35m[UiAutomator][39m UiAutomator shut down normally
+[debug] [35m[UiAutomator][39m Moving to state 'stopped'
+[debug] [35m[ADB][39m Attempting to kill all uiautomator processes
+[debug] [35m[ADB][39m Getting IDs of all 'uiautomator' processes
+[debug] [35m[ADB][39m Using ps-based PID detection
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell ps'
+[35m[ADB][39m No 'uiautomator' process has been found
+[debug] [35m[UiAutomator][39m Moving to state 'stopped'
+[debug] [35m[Logcat][39m Stopping logcat capture
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62025 shell am force-stop io.appium.unlock'
+[debug] [35m[AndroidDriver][39m Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+[35m[Appium][39m Welcome to Appium v1.13.0
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   address: 127.0.0.1
+[35m[Appium][39m   port: 4725
+[35m[Appium][39m   bootstrapPort: 4726
+[35m[Appium][39m Appium REST http interface listener started on 127.0.0.1:4725
+":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]},"desiredCapabilities":{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62025","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true}}[39m
+[debug] [35m[W3C][39m Calling AppiumDriver.createSession() with args: [{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62025","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true},null,{"firstMatch":[{"platformName":"Android","appium:platformVersion":"5.1.1","appium:deviceName":"127.0.0.1:62025","appium:appPackage":"com.jiandan.mobilelesson","appium:appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]}]
+[debug] [35m[BaseDriver][39m Event 'newSessionRequested' logged at 1557672975872 (22:56:15 GMT+0800 (GMT+08:00))
+[35m[Appium][39m 
+[35m[Appium][39m ======================================================================
+[35m[Appium][39m   DEPRECATION WARNING:
+[35m[Appium][39m 
+[35m[Appium][39m   The 'automationName' capability was not provided in the desired 
+[35m[Appium][39m   capabilities for this Android session
+[35m[Appium][39m 
+[35m[Appium][39m   Setting 'automationName=UiAutomator1' by default and using the 
+[35m[Appium][39m   UiAutomator1 Driver
+[35m[Appium][39m 
+[35m[Appium][39m   The next minor version of Appium (1.14.x) will set 
+[35m[Appium][39m   'automationName=UiAutomator2' by default and use the UiAutomator2 
+[35m[Appium][39m   Driver
+[35m[Appium][39m 
+[35m[Appium][39m   The next major version of Appium (2.x) will **require** the 
+[35m[Appium][39m   'automationName' capability to be set for all sessions on all 
+[35m[Appium][39m   platforms
+[35m[Appium][39m 
+[35m[Appium][39m   If you are happy with 'UiAutomator1' and do not wish to upgrade 
+[35m[Appium][39m   Android drivers, please add 'automationName=UiAutomator1' to your 
+[35m[Appium][39m   desired capabilities
+[35m[Appium][39m 
+[35m[Appium][39m   For more information about drivers, please visit 
+[35m[Appium][39m   http://appium.io/docs/en/about-appium/intro/ and explore the 
+[35m[Appium][39m   'Drivers' menu
+[35m[Appium][39m 
+[35m[Appium][39m ======================================================================
+[35m[Appium][39m 
+[35m[Appium][39m Setting automation to 'UiAutomator1'. 
+[35m[Appium][39m Appium v1.13.0 creating new AndroidDriver (v4.16.0) session
+[35m[Appium][39m Capabilities:
+[35m[Appium][39m   platformName: Android
+[35m[Appium][39m   platformVersion: 5.1.1
+[35m[Appium][39m   deviceName: 127.0.0.1:62025
+[35m[Appium][39m   appPackage: com.jiandan.mobilelesson
+[35m[Appium][39m   appActivity: com.jiandan.mobilelesson.InstallOpenActivity
+[35m[Appium][39m   unicodeKeyboard: true
+[35m[Appium][39m   resetKeyboard: true
+[35m[Appium][39m   noReset: true
+[debug] [35m[BaseDriver][39m W3C capabilities {"alwaysMatch":{"platformNa... and MJSONWP desired capabilities {"platformName":"Android","... were provided
+[debug] [35m[BaseDriver][39m Creating session with W3C capabilities: {"alwaysMatch":{"platformNa...
+[35m[BaseDriver][39m Session created with session id: f2708ee6-b7fa-4d19-8d79-851ea0fa5461
+[35m[ADB][39m The ANDROID_HOME environment variable is not set to the Android SDK root directory path. ANDROID_HOME is required for compatibility with SDK 23+. Checking along PATH for adb.
+[35m[ADB][39m Using 'adb.exe' from 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe'
+[35m[AndroidDriver][39m Retrieving device list
+[debug] [35m[ADB][39m Trying to find a connected android device
+[debug] [35m[ADB][39m Getting connected devices...
+
 D:\myPythonProject\app_project\app_start_sync>
