@@ -1,9 +1,10 @@
 import unittest
 from BeautifulReport import BeautifulReport
 from time import sleep
+from app_project.common.myUnittest import StartEnd
 
 
-class Testing1(unittest.TestCase):
+class Testing1(StartEnd):
 
     def test_case1(self):
         """ceshi1"""

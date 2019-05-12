@@ -16,6 +16,12 @@ class ClassName:  # class(类)
         print("class外部可以通过set方法修改ClassName类中的私有属性__protect_var ：{}".format(self.__private_var))
 
 
+# python并没有真正的私有属性
+#
+# 用__定义的属性，只是被改名换姓而已
+#
+# 用_定义的属性，意义在于唤起用户的注意，看成私有属性
+
 somebody = ClassName(name="python", age=15)
 somebody.meth()
 
@@ -30,3 +36,4 @@ print("class外部可以直接修改ClassName类中的公共属性_protect_var �
 # print("class外部 不可以 直接访问ClassName类中的受保护属性_protect_var ：{}".format(somebody.__protect_var))
 print("class外部可以通过get方法访问ClassName类中的私有属性__protect_var ：{}".format(somebody.get_var()))
 somebody.set_var("***update私有属性***")
+print(dir(ClassName))

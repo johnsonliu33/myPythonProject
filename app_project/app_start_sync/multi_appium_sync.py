@@ -1,6 +1,10 @@
+# -*-coding:utf-8-*-
+
 import subprocess
 from time import strftime
+import multiprocessing
 from app_project.app_start_sync.appium_port import check_port, release_port
+from app_project.common.app_log import my_log
 
 
 def check_stats(host, port):
@@ -12,22 +16,31 @@ def check_stats(host, port):
 
 
 def appium_start(host, port):
+    logger = my_log()
+    # if True:
     if check_stats(host, port):  # 注释掉，不会每次都重启appium
+        """启动appium命令"""
         bootstrap_port = str(port + 1)
-        # 启动多个appium服务时，不要安装客户端
-        # npm install -g cnpm --registry=https://registry.npm.taobao.org
-        # cnpm install -g appium
         cmd = "start /b appium -a " + host + " -p " + str(port) + " -bp " + str(bootstrap_port)
-        # 说明：/b 不打开命令窗口; bp端口（ --bootstrap-port）是appium和设备之间通信的端口，如果不指定到时无法操作多台设备运行脚本。
-        print("{} at {}".format(cmd, strftime("%Y-%m-%d %H:%M:%S")))
+        logger.info("{} at {}".format(cmd, strftime("%Y-%m-%d %H:%M:%S")))
         subprocess.Popen(cmd, shell=True, stdout=open("./appium_log/" + str(port) + ".log", "a"),
                          stderr=subprocess.STDOUT)
-        return True
+
+
+def multi_appium(host, devices_list):
+    # 构建进程组
+    appium_pocess = []
+    for i in range(len(devices_list)):
+        port = 4723 + 2 * i
+        appium = multiprocessing.Process(target=appium_start, args=(host, port,))
+        appium_pocess.append(appium)
+    for app in appium_pocess:
+        app.start()
+    for app in appium_pocess:
+        app.join()
 
 
 if __name__ == '__main__':
     host = "127.0.0.1"
-    port = 4723
-    for i in range(2):
-        port = 4723 + 2 * i
-        appium_start(host, port)
+    devices_list = ["127.0.0.1:62001", "127.0.0.1:62025"]
+    multi_appium(host, devices_list)

@@ -1,14 +1,12 @@
 from app_project.common.app_common import Common
 from selenium.webdriver.common.by import By
 from app_project.baseView.desired_caps import appium_desired
-import logging.config
 from time import sleep
-CON_LOG = "../config/log.conf"
-logging.config.fileConfig(CON_LOG)
-logs = logging.getLogger()
+from app_project.common.app_log import my_log
 
 
 class LoginView(Common):
+    logger=my_log()
     username_type = (By.ID, "com.jiandan.mobilelesson:id/account_et")
     password_type = (By.ID, "com.jiandan.mobilelesson:id/password_et")
     login_btn = (By.ID, "com.jiandan.mobilelesson:id/login_btn")
@@ -17,9 +15,9 @@ class LoginView(Common):
         self.is_upgrade()
         self.get_screen_shot("login")
 
-        logs.info("login username: %s" % username)
+        self.logger.info("login username: %s" % username)
         self.driver.find_element(*self.username_type).send_keys(username)
-        logs.info("login password: %s" % password)
+        self.logger.info("login password: %s" % password)
         self.driver.find_element(*self.password_type).send_keys(password)
         self.driver.find_element(*self.login_btn).click()
         sleep(5)

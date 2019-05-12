@@ -2,35 +2,145 @@
 [35m[Appium][39m Non-default server args:
 [35m[Appium][39m   address: 127.0.0.1
 [35m[Appium][39m Appium REST http interface listener started on 127.0.0.1:4723
-
-D:\myPythonProject\app_project\baseView>.0
-[35m[Appium][39m Non-default server args:
-[35m[Appium][39m   address: 127.0.0.1
-[35m[HTTP][39m Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
-Fatal Error: listen EADDRINUSE: address already in use 127.0.0.1:4723
-    at Server.setupListenHandle [as _listen2] (net.js:1270:14)
-    at listenInCluster (net.js:1318:12)
-    at doListen (net.js:1451:7)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-
-D:\myPythonProject\app_project\baseView>[35m[Appium][39m Welcome to Appium v1.13.0
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m
+[35m[HTTP][39m [90m{"capabilities":{"firstMatch":[{"platformName":"Android","appium:platformVersion":"5.1.1","appium:deviceName":"127.0.0.1:62001","appium:appPackage":"com.jiandan.mobilelesson","appium:appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]},"desiredCapabilities":{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62001","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true}}[39m
+[debug] [35m[W3C][39m Calling AppiumDriver.createSession() with args: [{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62001","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true},null,{"firstMatch":[{"platformName":"Android","appium:platformVersion":"5.1.1","appium:deviceName":"127.0.0.1:62001","appium:appPackage":"com.jiandan.mobilelesson","appium:appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]}]
+[debug] [35m[BaseDriver][39m Event 'newSessionRequested' logged at 1557658463373 (18:54:23 GMT+0800 (GMT+08:00))
+[35m[Appium][39m 
+[35m[Appium][39m ======================================================================
+[35m[Appium][39m   DEPRECATION WARNING:
+[35m[Appium][39m 
+[35m[Appium][39m   The 'automationName' capability was not provided in the desired 
+[35m[Appium][39m   capabilities for this Android session
+[35m[Appium][39m 
+[35m[Appium][39m   Setting 'automationName=UiAutomator1' by default and using the 
+[35m[Appium][39m   UiAutomator1 Driver
+[35m[Appium][39m 
+[35m[Appium][39m   The next minor version of Appium (1.14.x) will set 
+[35m[Appium][39m   'automationName=UiAutomator2' by default and use the UiAutomator2 
+[35m[Appium][39m   Driver
+[35m[Appium][39m 
+[35m[Appium][39m   The next major version of Appium (2.x) will **require** the 
+[35m[Appium][39m   'automationName' capability to be set for all sessions on all 
+[35m[Appium][39m   platforms
+[35m[Appium][39m 
+[35m[Appium][39m   If you are happy with 'UiAutomator1' and do not wish to upgrade 
+[35m[Appium][39m   Android drivers, please add 'automationName=UiAutomator1' to your 
+[35m[Appium][39m   desired capabilities
+[35m[Appium][39m 
+[35m[Appium][39m   For more information about drivers, please visit 
+[35m[Appium][39m   http://appium.io/docs/en/about-appium/intro/ and explore the 
+[35m[Appium][39m   'Drivers' menu
+[35m[Appium][39m 
+[35m[Appium][39m ======================================================================
+[35m[Appium][39m 
+[35m[Appium][39m Setting automation to 'UiAutomator1'. 
+[35m[Appium][39m Appium v1.13.0 creating new AndroidDriver (v4.16.0) session
+[35m[Appium][39m Capabilities:
+[35m[Appium][39m   platformName: Android
+[35m[Appium][39m   platformVersion: 5.1.1
+[35m[Appium][39m   deviceName: 127.0.0.1:62001
+[35m[Appium][39m   appPackage: com.jiandan.mobilelesson
+[35m[Appium][39m   appActivity: com.jiandan.mobilelesson.InstallOpenActivity
+[35m[Appium][39m   unicodeKeyboard: true
+[35m[Appium][39m   resetKeyboard: true
+[35m[Appium][39m   noReset: true
+[debug] [35m[BaseDriver][39m W3C capabilities {"alwaysMatch":{"platformNa... and MJSONWP desired capabilities {"platformName":"Android","... were provided
+[debug] [35m[BaseDriver][39m Creating session with W3C capabilities: {"alwaysMatch":{"platformNa...
+[35m[BaseDriver][39m Session created with session id: b1c59665-5d80-4758-ab11-f8ccb70b2833
+[35m[ADB][39m The ANDROID_HOME environment variable is not set to the Android SDK root directory path. ANDROID_HOME is required for compatibility with SDK 23+. Checking along PATH for adb.
+[35m[ADB][39m Using 'adb.exe' from 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe'
+[35m[AndroidDriver][39m Retrieving device list
+[debug] [35m[ADB][39m Trying to find a connected android device
+[debug] [35m[ADB][39m Getting connected devices...
+[debug] [35m[ADB][39m 2 device(s) connected
+[35m[AndroidDriver][39m Looking for a device with Android '5.1.1'
+[debug] [35m[ADB][39m Setting device id to 127.0.0.1:62001
+[35m[ADB][39m Getting device platform version
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62001 shell getprop ro.build.version.release'
+[debug] [35m[ADB][39m Current device property 'ro.build.version.release': 5.1.1
+[35m[AndroidDriver][39m Using device: 127.0.0.1:62001
+[35m[ADB][39m The ANDROID_HOME environment variable is not set to the Android SDK root directory path. ANDROID_HOME is required for compatibility with SDK 23+. Checking along PATH for adb.
+[35m[ADB][39m Using 'adb.exe' from 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe'
+[debug] [35m[ADB][39m Setting device id to 127.0.0.1:62001
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62001 shell getprop ro.build.version.sdk'
+[debug] [35m[ADB][39m Current device property 'ro.build.version.sdk': 22
+[debug] [35m[ADB][39m Device API level: 22
+[35m[AndroidDriver][39m App file was not listed, instead we're going to run com.jiandan.mobilelesson directly on the device
+[debug] [35m[AndroidDriver][39m Checking whether package is present on the device
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62001 shell pm list packages com.jiandan.mobilelesson'
+[35m[AndroidDriver][39m Error: Could not find package com.jiandan.mobilelesson on the device
+[35m[AndroidDriver][39m     at Object.wrappedLogger.errorAndThrow (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\_appium-support@2.27.0@appium-support\lib\logging.js:78:13)
+[35m[AndroidDriver][39m     at AndroidDriver.errorAndThrow [as checkPackagePresent] (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\_appium-android-driver@4.16.0@appium-android-driver\lib\driver.js:389:11)
+[debug] [35m[AndroidDriver][39m Shutting down Android driver
+[debug] [35m[AndroidDriver][39m Called deleteSession but bootstrap wasn't active
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62001 shell am force-stop io.appium.unlock'
+[debug] [35m[AndroidDriver][39m Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+[debug] [35m[BaseDriver][39m Event 'newSessionStarted' logged at 1557658466244 (18:54:26 GMT+0800 (GMT+08:00))
+[debug] [35m[W3C][39m Encountered internal error running command: Error: Could not find package com.jiandan.mobilelesson on the device
+[debug] [35m[W3C][39m     at Object.wrappedLogger.errorAndThrow (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\_appium-support@2.27.0@appium-support\lib\logging.js:78:13)
+[debug] [35m[W3C][39m     at AndroidDriver.errorAndThrow [as checkPackagePresent] (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\_appium-android-driver@4.16.0@appium-android-driver\lib\driver.js:389:11)
+[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[31m500[39m [90m2937 ms - 739[39m
+[35m[HTTP][39m [90m[39m
+[35m[Appium][39m Welcome to Appium v1.13.0
 [35m[Appium][39m Non-default server args:
 [35m[Appium][39m   address: 127.0.0.1
 [35m[Appium][39m Appium REST http interface listener started on 127.0.0.1:4723
 
-D:\myPythonProject\app_project\baseView>.0
-[35m[Appium][39m Non-default server args:
-[35m[Appium][39m   address: 127.0.0.1
-[35m[HTTP][39m Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
-Fatal Error: listen EADDRINUSE: address already in use 127.0.0.1:4723
-    at Server.setupListenHandle [as _listen2] (net.js:1270:14)
-    at listenInCluster (net.js:1318:12)
-    at doListen (net.js:1451:7)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
+D:\myPythonProject\app_project\app_start_sync>lesson","appium:appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]},"desiredCapabilities":{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62001","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true}}[39m
+[debug] [35m[W3C][39m Calling AppiumDriver.createSession() with args: [{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62001","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true},null,{"firstMatch":[{"platformName":"Android","appium:platformVersion":"5.1.1","appium:deviceName":"127.0.0.1:62001","appium:appPackage":"com.jiandan.mobilelesson","appium:appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]}]
+[debug] [35m[BaseDriver][39m Event 'newSessionRequested' logged at 1557658743246 (18:59:03 GMT+0800 (GMT+08:00))
+[35m[Appium][39m 
+[35m[Appium][39m ======================================================================
+[35m[Appium][39m   DEPRECATION WARNING:
+[35m[Appium][39m 
+[35m[Appium][39m   The 'automationName' capability was not provided in the desired 
+[35m[Appium][39m   capabilities for this Android session
+[35m[Appium][39m 
+[35m[Appium][39m   Setting 'automationName=UiAutomator1' by default and using the 
+[35m[Appium][39m   UiAutomator1 Driver
+[35m[Appium][39m 
+[35m[Appium][39m   The next minor version of Appium (1.14.x) will set 
+[35m[Appium][39m   'automationName=UiAutomator2' by default and use the UiAutomator2 
+[35m[Appium][39m   Driver
+[35m[Appium][39m 
+[35m[Appium][39m   The next major version of Appium (2.x) will **require** the 
+[35m[Appium][39m   'automationName' capability to be set for all sessions on all 
+[35m[Appium][39m   platforms
+[35m[Appium][39m 
+[35m[Appium][39m   If you are happy with 'UiAutomator1' and do not wish to upgrade 
+[35m[Appium][39m   Android drivers, please add 'automationName=UiAutomator1' to your 
+[35m[Appium][39m   desired capabilities
+[35m[Appium][39m 
+[35m[Appium][39m   For more information about drivers, please visit 
+[35m[Appium][39m   http://appium.io/docs/en/about-appium/intro/ and explore the 
+[35m[Appium][39m   'Drivers' menu
+[35m[Appium][39m 
+[35m[Appium][39m ======================================================================
+[35m[Appium][39m 
+[35m[Appium][39m Setting automation to 'UiAutomator1'. 
+[35m[Appium][39m Appium v1.13.0 creating new AndroidDriver (v4.16.0) session
+[35m[Appium][39m Capabilities:
+[35m[Appium][39m   platformName: Android
+[35m[Appium][39m   platformVersion: 5.1.1
+[35m[Appium][39m   deviceName: 127.0.0.1:62001
+[35m[Appium][39m   appPackage: com.jiandan.mobilelesson
+[35m[Appium][39m   appActivity: com.jiandan.mobilelesson.InstallOpenActivity
+[35m[Appium][39m   unicodeKeyboard: true
+[35m[Appium][39m   resetKeyboard: true
+[35m[Appium][39m   noReset: true
+[debug] [35m[BaseDriver][39m W3C capabilities {"alwaysMatch":{"platformNa... and MJSONWP desired capabilities {"platformName":"Android","... were provided
+[debug] [35m[BaseDriver][39m Creating session with W3C capabilities: {"alwaysMatch":{"platformNa...
+[35m[BaseDriver][39m Session created with session id: 84e5933a-2929-4a03-bfbe-44c47035e182
+[35m[ADB][39m The ANDROID_HOME environment variable is not set to the Android SDK root directory path. ANDROID_HOME is required for compatibility with SDK 23+. Checking along PATH for adb.
+[35m[ADB][39m Using 'adb.exe' from 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe'
+[35m[AndroidDriver][39m Retrieving device list
+[debug] [35m[ADB][39m Trying to find a connected android device
+[debug] [35m[ADB][39m Getting connected devices...
+[debug] [35m[ADB][39m 2 device(s) connected
+[35m[AndroidDriver][39m Looking for a device with Android '5.1.1'
+[debug] [35m[ADB][39m Setting device id to 127.0.0.1:62001
+[35m[ADB][39m Getting device platform version
+[debug] [35m[ADB][39m Running 'C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe -P 5037 -s 127.0.0.1\:62001 shell getprop ro.build.version.release'
 
-D:\myPythonProject\app_project\baseView>[35m[Appium][39m Welcome to Appium v1.13.0
-[35m[Appium][39m Non-default server args:
-[35m[Appium][39m   address: 127.0.0.1
-[35m[Appium][39m Appium REST http interface listener started on 127.0.0.1:4723
-
-D:\myPythonProject\app_project\baseView>
+D:\myPythonProject\app_project\app_start_sync>

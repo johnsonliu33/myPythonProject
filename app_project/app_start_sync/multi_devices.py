@@ -35,8 +35,6 @@ def devices_start(uuid):
             driver = webdriver.Remote("http://" + desired["host"] + ":" + desired["port"] + "/wd/hub", _desired_caps)
             driver.implicitly_wait(8)
             logger.info("====== start run app ======")
-            isupg = IsUpgrade(driver)
-            isupg.is_upgrade()
             return driver
         except:
             logger.error("appium port : {} start Failed {} at {} ".format(desired["port"], desired["deviceName"],

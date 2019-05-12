@@ -1,30 +1,29 @@
 # coding:utf-8
 from app_project.businessView.app_login import LoginView
-from app_project.common.startEnd import StartEnd
+from app_project.common.myUnittest import StartEnd
 import unittest
-import logging.config
-
-CON_LOG = "../config/log.conf"
-logging.config.fileConfig(CON_LOG)
-logs = logging.getLogger()
-file_logs = logging.getLogger("fileLogger")
+from app_project.common.app_log import my_log
 
 
 class TestLogin(StartEnd):
+    logger = my_log()
     csv_file = "../data/loginUser.csv"
 
     def test_login_https005(self):
+        """登录测试"""
         test1 = LoginView(self.driver)
         data = test1.get_csv_data(self.csv_file, 1)
         test1.login_action(data)
 
     def test_login_https006(self):
+        """登录测试"""
         test1 = LoginView(self.driver)
         data = test1.get_csv_data(self.csv_file, 2)
         test1.login_action(data)
 
-    @unittest.skip("test_login_https007")
+    @unittest.skip("test_login_https007")  # 跳过
     def test_login_https007(self):
+        """登录测试"""
         test1 = LoginView(self.driver)
         data = test1.get_csv_data(self.csv_file, 3)
         test1.login_action(data)
