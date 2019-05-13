@@ -1,5 +1,5 @@
 from app_project.baseView.baseDriver import BaseDriver
-from app_project.baseView.desired_caps import devices_start
+# from app_project.baseView.desired_caps import devices_start
 import time, os, csv
 from app_project.common.app_log import my_log
 
@@ -43,9 +43,10 @@ class Common(BaseDriver):
 
 
 if __name__ == "__main__":
-    driver = devices_start("62001")
-    comm = Common(driver)
-    comm.get_screen_shot("upgrade")
-    comm.swipe_up()
-    csv_file = "../data/loginUser.csv"
-    comm.get_csv_data(csv_file, 3)
+    pass
+    # driver = devices_start("62001")
+    # comm = Common(driver)
+    # comm.get_screen_shot("upgrade")
+    # comm.swipe_up()
+    # csv_file = "../data/loginUser.csv"
+    # comm.get_csv_data(csv_file, 3)

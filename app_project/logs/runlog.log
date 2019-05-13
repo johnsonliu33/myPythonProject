@@ -52,3 +52,80 @@
 [INFO]  2019-05-12 22:56:15 multi_devices_sync.py[line:34] : appium port : 4725 start run 127.0.0.1:62025 at 2019-05-12 22:56:15 
 [ERROR]  2019-05-12 22:56:15 multi_devices_sync.py[line:41] : appium port : 4723 start Failed 127.0.0.1:62001 at 2019-05-12 22:56:15 
 [ERROR]  2019-05-12 22:56:16 multi_devices_sync.py[line:41] : appium port : 4725 start Failed 127.0.0.1:62025 at 2019-05-12 22:56:16 
+[INFO]  2019-05-14 00:16:35 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:16:35 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:16:37 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:16:45 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:16:45 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:16:45 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:16:53 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:16:53 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:16:53 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:01 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:17:01 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:01 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:09 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:17:09 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:11 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:30 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:17:30 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:30 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:32 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:32 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:40 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:17:40 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:17:40 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:40 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:40 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:40 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:48 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:17:48 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:17:48 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:48 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:48 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:48 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:56 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:17:56 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:56 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:17:56 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:17:56 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:17:56 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:18:04 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:18:04 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:18:04 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:18:04 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:18:06 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:18:06 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:18:14 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:18:14 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:18:14 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:18:14 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:18:14 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:18:14 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:18:22 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:18:22 myUnittest.py[line:19] : uuid=self.uuid
+===
+[INFO]  2019-05-14 00:18:22 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:18:22 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:18:22 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:18:30 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:18:30 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:18:30 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:18:30 myUnittest.py[line:19] : uuid=self.uuid
+[INFO]  2019-05-14 00:18:30 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:18:30 myUnittest.py[line:23] : ====== tearDown ======
+[INFO]  2019-05-14 00:37:11 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:37:11 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:37:13 myUnittest.py[line:22] : ====== tearDown ======
+[INFO]  2019-05-14 00:37:13 myUnittest.py[line:22] : ====== tearDown ======
+[INFO]  2019-05-14 00:37:21 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:37:21 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:37:21 myUnittest.py[line:22] : ====== tearDown ======
+[INFO]  2019-05-14 00:37:21 myUnittest.py[line:22] : ====== tearDown ======
+[INFO]  2019-05-14 00:37:29 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:37:29 myUnittest.py[line:22] : ====== tearDown ======
+[INFO]  2019-05-14 00:37:29 myUnittest.py[line:22] : ====== tearDown ======
+[INFO]  2019-05-14 00:37:37 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:37:37 myUnittest.py[line:18] : ====== setUp ======
+[INFO]  2019-05-14 00:37:37 myUnittest.py[line:22] : ====== tearDown ======
+[INFO]  2019-05-14 00:37:37 myUnittest.py[line:22] : ====== tearDown ======

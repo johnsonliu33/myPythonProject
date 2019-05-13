@@ -350,7 +350,8 @@ D:\myPythonProject\app_project\app_start_sync>[35m[Appium][39m Welcome to Appi
 [35m[Appium][39m   port: 4725
 [35m[Appium][39m   bootstrapPort: 4726
 [35m[Appium][39m Appium REST http interface listener started on 127.0.0.1:4725
-":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]},"desiredCapabilities":{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62025","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true}}[39m
+
+D:\myPythonProject\app_project\app_start_sync>,"appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]},"desiredCapabilities":{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62025","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true}}[39m
 [debug] [35m[W3C][39m Calling AppiumDriver.createSession() with args: [{"platformName":"Android","platformVersion":"5.1.1","deviceName":"127.0.0.1:62025","appPackage":"com.jiandan.mobilelesson","appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","unicodeKeyboard":true,"resetKeyboard":true,"noReset":true},null,{"firstMatch":[{"platformName":"Android","appium:platformVersion":"5.1.1","appium:deviceName":"127.0.0.1:62025","appium:appPackage":"com.jiandan.mobilelesson","appium:appActivity":"com.jiandan.mobilelesson.InstallOpenActivity","appium:unicodeKeyboard":true,"appium:resetKeyboard":true,"appium:noReset":true}]}]
 [debug] [35m[BaseDriver][39m Event 'newSessionRequested' logged at 1557672975872 (22:56:15 GMT+0800 (GMT+08:00))
 [35m[Appium][39m 
