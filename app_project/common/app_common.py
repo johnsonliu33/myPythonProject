@@ -43,7 +43,7 @@ class Common(BaseDriver):
 
 
 if __name__ == "__main__":
-    driver = devices_start()
+    driver = devices_start("62001")
     comm = Common(driver)
     comm.get_screen_shot("upgrade")
     comm.swipe_up()

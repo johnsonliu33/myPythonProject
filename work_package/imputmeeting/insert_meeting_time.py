@@ -1,6 +1,7 @@
 import xlrd
 import datetime
 from pymongo import MongoClient
+import pytz
 
 
 def get_mongo():
@@ -25,12 +26,10 @@ def get_id(collect, user, init=123):
     # upsert=true时，匹配不到数据会插入一条新数据
     getRes = collect.find_one_and_update({"_id": user}, {"$inc": {"seq": 1}, "$set": {
         "updatedAt": datetime.datetime.utcnow()}}, new=True, upsert=True, setDefaultsOnInsert=True)
-    print("getRes===", getRes)
     if getRes and (getRes["seq"] < init):
         getRes = collect.find_one_and_update({"_id": user},
                                              {"$inc": {"seq": init}, "$set": {"updatedAt": datetime.datetime.utcnow()}},
                                              new=True, upsert=True, setDefaultsOnInsert=True)
-
     return getRes["seq"]
 
 
@@ -57,11 +56,10 @@ def exec(meetingtimes_collect, seqidgens_collect):
         # book.datemode 以日期方式显示该单元数据
         date_value = xlrd.xldate_as_tuple(sheet.cell_value(i, 1), book.datemode)
         time_value = xlrd.xldate_as_tuple(sheet.cell_value(i, 3), book.datemode)
-        meeting_date = datetime.datetime(date_value[:3][0], date_value[:3][1], date_value[:3][2], time_value[3:][0],
+        meeting_date = datetime.datetime(date_value[:3][0], date_value[:3][1], date_value[:3][2],
+                                         time_value[3:][0],
                                          time_value[3:][1], time_value[3:][2])
-
-        gradeType = ""
-
+        meeting_date = meeting_date + datetime.timedelta(hours=-8)
         if grade == "初中":
             gradeType = "cz"
         else:
