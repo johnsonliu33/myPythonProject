@@ -1,7 +1,6 @@
 import unittest, time
 from BeautifulReport import BeautifulReport
 from multiprocessing import Process
-from app_project.common.myUnittest import StartEnd
 
 
 def runing(uuid):

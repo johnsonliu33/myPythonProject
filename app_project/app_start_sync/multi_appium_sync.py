@@ -1,9 +1,10 @@
 # -*-coding:utf-8-*-
 import subprocess
-from time import strftime
 from multiprocessing import Process
-from app_project.app_start_sync.appium_port import check_port, release_port
-from app_project.common.app_log import my_log
+from time import strftime
+
+from app_project.src.baseView.appium_port import check_port, release_port
+from app_project.src.util.app_log import my_log
 
 
 def check_stats(host, port):

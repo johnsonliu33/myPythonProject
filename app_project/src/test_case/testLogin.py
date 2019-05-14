@@ -1,8 +1,10 @@
 # coding:utf-8
-from app_project.businessView.app_login import LoginView
-from app_project.common.myUnittest import StartEnd
 import unittest
-from app_project.common.app_log import my_log
+
+from app_project.common.myUnittest import StartEnd
+
+from app_project.src.businessView.app_login import LoginView
+from app_project.src.util.app_log import my_log
 
 
 class TestLogin(StartEnd):

@@ -1,8 +1,10 @@
+from time import sleep
+
 from app_project.common.app_common import Common
 from selenium.webdriver.common.by import By
-from app_project.baseView.desired_caps import devices_start
-from time import sleep
-from app_project.common.app_log import my_log
+
+from app_project.src.baseView.desired_caps import devices_start
+from app_project.src.util.app_log import my_log
 
 
 class LoginView(Common):

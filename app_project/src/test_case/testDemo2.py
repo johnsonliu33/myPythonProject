@@ -1,10 +1,12 @@
 import unittest
-from BeautifulReport import BeautifulReport
 from time import sleep
-from app_project.common.myUnittest import StartEnd
+
+from BeautifulReport import BeautifulReport
+
+from app_project.src.common.myUnittest import StartEnd
 
 
-class Testing1(StartEnd):
+class Testing2(StartEnd):
 
     def test_case1(self):
         """ceshi1"""
@@ -23,7 +25,7 @@ class Testing1(StartEnd):
         print("test2")
         self.assertTrue(True)
 
-    @BeautifulReport.add_test_img('error_img.png')
+    @BeautifulReport.add_test_img("error_img.png")
     def test_case4(self):
         """ceshi4"""
         print("test2")

@@ -1,11 +1,14 @@
 # adb connect 127.0.0.1:62025
 # -*- coding:utf-8 -*-
-import yaml, os
-from appium import webdriver
-from time import strftime
+import os
 from multiprocessing import Process
-from app_project.common.app_log import my_log
-from app_project.app_start_sync.multi_appium import appium_start
+from time import strftime
+
+import yaml
+from appium import webdriver
+
+from app_project.src.baseView.multi_appium import appium_start
+from app_project.src.util.app_log import my_log
 
 
 def get_desired(yamlName):

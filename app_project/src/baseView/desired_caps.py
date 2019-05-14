@@ -1,10 +1,14 @@
 # adb connect 127.0.0.1:62025
 # -*- coding:utf-8 -*-
-import yaml, os
-from appium import webdriver
-from app_project.common.app_log import my_log
+import os
 from time import strftime
-from app_project.app_start_sync.multi_appium import appium_start
+
+import yaml
+from app_project.common.testUpgrade import IsUpgrade
+from appium import webdriver
+
+from app_project.src.baseView.multi_appium import appium_start
+from app_project.src.util.app_log import my_log
 
 
 def get_desired(yamlName):
@@ -33,7 +37,9 @@ def devices_start(uuid):
                                                                       strftime("%Y-%m-%d %H:%M:%S")))
             driver = webdriver.Remote("http://" + desired["host"] + ":" + desired["port"] + "/wd/hub", _desired_caps)
             driver.implicitly_wait(8)
-            logger.info("====== start run app ======")
+            logger.info("====== start run app : {}======".format(desired["deviceName"]))
+            isupg = IsUpgrade(driver)
+            isupg.is_upgrade()
             return driver
         except:
             logger.error("appium port : {} start Failed {} at {} ".format(desired["port"], desired["deviceName"],
