@@ -4,7 +4,7 @@ import os
 from time import strftime
 
 import yaml
-from app_project.common.testUpgrade import IsUpgrade
+from app_project.src.common.testUpgrade import IsUpgrade
 from appium import webdriver
 
 from app_project.src.baseView.multi_appium import appium_start
@@ -18,7 +18,7 @@ def get_desired(yamlName):
     return desired
 
 
-def devices_start(uuid):
+def devices_start():
     logger = my_log()
     desired = get_desired(uuid)
     if appium_start(desired["host"], int(desired["port"])):
