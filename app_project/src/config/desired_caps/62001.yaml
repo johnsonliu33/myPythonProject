@@ -1,0 +1,18 @@
+platformName: Android
+platformVersion: 5.1.1
+
+### mx4真机
+#platformVersion: 5.1
+#udid: 750BBKL22GDN
+#deviceName: MX4
+
+appPackage: com.jiandan.mobilelesson
+appActivity: com.jiandan.mobilelesson.InstallOpenActivity
+#appPackage: com.guideclasspad
+#appActivity: com.guideclasspad.MainActivity
+unicodeKeyboard: true
+resetKeyboard: true
+noReset: true
+deviceName: 127.0.0.1:62001
+host: "127.0.0.1"
+port: "4723"
