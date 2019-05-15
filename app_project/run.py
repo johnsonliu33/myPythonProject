@@ -1,5 +1,5 @@
 import unittest, time
-from app_project.BeautifulReport.BeautifulReport import BeautifulReport
+from BeautifulReport import BeautifulReport
 
 test_suit = unittest.defaultTestLoader.discover("src/test_case", pattern="testDemo*.py")
 result = BeautifulReport(test_suit)
