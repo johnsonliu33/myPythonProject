@@ -16,8 +16,8 @@ class People:
 # f.close()
 
 f = open("pickle_demo", "rb")
-pcd = pickle.load(f)  # pickle写入只能用pickle读取，其他编程语言不能读取,读取恶意代码有风险
+pic = pickle.load(f)  # pickle写入只能用pickle读取，其他编程语言不能读取,读取恶意代码有风险
 f.close()
 # pickle读取的时候必须要有写入的方法
-print(pcd, pcd.name, pcd.age)
-pcd.hello()  # 可以调用People类中的hello方法
+print(pic, pic.name, pic.age)
+pic.hello()  # 可以调用People类中的hello方法
