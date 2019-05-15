@@ -10,3 +10,11 @@ d = [item for item in a if item % 2 == 0]
 print(d)  # [2, 4, 6]
 print(5 / 2)  # 2.5  求商
 print(5 % 2)  # 1  取余
+
+# 字典解析式
+tmp = {x: (x, x + 1) for x in range(3)}
+print(tmp)  # {0: (0, 1), 1: (1, 2), 2: (2, 3)}
+tmp = {x: [x, x + 1] for x in range(3)}
+print(tmp)  # {0: [0, 1], 1: [1, 2], 2: [2, 3]}
+tmp = {x: {x, x + 1} for x in range(3)}
+print(tmp)  # {0: {0, 1}, 1: {1, 2}, 2: {2, 3}}
