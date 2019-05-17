@@ -6,7 +6,7 @@ import os
 DBUSER = "guideclass"  # 用户
 DBPASS = "zaq1xsw2"  # 密码
 IP = "172.16.0.166"  # 主机
-now = time.strftime("%Y-%m-%d")
+# now = time.strftime("%Y-%m-%d")
 DATA_DIR = "./back_data"  # 目录
 DATA_BASE = "guideclass_ceshi2"  # 库名
 PATH_DUMP = "/usr/local/mongodb/bin/mongodump"  # 命令路径

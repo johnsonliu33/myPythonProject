@@ -64,8 +64,8 @@ def exec(meetingtimes_collect, seqidgens_collect):
             gradeType = "cz"
         else:
             gradeType = "gz"
+        # "id": create_id(get_id(seqidgens_collect, "meetingTimeId", 1000000)),
         records = {
-            "id": create_id(get_id(seqidgens_collect, "meetingTimeId", 1000000)),
             "isValid": True,
             "classTime": meeting_date,
             "duration": 30,
