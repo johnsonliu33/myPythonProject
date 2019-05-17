@@ -12,6 +12,7 @@ print((datetime.datetime.now() + datetime.timedelta(days=-1)).strftime("%Y-%m-%d
 # 可以把days改为 hours / minutes，就可以提前XX小时/分钟。
 meeting_date = datetime.datetime(2019, 5, 13, 6, 30, 0) + datetime.timedelta(hours=-8)
 print(meeting_date)
+#格式化指定时间为UTC时间
 meeting_date = datetime.datetime(2019, 5, 13, 6, 30, 0)
 print(meeting_date)
 
