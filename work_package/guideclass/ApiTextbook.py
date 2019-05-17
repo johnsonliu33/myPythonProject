@@ -1,4 +1,3 @@
-import pymysql
 import requests
 import json
 from urllib import parse
