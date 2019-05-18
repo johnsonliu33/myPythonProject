@@ -4,7 +4,7 @@ import os
 from time import strftime
 
 import yaml
-from app_project.src.common.testUpgrade import IsUpgrade
+from app_project.src.common.is_upgrade import IsUpgrade
 from appium import webdriver
 
 from app_project.src.baseView.appium_start import appium_start

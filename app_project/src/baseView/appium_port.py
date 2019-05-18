@@ -2,7 +2,7 @@
 
 import socket
 import os
-from app_project.src.ut.app_log import my_log
+from app_project.src.util.app_log import my_log
 
 
 # os.popen() 功能强于os.system() , os.popen() 可以返回回显的内容，以文件描述符返回。

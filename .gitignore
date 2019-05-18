@@ -1,2 +1,4 @@
 .idea/
 *.log
+*.apk
+__pycache__/
