@@ -1,13 +1,12 @@
 import xlrd
 import datetime
 from pymongo import MongoClient
-import pytz
 
 
 def get_mongo():
-    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi"
+    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi2"
     client = MongoClient(uri)
-    collection = client["guideclass_ceshi"]
+    collection = client["guideclass_ceshi2"]
     return collection
 
 

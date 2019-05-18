@@ -15,7 +15,7 @@ def file_list(dir_name):
         else:
             file_name = os.path.join(dir_name, child_name)
             global count
-            count = count + 1
+            count += 1
             size = os.path.getsize(file_name)
             global all_size
             all_size = all_size + size

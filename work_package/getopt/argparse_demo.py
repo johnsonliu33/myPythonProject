@@ -45,7 +45,7 @@ class ArgParseDemo:
             # 判断文件是否为目录
             if not os.path.isdir(filepath):
                 # 判断文件是否是图片
-                if imghdr.what(filepath) != None:
+                if imghdr.what(filepath) is not None:
                     # 将图片存入列表
                     images.append(filepath)
             else:  # 若文件是目录，递归遍历文件，有图片就存入images集合
