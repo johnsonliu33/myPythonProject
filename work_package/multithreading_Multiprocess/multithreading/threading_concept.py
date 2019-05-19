@@ -120,6 +120,7 @@ for j in range(3):
 time.sleep(0.5)  # 主线程暂停0.5s
 print(threading.active_count())  # 输出当前你活跃的线程数4
 
+
 # 由于主线程比子线程快很多，当主线程执行active_count()时，其他子线程都还没执行完成，
 # 因此利用主线程统计活跃的线程数num=1(主线程本身)
 def run5(x):
@@ -133,4 +134,4 @@ for j in range(3):
 time.sleep(1)  # 主线程暂停1s
 print(threading.active_count())  # 输出当前你活跃的线程数1
 
-#在Python内部默认会等待最后一个进程执行完后执行exit()，或者说在python内部有一个隐藏的join()
+# 在Python内部默认会等待最后一个进程执行完后执行exit()，或者说在python内部有一个隐藏的join()

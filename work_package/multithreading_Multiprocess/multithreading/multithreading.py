@@ -9,9 +9,9 @@
 #     线程共享同一块CPU。
 
 # 线程常用方法：
-    # start() 线程准备就绪，等待CPU调度
-    # setName()   为线程设置名称
-    # getName()   获取线程名称
-    # setDaemon(True) 设置为守护线程
-    # join()  逐个执行每个线程，执行完毕后往下执行
-    # run()   线程被CPU调度后自动执行线程对象的run方法，重写run方法可以自定义线程类
+# start() 线程准备就绪，等待CPU调度
+# setName()   为线程设置名称
+# getName()   获取线程名称
+# setDaemon(True) 设置为守护线程
+# join()  逐个执行每个线程，执行完毕后往下执行
+# run()   线程被CPU调度后自动执行线程对象的run方法，重写run方法可以自定义线程类

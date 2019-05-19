@@ -66,8 +66,6 @@ print("访问模式 : ", fo.mode)
 # print ("末尾是否强制加空格 : ", fo.softspace)
 
 
-
-
 localtime = time.localtime(time.time())
 print("本地:", localtime)
 print(time.clock())
@@ -90,34 +88,44 @@ print("重新读取字符串 : ", str)
 # 关闭打开的文件
 fo.close()
 
-print ("=================不定长参数函数==================")
+print("=================不定长参数函数==================")
+
+
 def functionname(formal_args, *var_args):
     # * 可以代表一个不定长参数
     print(formal_args)
     print(var_args)
     print(type(var_args))
-    print ("----------")
+    print("----------")
     return True
+
+
 functionname("这是一个可变参数")
-functionname("这是一个可变参数","aaa","bbb","ccc")
+functionname("这是一个可变参数", "aaa", "bbb", "ccc")
+
+print("=================类和方法==================")
 
 
-print ("=================类和方法==================")
 class Allfc():
     def add(self):
         # 无 return
         print("==add==")
+
     def acc(self):
         # 有 return
         return "==acc=="
+
     def aee(self, a, b):
         # 有参数，无默认值
-        print (a+b)
+        print(a + b)
+
     def aff(self, a=1, b=2):
         # 有参数默认值
-        print (a+b)
-a=Allfc()
+        print(a + b)
+
+
+a = Allfc()
 a.add()
 a.acc()
-a.aee(2,3)
+a.aee(2, 3)
 a.aff()
