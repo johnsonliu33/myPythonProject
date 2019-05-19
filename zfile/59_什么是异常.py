@@ -3,6 +3,7 @@ a = [9, 4, 6, 11, 34, 0, 5, 44, 21, 10]
 b = [item for item in a if 100 % item == 0]
 print(b)
 
+
 # 内置的异常
 
 """
