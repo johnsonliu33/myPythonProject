@@ -1,11 +1,7 @@
 a = [9, 4, 6, 11, 34, 0, 5, 44, 21, 10]
-try:
-    b = [item for item in a if 100 % item == 0]
-except Exception as  e:
-    print(e)
-else:
-    print(b)
 
+b = [item for item in a if 100 % item == 0]
+print(b)
 
 # 内置的异常
 
@@ -16,7 +12,6 @@ else:
              |                                          |
           内置异常                                  用户自定义的异常
 """
-
 
 # AttributeError
 
