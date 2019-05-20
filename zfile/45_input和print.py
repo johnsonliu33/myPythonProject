@@ -5,4 +5,4 @@
 print("hello word", "python", sep="-", end="***")  # hello word-python***
 import sys
 
-sys.stdout.write("\nare you ok!")  # are you ok!
+sys.stdout.write("\n are you ok!")  # are you ok!
