@@ -9,7 +9,7 @@ def gethtml():
                "Connection: keep-alive",
                "Host: vip.jd100.com",
                "Upgrade-Insecure-Requests: 1"}
-    url = "https://vip.jd100.com/g1/freelesson/"
+    url = "http://www.xiaohuar.com"
     response = requests.get(url)
     # print(response.encoding)
     html = response.content
@@ -30,17 +30,17 @@ def getcontent(htmltxt):
     return content  # 得到网页的内容
 
 
-def gettitle(content, beg=0):
+def gettitle(content, begin=0):
     # 思路是利用str.index()和序列的切片
     try:
         title_list = []
         while True:
-            num1 = content.index('"free_lessonTil">', beg)
+            num1 = content.index('"free_lessonTil">', begin)
             num2 = content.index('</dd>', num1)
             temp = content[num1: num2]
             titl = temp.split('>')
             title_list.append(titl[1])
-            beg = num2
+            begin = num2
     except ValueError:
         return title_list
 

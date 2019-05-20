@@ -14,7 +14,6 @@ def collec_mongo1():
 
 
 def collec_mongo2():
-    ##链接MongoDB
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi"
     client2 = MongoClient(uri)
     # A

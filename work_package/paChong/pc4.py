@@ -4,7 +4,7 @@ import hashlib
 import time
 from concurrent.futures import ThreadPoolExecutor
 
-p = ThreadPoolExecutor(30)  # 创建1个程池中，容纳线程个数为30个；
+p = ThreadPoolExecutor(30)  # 创建1个线程池，容纳线程个数为30个；
 
 
 def get_index(url):
@@ -29,7 +29,7 @@ def get_detail(url):  # 只下载1个视频
         if mp4_url_list:
             mp4_url = mp4_url_list[0]
             print(mp4_url)
-            # save(mp4_url)
+            save(mp4_url)
 
 
 def save(url):

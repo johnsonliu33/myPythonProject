@@ -43,7 +43,6 @@ def get_args():
         -a ADD, --add ADD  add something
         -m, --move         The way to operate the file is to move
         -c, --copy         The way to operate the file is to copy
-
     """
     # 输出 usage
     parser.format_usage()  # 不打印
