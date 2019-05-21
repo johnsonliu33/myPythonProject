@@ -1,6 +1,5 @@
 import requests
 import re
-from time import sleep
 url = "https://huke88.com/course/30973.html"
 header_dict = {
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",

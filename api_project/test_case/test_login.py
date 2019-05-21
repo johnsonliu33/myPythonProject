@@ -1,11 +1,20 @@
 # -*- coding:utf-8 -*-
 #
 import re
+from api_project.apiView.HomePage import HomePage
+import unittest
 from api_project.apiView.action_login import LoginPage
-from api_project.common.myUnittest import StartEnd
 
 
-class test_login(StartEnd):
+class Test_Login(unittest.TestCase):
+    def setUp(self):
+        print("====== setUp ======")
+        start = HomePage()
+        cont = start.home_page()
+        key = "<title>(.+?)</title>"
+        temp = re.findall(key, cont)
+        self.assertEqual(temp[0], "用户登录")
+
     def test_login_true(self):
         body = {
             "role": "1",
@@ -14,9 +23,8 @@ class test_login(StartEnd):
         }
         loginp = LoginPage()
         resp = loginp.login_page(body)
-        key = '"message": "(.+?)",'
+        key = '"message":"(.+?)"'
         temp = re.findall(key, resp)
-        print(temp)
         self.assertEqual(temp[0], "登录成功")
 
     def test_login_fasle(self):
@@ -27,20 +35,25 @@ class test_login(StartEnd):
         }
         loginp = LoginPage()
         resp = loginp.login_page(body)
-        key = '"message": "(.+?)",'
+        key = '"message":"(.+?)"'
         temp = re.findall(key, resp)
-        print(temp)
         self.assertEqual(temp[0], "用户名或密码错误")
 
     def test_login_fasle2(self):
         body = {
             "role": "1",
-            "username": "teacherlengjing",
-            "password": "22222"
+            "username": "https001",
+            "password": "11111"
         }
         loginp = LoginPage()
         resp = loginp.login_page(body)
-        key = '"message": "(.+?)",'
+        key = '"message":"(.+?)"'
         temp = re.findall(key, resp)
-        print(temp)
         self.assertEqual(temp[0], "该账号未授权")
+
+    def tearDown(self):
+        print("====== tearDown ======")
+
+
+if __name__ == '__main__':
+    unittest.main()

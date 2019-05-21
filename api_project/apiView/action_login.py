@@ -1,14 +1,12 @@
 # -*- coding:utf-8 -*-
 #
 import requests
-from api_project.common.myUnittest import StartEnd
 
-
-class LoginPage(StartEnd):
+class LoginPage():
     def login_page(self, body):
         uri = "http://172.16.0.210:3030/api/login"
         resp = requests.post(url=uri, json=body)
-        print(resp.status_code)
+        print("登录：",resp.status_code)
         return resp.content.decode("utf-8")
 
 
