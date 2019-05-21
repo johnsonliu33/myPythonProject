@@ -11,13 +11,14 @@ def get_csv_data(file_name, line):
 
 def insert_csv_data(file_name, data_list):
     with open(file_name, "a", newline="") as file:
-        csv_write = csv.writer(file, dialect="excle")
+        csv_write = csv.writer(file, dialect="excel")
         for i in range(len(data_list)):
-            csv_write.write(data_list[i])
+            csv_write.writerow(data_list[i])
 
 
 if __name__ == '__main__':
     csv_file = "../app_project/src/data/loginUser.csv"
     data = get_csv_data(csv_file, 1)
     print(data)
-    user1 = []
+    user1 = [["https006", 11111], ["https008", 11111]]
+    insert_csv_data(csv_file, user1)
