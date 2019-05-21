@@ -38,8 +38,9 @@ class Common(BaseDriver):
     def get_csv_data(file_name, line):
         with open(file_name, "r", encoding="utf-8-sig") as file:
             read = csv.reader(file)
-            for row in enumerate(read, line):
-                return row
+            for index, row in enumerate(read):
+                if index == line:
+                    return row
 
 
 if __name__ == "__main__":

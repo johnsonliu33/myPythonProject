@@ -4,9 +4,9 @@ import csv
 def get_csv_data(file_name, line):
     with open(file_name, 'r', encoding='utf-8-sig')as file:
         read = csv.reader(file)
-        for index, row in enumerate(read, line):  # index为行号 # row是该行内容.  # line表示读第几行数据,没有默认为0
-            print(index, row)
-            return row
+        for index, row in enumerate(read):  # index为行号 # row是该行内容.  # line表示坐标从line开始计数,默认index从0开始
+            if index == line:
+                return row
 
 
 def insert_csv_data(file_name, data_list):
@@ -18,6 +18,6 @@ def insert_csv_data(file_name, data_list):
 
 if __name__ == '__main__':
     csv_file = "../app_project/src/data/loginUser.csv"
-    data = get_csv_data(csv_file, 3)
+    data = get_csv_data(csv_file, 1)
     print(data)
     user1 = []
