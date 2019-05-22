@@ -1,12 +1,12 @@
 # -*- coding:utf-8 -*-
 #
-import re
 import unittest
-from api_project.apiView.updateStudentInfo import UpdateStudentInfo
-from api_project.apiView.action_login import LoginPage
+import re
+from api_project.apiView.actionLogin import LoginPage
+from api_project.apiView.examNoneStudent import ExamNoneStudent
 
 
-class TestUpdateStudent(unittest.TestCase):
+class Test_ExamNoneStudent(unittest.TestCase):
     def setUp(self):
         print("====== setUp ======")
         loginp = LoginPage()
@@ -15,13 +15,13 @@ class TestUpdateStudent(unittest.TestCase):
             "username": "teacherlengjing",
             "password": "11111"
         }
-        loginp.login_page(body)
-
+        resp = loginp.login_page(body)
+        self.session = resp[1]
 
     def test_exam_true(self):
-        ens = UpdateStudentInfo()
+        ens = ExamNoneStudent()
         data = {"guider": "teacherlengjing"}
-        resp = ens.get_ExamNone(data)
+        resp = ens.get_ExamNone(self.session, data)
         key = '"success":(.+?),'
         temp = re.findall(key, resp)
         self.assertEqual(temp[0], "true")

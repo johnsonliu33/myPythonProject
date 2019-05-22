@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 #
 import re
-from api_project.apiView.HomePage import HomePage
+from api_project.apiView.homePage import HomePage
 import unittest
-from api_project.apiView.action_login import LoginPage
+from api_project.apiView.actionLogin import LoginPage
 
 
 class Test_Login(unittest.TestCase):
@@ -24,7 +24,7 @@ class Test_Login(unittest.TestCase):
         loginp = LoginPage()
         resp = loginp.login_page(body)
         key = '"message":"(.+?)"'
-        temp = re.findall(key, resp)
+        temp = re.findall(key, resp[0])
         self.assertEqual(temp[0], "登录成功")
 
     def test_login_fasle(self):
@@ -36,7 +36,7 @@ class Test_Login(unittest.TestCase):
         loginp = LoginPage()
         resp = loginp.login_page(body)
         key = '"message":"(.+?)"'
-        temp = re.findall(key, resp)
+        temp = re.findall(key, resp[0])
         self.assertEqual(temp[0], "用户名或密码错误")
 
     def test_login_fasle2(self):
@@ -48,7 +48,7 @@ class Test_Login(unittest.TestCase):
         loginp = LoginPage()
         resp = loginp.login_page(body)
         key = '"message":"(.+?)"'
-        temp = re.findall(key, resp)
+        temp = re.findall(key, resp[0])
         self.assertEqual(temp[0], "该账号未授权")
 
     def tearDown(self):
