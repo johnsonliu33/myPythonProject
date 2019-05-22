@@ -16,6 +16,7 @@ class Test_Login(unittest.TestCase):
         self.assertEqual(temp[0], "用户登录")
 
     def test_login_true(self):
+        """登录-成功"""
         body = {
             "role": "1",
             "username": "teacherlengjing",

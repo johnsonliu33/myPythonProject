@@ -15,6 +15,7 @@ def get_desired(yamlName):
     root_dir = os.path.dirname(os.path.dirname(__file__))
     with open(root_dir + "/config/desired_caps/" + yamlName + ".yaml", "r", encoding="utf-8") as file:
         desired = yaml.load(file, Loader=yaml.FullLoader)
+        # 或者 desired = yaml.full_load(file)
     return desired
 
 

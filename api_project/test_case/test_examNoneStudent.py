@@ -19,6 +19,7 @@ class Test_ExamNoneStudent(unittest.TestCase):
         self.session = resp[1]
 
     def test_exam_true(self):
+        """未定首测学员"""
         ens = ExamNoneStudent()
         data = {"guider": "teacherlengjing"}
         resp = ens.get_ExamNone(self.session, data)

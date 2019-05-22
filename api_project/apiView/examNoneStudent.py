@@ -8,7 +8,7 @@ class ExamNoneStudent:
     def get_ExamNone(self, session, data, ):
         uri = "http://172.16.0.210:3030/api/getExamNoneStudents"
         resp = session.get(url=uri, params=data)
-        print("未首测学员：", resp.status_code)
+        # print("未首测学员：", resp.status_code)
         return resp.content.decode("utf-8")
 
 
