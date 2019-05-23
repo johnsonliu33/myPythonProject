@@ -7,7 +7,8 @@ from api_project.apiView.actionLogin import LoginPage
 
 
 class TestUpdateStudentInfo(unittest.TestCase):
-    def setUp(self):
+    @classmethod
+    def setUpClass(cls):
         print("====== setUp ======")
         loginp = LoginPage()
         body = {
@@ -16,7 +17,7 @@ class TestUpdateStudentInfo(unittest.TestCase):
             "password": "11111"
         }
         resp=loginp.login_page(body)
-        self.session=resp[1]
+        cls.session=resp[1]
 
     def test_exam_true(self):
         """修改学生信息-成功"""
@@ -43,7 +44,8 @@ class TestUpdateStudentInfo(unittest.TestCase):
         temp = re.findall(key, resp)
         self.assertEqual(temp[0], "true")
 
-    def tearDown(self):
+    @classmethod
+    def tearDownClass(cls):
         print("====== tearDown ======")
 
 
