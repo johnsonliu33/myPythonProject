@@ -2,19 +2,20 @@
 #
 import requests
 import yaml
+import os
 
 
 class LoginPage:
     def __init__(self):
-        with open("../config/host.yaml", "r", encoding="utf-8") as file:
+        file_path = os.path.dirname(os.path.dirname(__file__))
+        with open(file_path + "/config/host.yaml", "r", encoding="utf-8") as file:
             self.host = yaml.full_load(file)
-            print(self.host)
 
     def login_page(self, body):
-        uri = "http://172.16.0.210:3000/api/login"
+        uri = "http://" + self.host["host"] + ":3030" + "/api/login"
         session = requests.session()
         resp = session.post(url=uri, data=body)
-        print("登录：", resp.status_code)
+        # print("登录：", resp.status_code)
         return resp.content.decode("utf-8"), session
 
 

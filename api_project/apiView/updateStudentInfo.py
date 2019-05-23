@@ -1,11 +1,18 @@
 # -*- coding:utf-8 -*-
 #
+import os
+import yaml
 from api_project.apiView.actionLogin import LoginPage
 
 
 class UpdateStudentInfo:
+    def __init__(self):
+        file_path = os.path.dirname(os.path.dirname(__file__))
+        with open(file_path + "/config/host.yaml", "r", encoding="utf-8") as file:
+            self.host = yaml.full_load(file)
+
     def update_student(self, session, body):
-        uri = "http://172.16.0.210:3030/api/updateStudentInfo"
+        uri = "http://" + self.host["host"] + ":3030" + "/api/updateStudentInfo"
         resp = session.post(uri, data=body)
         # print("更新学生信息：", resp.status_code)
         return resp.content.decode("utf-8")
