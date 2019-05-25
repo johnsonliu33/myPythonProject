@@ -9,7 +9,6 @@ from api_project.apiView.examNoneStudent import ExamNoneStudent
 class Test_ExamNoneStudent(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        print("====== setUp ======")
         loginp = LoginPage()
         body = {
             "role": "1",
@@ -30,7 +29,7 @@ class Test_ExamNoneStudent(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        print("====== tearDown ======")
+        pass
 
 
 if __name__ == '__main__':

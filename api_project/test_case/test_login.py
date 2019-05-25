@@ -8,7 +8,6 @@ from api_project.apiView.actionLogin import LoginPage
 
 class Test_Login(unittest.TestCase):
     def setUp(self):
-        print("====== setUp ======")
         start = HomePage()
         cont = start.home_page()
         key = "<title>(.+?)</title>"
@@ -16,7 +15,7 @@ class Test_Login(unittest.TestCase):
         self.assertEqual(temp[0], "用户登录")
 
     def test_login_true(self):
-        """登录-成功"""
+        """登录-登录成功"""
         body = {
             "role": "1",
             "username": "teacherlengjing",
@@ -29,6 +28,7 @@ class Test_Login(unittest.TestCase):
         self.assertEqual(temp[0], "登录成功")
 
     def test_login_fasle(self):
+        """登录-用户名或密码错误"""
         body = {
             "role": "1",
             "username": "teacherlengjing",
@@ -41,6 +41,7 @@ class Test_Login(unittest.TestCase):
         self.assertEqual(temp[0], "用户名或密码错误")
 
     def test_login_fasle2(self):
+        """登录-该账号未授权"""
         body = {
             "role": "1",
             "username": "https001",
@@ -53,7 +54,7 @@ class Test_Login(unittest.TestCase):
         self.assertEqual(temp[0], "该账号未授权")
 
     def tearDown(self):
-        print("====== tearDown ======")
+        pass
 
 
 if __name__ == '__main__':
