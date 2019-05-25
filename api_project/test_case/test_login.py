@@ -3,7 +3,7 @@
 import re
 from api_project.apiView.homePage import HomePage
 import unittest
-from api_project.apiView.actionLogin import LoginPage
+from api_project.apiView.guiderLogin import LoginPage
 
 
 class Test_Login(unittest.TestCase):

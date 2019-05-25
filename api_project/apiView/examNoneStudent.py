@@ -2,7 +2,7 @@
 #
 import os
 import yaml
-from api_project.apiView.actionLogin import LoginPage
+from api_project.apiView.guiderLogin import LoginPage
 
 
 class ExamNoneStudent:

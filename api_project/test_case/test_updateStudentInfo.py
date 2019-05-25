@@ -3,7 +3,7 @@
 import re
 import unittest
 from api_project.apiView.updateStudentInfo import UpdateStudentInfo
-from api_project.apiView.actionLogin import LoginPage
+from api_project.apiView.guiderLogin import LoginPage
 
 
 class TestUpdateStudentInfo(unittest.TestCase):
