@@ -15,7 +15,6 @@ class LoginPage:
         uri = "http://" + self.host["host"] + ":3030" + "/api/login"
         session = requests.session()
         resp = session.post(url=uri, data=body)
-        # print("登录：", resp.status_code)
         return resp.content.decode("utf-8"), session
 
 

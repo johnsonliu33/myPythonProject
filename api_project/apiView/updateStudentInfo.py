@@ -14,7 +14,6 @@ class UpdateStudentInfo:
     def update_student(self, session, body):
         uri = "http://" + self.host["host"] + ":3030" + "/api/updateStudentInfo"
         resp = session.post(uri, data=body)
-        # print("更新学生信息：", resp.status_code)
         return resp.content.decode("utf-8")
 
 
