@@ -2,7 +2,8 @@
 #
 
 import unittest
-
+import os
+import sys
 import time
 from BeautifulReport import BeautifulReport
 
@@ -17,3 +18,5 @@ def start():
 
 if __name__ == '__main__':
     start()
+    print(sys.path.append(os.path.abspath(os.path.join(os.getcwd(), ".."))))
+

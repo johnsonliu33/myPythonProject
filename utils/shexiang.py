@@ -1,4 +1,5 @@
 import cv2
+#pip install opencv-python
 
 capture = cv2.VideoCapture(0)
 # 定义编码方式并创建VideoWriter对象
