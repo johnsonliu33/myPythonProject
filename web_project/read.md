@@ -1,9 +1,3 @@
-http://chromedriver.storage.googleapis.com/index.html
-https://github.com/mozilla/geckodriver/releases
-http://www.nuget.org/packages/Selenium.WebDriver.IEDriver/
-
-
-
 # 获取元素 8个
 driver.find_elements_by_id()
 driver.find_element_by_name()

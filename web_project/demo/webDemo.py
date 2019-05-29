@@ -2,7 +2,9 @@
 from selenium import webdriver
 from time import sleep
 
-driver=webdriver.Firefox()
+# driver=webdriver.Firefox()
+# driver=webdriver.Chrome()
+driver=webdriver.Ie()
 driver.implicitly_wait(8)
 driver.get("http://www.baidu.com")
 print(driver.title)
