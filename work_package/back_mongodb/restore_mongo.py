@@ -7,15 +7,15 @@ DBUSER = "guideclass"
 DBPASS = "zaq1xsw2"
 IP = "172.16.0.166"
 DATA_BASE = "guideclass_ceshi2"
-DATA_DIR = "./back_data/guideclass_ceshi2"
+DATA_PATH = "./back_data/guideclass_ceshi2"
 PATH_RES = "/usr/local/mongodb/bin/mongorestore"
-BACKITEMS = ["%s -h %s:27017 -u %s -p %s -d %s --dir %s" % (PATH_RES, IP, DBUSER, DBPASS, DATA_BASE, DATA_DIR)]
+BACKITEMS = ["%s -h %s:27017 -u %s -p %s -d %s --dir %s" % (PATH_RES, IP, DBUSER, DBPASS, DATA_BASE, DATA_PATH)]
 
 
 def get_database():
-    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi2"
+    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(DATA_BASE)
     client = MongoClient(uri)
-    database = client["guideclass_ceshi2"]
+    database = client[DATA_BASE]
     return database
 
 
