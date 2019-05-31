@@ -1,12 +1,13 @@
 import cv2
-#pip install opencv-python
+
+# pip install opencv-python
 
 capture = cv2.VideoCapture(0)
 # 定义编码方式并创建VideoWriter对象
 fourcc = cv2.VideoWriter_fourcc(*'MJPG')
 outfile = cv2.VideoWriter('output.avi', fourcc, 25., (640, 480))
 print(" =============== 按 'q' 键退出 =============== ")
-while(capture.isOpened()):
+while (capture.isOpened()):
     ret, frame = capture.read()
     if ret:
         outfile.write(frame)  # 写入文件

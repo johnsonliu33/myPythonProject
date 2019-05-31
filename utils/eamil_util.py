@@ -11,15 +11,14 @@ import os.path
 From = "songqianqian@jiandan100.cn"
 
 # 多个收件人用逗号隔开
-To = "779446928@qq.com, 1220688565@qq.com"
+To = "779446928@qq.com, songqianqian@jiandan100.cn"
 
 cc = '1220688565@qq.com, 1220688565@qq.com'
 # file_name = "report.html"
-file_name = "output.avi"
-
+file_name = "中文.avi"
 
 server = smtplib.SMTP("mail.jiandan100.cn")
-server.login("songqianqian@jiandan100.cn","Mm9842")   # 仅smtp服务器需要验证时
+server.login("songqianqian@jiandan100.cn", "Mm9842")  # 仅smtp服务器需要验证时
 
 # 构造MIMEMultipart对象做为根容器
 main_msg = MIMEMultipart()
@@ -35,8 +34,8 @@ maintype, subtype = contype.split('/', 1)
 # 读入文件内容并格式化
 data = open(file_name, 'rb')
 file_msg = MIMEBase(maintype, subtype)
-file_msg.set_payload(data.read( ))
-data.close( )
+file_msg.set_payload(data.read())
+data.close()
 encoders.encode_base64(file_msg)
 
 # 设置附件头
@@ -50,11 +49,11 @@ main_msg['From'] = From
 main_msg['To'] = To
 
 main_msg['Cc'] = cc
-main_msg['Subject'] = Header("邮件","utf-8")
-main_msg['Date'] = formatdate( )
+main_msg['Subject'] = Header("邮件", "utf-8")
+main_msg['Date'] = formatdate()
 
 # 得到格式化后的完整文本
-fullText = main_msg.as_string( )
+fullText = main_msg.as_string()
 
 # 用smtp发送邮件
 try:
@@ -65,4 +64,3 @@ except:
     print("发送失败！")
 finally:
     server.quit()
-
