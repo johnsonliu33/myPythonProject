@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 import unittest
-from BeautifulReport import BeautifulReport
+from HTMLTestRunner import BSTestRunner
 import time
 import os
 
@@ -8,9 +8,11 @@ import os
 def start():
     test_dir = './src/testcase'
     suite = unittest.defaultTestLoader.discover(test_dir, pattern='test_*.py')
-    result = BeautifulReport(suite)
-    report_name = time.strftime("%Y_%m_%d %H_%M_%S") + "-report"
-    result.report(filename=report_name, description="selenium自动化", log_path="./report")
+    report_name = time.strftime("%Y_%m_%d %H_%M_%S") + "-report.html"
+    fp= open(report_name,"wb")
+    runner=BSTestRunner.BSTestRunner(stream=fp,title="Test report", description="selenium自动化")
+    runner.STYLESHEET_TMPL = '<link rel="stylesheet" href="my_stylesheet.css" type="text/css">'
+    runner.run(suite)
 
 
 def reporty_path():
