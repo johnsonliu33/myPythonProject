@@ -4,9 +4,10 @@ from pymongo import MongoClient
 
 
 def get_mongo():
-    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi2"
+    DATEBASE = "guideclass_ceshi2"
+    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(DATEBASE)
     client = MongoClient(uri)
-    collection = client["guideclass_ceshi2"]
+    collection = client[DATEBASE]
     return collection
 
 
@@ -16,7 +17,6 @@ def get_seqidgens_collect(collect):
 
 def get_meetingtimes_collect(collect):
     return collect["meetingtimes"]
-    # return collect["test"]
 
 
 def get_id(collect, user, init=123):
