@@ -4,10 +4,10 @@ from pymongo import MongoClient
 
 
 def get_mongo():
-    DATEBASE = "guideclass_ceshi2"
-    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(DATEBASE)
+    DATABASE="guideclass_ceshi2"
+    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(DATABASE)
     client = MongoClient(uri)
-    collection = client[DATEBASE]
+    collection = client[DATABASE]
     return collection
 
 
@@ -17,6 +17,7 @@ def get_seqidgens_collect(collect):
 
 def get_meetingtimes_collect(collect):
     return collect["meetingtimes"]
+    # return collect["test"]
 
 
 def get_id(collect, user, init=123):
@@ -76,6 +77,7 @@ def exec(meetingtimes_collect, seqidgens_collect):
 
     ############################################
     ############################################
+
     print("===================")
     print("=有效数据为: " + str(valid_num) + " 条=")
     print("===================")
