@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
 
-import time
 import os
 import sys
 
@@ -10,12 +9,10 @@ def dump():
     DBUSER = "guideclass"  # 用户
     DBPASS = "zaq1xsw2"  # 密码
     IP = "172.16.0.166"  # 主机
-    now = time.strftime("%Y-%m-%d")
     DATA_DIR = "./back_data"  # 目录
     PATH_DUMP = "/usr/local/mongodb/bin/mongodump"  # 命令路径
-    print("-----------", sys.argv[1])
-    BACKITEMS = ["%s -h %s:27017 -u %s -p %s -d %s -o %s" % (PATH_DUMP, IP, DBUSER, DBPASS, DATA_BASE, DATA_DIR),
-                 "date"]
+    BACKITEMS = ['%s -h %s:27017 -u %s -p %s -d %s -o %s' % (PATH_DUMP, IP, DBUSER, DBPASS, DATA_BASE, DATA_DIR),
+                 'date +"%Y-%m-%d %T"']
     mk_dir = "mkdir back_data"
     if not os.path.exists("back_data"):
         os.system(mk_dir)
