@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
-"""遍历文件夹所有文件，计算文件总数和大小"""
+"""遍历文件夹所有文件，计算文件总数和大小;解压所有zip文件"""
 import os
+import zipfile
 
 count = 0
 all_size = 0
@@ -19,7 +20,13 @@ def file_list(dir_name):
             size = os.path.getsize(file_name)
             global all_size
             all_size = all_size + size
-            print(file_name, "  %.3f Kb" % (size / 1024))
+            print(file_name, "\t%.3f Kb" % (size / 1024))
+            if file_name.endswith(".zip"):
+                file_zip = zipfile.ZipFile(file_name, "r")
+                for f in file_zip.namelist():
+                    file_zip.extract(f, dir_name)
+                file_zip.close()
+                os.remove(file_name)
 
 
 def find_files():
@@ -33,3 +40,9 @@ def find_files():
 
 if __name__ == '__main__':
     find_files()
+
+    # ########start 获取文件路径、文件名、后缀名############
+    # def jwkj_get_filePath_fileName_fileExt(filename):
+    #     (filepath, tempfilename) = os.path.split(filename);
+    #     (shotname, extension) = os.path.splitext(tempfilename);
+    #   return filepath, shotname, extension
