@@ -13,7 +13,7 @@ class UnitDemo(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Firefox()
+        cls.driver = webdriver.Firefox(executable_path="../../driver/geckodriver.exe")
         cls.driver.implicitly_wait(8)
 
     def setUp(self):
@@ -27,6 +27,7 @@ class UnitDemo(unittest.TestCase):
         self.driver.find_element_by_id("su").click()
         self.sleep_three()
         self.assertEqual(self.driver.title, "selenium_百度搜索", "title is fail")
+        self.assertIn("selenium", self.driver.page_source, "title is fail")
         self.sleep_three()
         self.driver.refresh()
         self.sleep_three()
@@ -51,7 +52,7 @@ class UnitDemo(unittest.TestCase):
         self.sleep_three()
         self.driver.find_element_by_id("su").click()
         self.sleep_three()
-        self.assertEqual(self.driver.title, "java_百度搜索", "title is fail")
+        self.assertEqual(self.driver.title, "j              ava_百度搜索", "title is fail")
 
     @unittest.skipUnless(sys.platform.startswith("linux"), "request windows")  # 如果系统是Linux，则跳过
     def test_demo3(self):
