@@ -1,10 +1,12 @@
 # -*- coding:utf-8 -*-
+import sys
 from selenium import webdriver
 from time import sleep
 import unittest
 
 
 class UnitDemo(unittest.TestCase):
+    a = 6
 
     def sleep_three(self):
         sleep(3)
@@ -19,7 +21,7 @@ class UnitDemo(unittest.TestCase):
         print(self.driver.title)
         self.driver.maximize_window()
 
-    def test_demo(self):
+    def test_demo0(self):
         self.driver.find_element_by_id("kw").send_keys("selenium")
         self.sleep_three()
         self.driver.find_element_by_id("su").click()
@@ -33,8 +35,36 @@ class UnitDemo(unittest.TestCase):
         self.driver.back()
         self.sleep_three()
 
+    @unittest.skip("skipping")  # 无条件跳过
+    def test_demo1(self):
+        """百度搜索python"""
+        self.driver.find_element_by_id("kw").send_keys("python")
+        self.sleep_three()
+        self.driver.find_element_by_id("su").click()
+        self.sleep_three()
+        self.assertEqual(self.driver.title, "python_百度搜索", "title is fail")
+
+    @unittest.skipIf(a > 5, "a>5=true")  # 如果a>5=true，则跳过
+    def test_demo2(self):
+        """百度搜索java"""
+        self.driver.find_element_by_id("kw").send_keys("java")
+        self.sleep_three()
+        self.driver.find_element_by_id("su").click()
+        self.sleep_three()
+        self.assertEqual(self.driver.title, "java_百度搜索", "title is fail")
+
+    @unittest.skipUnless(sys.platform.startswith("linux"), "request windows")  # 如果系统是Linux，则跳过
+    def test_demo3(self):
+        """百度搜索unittest"""
+        self.driver.find_element_by_id("kw").send_keys("unittest")
+        self.sleep_three()
+        self.driver.find_element_by_id("su").click()
+        self.sleep_three()
+        self.assertEqual(self.driver.title, "unittest_百度搜索", "title is fail")
+
     def tearDown(self):
-        self.driver.close()  # 关闭浏览器
+        # self.driver.close()  # 关闭浏览器
+        pass
 
     @classmethod
     def tearDownClass(cls):
