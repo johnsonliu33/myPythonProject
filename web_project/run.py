@@ -1,26 +1,26 @@
 # -*- coding:utf-8 -*-
 import unittest
-from HTMLTestRunner import BSTestRunner
+from BeautifulReport import BeautifulReport
 import time
 import os
+from web_project.src.util.send_email import send_email
 
 
 def start():
-    test_dir = './src/testcase'
-    suite = unittest.defaultTestLoader.discover(test_dir, pattern='test_*.py')
-    report_name = time.strftime("%Y_%m_%d %H_%M_%S") + "-report.html"
-    fp= open(report_name,"wb")
-    runner=BSTestRunner.BSTestRunner(stream=fp,title="Test report", description="selenium自动化")
-    runner.STYLESHEET_TMPL = '<link rel="stylesheet" href="my_stylesheet.css" type="text/css">'
-    runner.run(suite)
+    suite = unittest.defaultTestLoader.discover("./src/testcase", pattern='test_*.py')
+    result = BeautifulReport(suite)
+    report_name = time.strftime("%Y_%m_%d %H_%M_%S") + "-report"
+    result.report(filename=report_name, description="selenium-测试报告", log_path="./report")
 
 
 def reporty_path():
     report_dir = "./report"
     lists = os.listdir(report_dir)
     lists.sort(key=lambda x: os.path.getatime(report_dir))  # 按文件时间排序
-    return lists[-1]
+    latest_report = os.path.join(report_dir, lists[-1])
+    send_email(latest_report)
 
 
 if __name__ == '__main__':
     start()
+    reporty_path()

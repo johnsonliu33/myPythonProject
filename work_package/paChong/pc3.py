@@ -32,8 +32,8 @@ def save(url):
     video = requests.get(url)
     if video.status_code == 200:
         m = hashlib.md5()
-        m.updata(url.encode('utf-8'))
-        m.updata(str(time.time()).encode('utf-8'))
+        # m.updata(url.encode('utf-8'))
+        # m.updata(str(time.time()).encode('utf-8'))
         filename = r'%s.mp4' % m.hexdigest()
         filepath = r'D:\\%s' % filename
         with open(filepath, 'wb') as f:
