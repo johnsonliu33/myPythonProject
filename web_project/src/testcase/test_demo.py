@@ -1,75 +1,54 @@
 # -*- coding:utf-8 -*-
-import sys
+#
 from selenium import webdriver
-from time import sleep
 import unittest
+from time import sleep
+import logging
+import traceback
+import ddt
+from selenium.common.exceptions import NoSuchElementException
 
+# 初始化日志对象
+logging.basicConfig(
+    # 日志级别
+    level=logging.INFO,
+    # 日志格式：级别 时间 文件名[行号] 日志信息
+    format="[%(levelname)s] %(asctime)s %(filename)s[line:%(lineno)d] %(message)s",
+    # 打印日志的时间
+    datefmt="%a, %Y-%m-%d %H:%M:%S",
+    # 输出位置
 
-class UnitDemo(unittest.TestCase):
-    a = 6
+    # 打开日志文件的方式
+    filemode="w"
+)
 
-    def sleep_three(self):
-        sleep(3)
-
-    @classmethod
-    def setUpClass(cls):
-        cls.driver = webdriver.Firefox(executable_path="../../driver/geckodriver.exe")
-        cls.driver.implicitly_wait(8)
-
+@ddt.ddt
+class TestDemo(unittest.TestCase):
     def setUp(self):
-        self.driver.get("http://www.baidu.com")
-        print(self.driver.title)
-        self.driver.maximize_window()
+        self.driver = webdriver.Firefox(executable_path="../../driver/geckodriver.exe")
 
-    def test_demo0(self):
-        self.driver.find_element_by_id("kw").send_keys("selenium")
-        self.sleep_three()
-        self.driver.find_element_by_id("su").click()
-        self.sleep_three()
-        self.assertEqual(self.driver.title, "selenium_百度搜索", "title is fail")
-        self.assertIn("selenium", self.driver.page_source, "title is fail")
-        self.sleep_three()
-        self.driver.refresh()
-        self.sleep_three()
-        self.driver.set_window_size(800, 800)
-        self.sleep_three()
-        self.driver.back()
-        self.sleep_three()
-
-    @unittest.skip("skipping")  # 无条件跳过
-    def test_demo1(self):
-        """百度搜索python"""
-        self.driver.find_element_by_id("kw").send_keys("python")
-        self.sleep_three()
-        self.driver.find_element_by_id("su").click()
-        self.sleep_three()
-        self.assertEqual(self.driver.title, "python_百度搜索", "title is fail")
-
-    @unittest.skipIf(a > 5, "a>5=true")  # 如果a>5=true，则跳过
-    def test_demo2(self):
-        """百度搜索java"""
-        self.driver.find_element_by_id("kw").send_keys("java")
-        self.sleep_three()
-        self.driver.find_element_by_id("su").click()
-        self.sleep_three()
-        self.assertEqual(self.driver.title, "j              ava_百度搜索", "title is fail")
-
-    @unittest.skipUnless(sys.platform.startswith("linux"), "request windows")  # 如果系统是Linux，则跳过
-    def test_demo3(self):
-        """百度搜索unittest"""
-        self.driver.find_element_by_id("kw").send_keys("unittest")
-        self.sleep_three()
-        self.driver.find_element_by_id("su").click()
-        self.sleep_three()
-        self.assertEqual(self.driver.title, "unittest_百度搜索", "title is fail")
+    @ddt.data(["神奇动物在哪里","叶茨"],["疯狂动物城","古德温"],["大话西游","周星驰"])
+    @ddt.unpack
+    def test_dataDrivenByObj(self, testdata, expectdata):
+        url = "http://www.baidu.com"
+        self.driver.get(url)
+        self.driver.implicitly_wait(8)
+        try:
+            self.driver.find_element_by_id("kw``").send_keys(testdata)
+            self.driver.find_element_by_id("su").click()
+            sleep(3)
+            self.assertTrue(expectdata in self.driver.page_source)
+        except NoSuchElementException :
+            logging.error("查找的页面元素不存在，异常堆栈信息：" + str(traceback.format_exc()))
+        except AssertionError :
+            logging.info("搜索{}，期望{}，失败".format(testdata, expectdata))
+        except Exception :
+            logging.error("未知错误，错误信息：" + str(traceback.format_exc()))
+        else:
+            logging.info("搜索{}，期望{}，通过".format(testdata, expectdata))
 
     def tearDown(self):
-        # self.driver.close()  # 关闭浏览器
-        pass
-
-    @classmethod
-    def tearDownClass(cls):
-        cls.driver.quit()  # 关闭geckodriver
+        self.driver.quit()
 
 
 if __name__ == '__main__':

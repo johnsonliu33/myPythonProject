@@ -7,9 +7,9 @@ header_dict = {
 }
 resp = requests.get(url)
 # print(resp.text)
-cont = resp.text
+content = resp.text
 key = '<p class="video-name" title="(.+?)">.+?</p>'
-tempList = re.findall(key, cont)
+tempList = re.findall(key, content)
 i = 0
 for temp in tempList:
     print(temp.split("章：")[1])
