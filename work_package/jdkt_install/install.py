@@ -5,7 +5,7 @@ import json
 
 def get_software(version):
     """获取当前版本应用程序"""
-    url = "http://download.jd100.com/ETClient/{}/".format(version)
+    url = "http://download.jd100.com/GuideTeacher/{}/".format(version)
     res = requests.get(url)
     software_list = []
     keys = '<a href=".+?">(.+?)</a>'
@@ -26,7 +26,7 @@ def get_software(version):
 def get_json(version, modules):
     """获取当前版本json文件"""
     json_list = []
-    url_json = "http://download.jd100.com/ETClient/{}/EasyClient.json".format(version)
+    url_json = "http://download.jd100.com/GuideTeacher/{}/GuideTeacher.json".format(version)
     resp = requests.get(url_json)
     params_json = json.loads(resp.text)  # 将 JSON 对象转换为 Python 字典
     json_str = params_json.items()
@@ -50,7 +50,7 @@ def check_software(software_list, json_list):
 
 
 if __name__ == '__main__':
-    version = "3.41.10.1902"
+    version = "1.0.2.1810"
     modules = "Modules"
     beta_modules = "BetaModules"
     software_list = get_software(version)

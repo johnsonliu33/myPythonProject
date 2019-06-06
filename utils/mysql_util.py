@@ -3,7 +3,7 @@ import pymysql
 
 
 ##链接mysql
-def select(userid):
+def mysqlUtil():
     host = "192.168.20.156"
     port = 3306
     user = "test_user"
@@ -15,7 +15,7 @@ def select(userid):
         # 创建游标
         cursor = conn.cursor()
         # 执行mysql语句，并返回执行的结果
-        sql = "select * from W_UserBaseInfo WHERE userid = %s " % userid
+        sql = "select * from W_UserBaseInfo WHERE userid = 17519255 "
         res = cursor.execute(sql)
         if res == 1:
             for i in cursor.fetchall():
@@ -31,3 +31,6 @@ def select(userid):
         cursor.close()
         # 关闭连接
         conn.close()
+
+if __name__ == '__main__':
+    mysqlUtil()
