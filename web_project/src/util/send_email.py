@@ -10,14 +10,14 @@ import os.path
 def send_email(latest_report):
     # 构造MIMEMultipart对象做为根容器
     main_msg = MIMEMultipart()
-
+    ###########################################
     # ### 发送邮件主题和内容
     subject = "按不出的法国"
     main_msg.attach(MIMEText("【邮件自动发送，无需回复】\n", "html", "utf-8"))
     with open(latest_report, "rb")as file:
         content = file.read()
     main_msg.attach(MIMEText(content, "html", "utf-8"))
-
+    ###########################################
     # ### 构造附件内容
     with open(latest_report, "rb")as file:
         send_file = file.read()
