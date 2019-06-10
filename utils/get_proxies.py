@@ -83,16 +83,16 @@ def main(param):
 
 
 if __name__ == '__main__':
-    # uri_param = ([x for x in range(1, 9)])
-    # uri_param = [""] + uri_param
-    # main_list = []
-    # for param in uri_param:
-    #     main_one = Thread(target=main, args=(param,))
-    #     main_list.append(main_one)
-    # for item in main_list:
-    #     item.start()
-    # for item in main_list:
-    #     item.join()
+    uri_param = ([x for x in range(1, 9)])
+    uri_param = [""] + uri_param
+    main_list = []
+    for param in uri_param:
+        main_one = Thread(target=main, args=(param,))
+        main_list.append(main_one)
+    for item in main_list:
+        item.start()
+    for item in main_list:
+        item.join()
     proxies = read_proxies()
     for proxy in proxies:
         check_proxy(proxy)
