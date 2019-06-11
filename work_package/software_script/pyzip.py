@@ -2,7 +2,8 @@ import zipfile
 import os.path
 import os
 
-class ZFile(object):
+
+class ZFile:
     def __init__(self, filename, mode='r', basedir=''):
         self.filename = filename
         self.mode = mode

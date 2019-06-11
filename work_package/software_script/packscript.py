@@ -1,8 +1,7 @@
-﻿#-*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import hashlib
-import os,sys,shutil,codecs
+import os, sys, shutil, codecs
 import gzip
-import time
 from ctypes import *
 import win32api
 import time
@@ -13,9 +12,10 @@ global gIsBeta
 global gAppName
 global gupdateinfo
 
-def getAppPackDir() :
+
+def getAppPackDir():
     packdir = ''
-    if gAppName == 'EasyClient' :
+    if gAppName == 'EasyClient':
         packdir = 'D:/wamp/www/AppPack/ETClientPack'
     elif gAppName == 'EClassStudent':
         packdir = 'D:/wamp/www/AppPack/EClassStudentPack'
@@ -25,15 +25,16 @@ def getAppPackDir() :
         packdir = 'D:/wamp/www/AppPack/ETutorTeacherPack'
     elif gAppName == 'ETutorStudent':
         packdir = 'D:/wamp/www/AppPack/ETutorStudentPack'
-    elif gAppName == 'GuideClassTeacher' :
+    elif gAppName == 'GuideClassTeacher':
         packdir = 'D:/wamp/www/AppPack/GuideClassTeacherPack'
-    elif gAppName == 'GuideClassStudent' :
+    elif gAppName == 'GuideClassStudent':
         packdir = 'D:/wamp/www/AppPack/GuideClassStudentPack'
     return packdir
 
-def getAppPackScriptFilePath() :
+
+def getAppPackScriptFilePath():
     packdir = ''
-    if gAppName == 'EasyClient' :
+    if gAppName == 'EasyClient':
         packdir = 'D:/wamp/www/AppPack/ETClientinstall.nsi'
     elif gAppName == 'EClassStudent':
         packdir = 'D:/wamp/www/AppPack/EClassStudentinstall.nsi'
@@ -43,17 +44,18 @@ def getAppPackScriptFilePath() :
         packdir = 'D:/wamp/www/AppPack/ETutorTeacherinstall.nsi'
     elif gAppName == 'ETutorStudent':
         packdir = 'D:/wamp/www/AppPack/ETutorStudentinstall.nsi'
-    elif gAppName == 'GuideClassTeacher' :
+    elif gAppName == 'GuideClassTeacher':
         packdir = 'D:/wamp/www/AppPack/GuideClassTeacherinstall.nsi'
-    elif gAppName == 'GuideClassStudent' :
+    elif gAppName == 'GuideClassStudent':
         packdir = 'D:/wamp/www/AppPack/GuideClassStudentinstall.nsi'
     return packdir
 
-def getAppVersionInfoJsonFileName() :
+
+def getAppVersionInfoJsonFileName():
     filename = ''
-    if gAppName == 'EasyClient' :
+    if gAppName == 'EasyClient':
         filename = 'EasyClient.json'
-        if gIsBeta :
+        if gIsBeta:
             filename = 'EasyClientBeta.json'
     elif gAppName == 'EClassStudent':
         filename = 'EClassStudent.json'
@@ -63,17 +65,18 @@ def getAppVersionInfoJsonFileName() :
         filename = 'ETutorTeacher.json'
     elif gAppName == 'ETutorStudent':
         filename = 'ETutorStudent.json'
-    elif gAppName == 'GuideClassTeacher' :
+    elif gAppName == 'GuideClassTeacher':
         filename = 'GuideClassTeacher.json'
-    elif gAppName == 'GuideClassStudent' :
+    elif gAppName == 'GuideClassStudent':
         filename = 'GuideClassStudent.json'
     return filename
 
-def getAppGitDir() :
+
+def getAppGitDir():
     packdir = ''
-    if gAppName == 'EasyClient' :
+    if gAppName == 'EasyClient':
         packdir = 'D:/AutomaticPublish/AutomaticPublishETClient'
-        if gIsBeta :
+        if gIsBeta:
             packdir = 'D:/AutomaticPublish/AutomaticPublishETClientBeta'
     elif gAppName == 'EClassStudent':
         packdir = 'D:/AutomaticPublish/AutomaticPublishEClassStudent'
@@ -83,16 +86,17 @@ def getAppGitDir() :
         packdir = 'D:/AutomaticPublish/AutomaticPublishETutorTeacher'
     elif gAppName == 'ETutorStudent':
         packdir = 'D:/AutomaticPublish/AutomaticPublishETutorStudent'
-    elif gAppName == 'GuideClassTeacher' :
+    elif gAppName == 'GuideClassTeacher':
         packdir = 'D:/AutomaticPublish/AutomaticPublishGuideClassTeacher'
-    elif gAppName == 'GuideClassStudent' :
+    elif gAppName == 'GuideClassStudent':
         packdir = 'D:/AutomaticPublish/AutomaticPublishGuideClassStudent'
 
-    if not os.path.exists(packdir) :
+    if not os.path.exists(packdir):
         os.mkdir(packdir)
     return packdir
 
-def getAppType() :
+
+def getAppType():
     type = 0
     if gAppName == 'EClassStudent':
         type = 1
@@ -102,16 +106,17 @@ def getAppType() :
         type = 3
     elif gAppName == 'ETutorTeacher':
         type = 4
-    elif gAppName == 'GuideClassTeacher' :
+    elif gAppName == 'GuideClassTeacher':
         type = 5
-    elif gAppName == 'GuideClassStudent' :
+    elif gAppName == 'GuideClassStudent':
         type = 6
 
     return type
 
-def getAppPublishDir() :
+
+def getAppPublishDir():
     packdir = ''
-    if gAppName == 'EasyClient' :
+    if gAppName == 'EasyClient':
         packdir = 'D:/wamp/www/AppPack/ETClientPublishFiles'
     elif gAppName == 'EClassStudent':
         packdir = 'D:/wamp/www/AppPack/EClassStudentPublishFiles'
@@ -121,12 +126,13 @@ def getAppPublishDir() :
         packdir = 'D:/wamp/www/AppPack/ETutorTeacherPublishFiles'
     elif gAppName == 'ETutorStudent':
         packdir = 'D:/wamp/www/AppPack/ETutorStudentPublishFiles'
-    elif gAppName == 'GuideClassTeacher' :
+    elif gAppName == 'GuideClassTeacher':
         packdir = 'D:/wamp/www/AppPack/GuideClassTeacherPublishFiles'
-    elif gAppName == 'GuideClassStudent' :
+    elif gAppName == 'GuideClassStudent':
         packdir = 'D:/wamp/www/AppPack/GuideClassStudentPublishFiles'
-    
+
     return packdir
+
 
 def ZipFile(srcfilepath):
     with open(srcfilepath, "rb")as localfile:
@@ -136,34 +142,36 @@ def ZipFile(srcfilepath):
     gf = gzip.open(destfilepath, "wb")
     gf.write(filecontent)
     gf.close()
- 
+
+
 def GetFileMd5(filename):
     if not os.path.isfile(filename):
         return
     myhash = hashlib.md5()
-    with open(filename,'rb')as f:
+    with open(filename, 'rb')as f:
         while True:
             b = f.read(8096)
-            if not b :
+            if not b:
                 break
             myhash.update(b)
     md5value = myhash.hexdigest()
     return md5value[8:-8]
 
+
 def getFileVersion(file_name):
-    try :
+    try:
         info = win32api.GetFileVersionInfo(file_name, os.sep)
         ms = info['FileVersionMS']
         ls = info['FileVersionLS']
         version = '%d.%d.%d.%04d' % (win32api.HIWORD(ms), win32api.LOWORD(ms), win32api.HIWORD(ls), win32api.LOWORD(ls))
-        if len(version) < 1 :
+        if len(version) < 1:
             version == '0.0.0.0'
         return version
     except Exception as error:
         return '0.0.0.0'
-    
 
-def getCurVersionInfo() :
+
+def getCurVersionInfo():
     dll = cdll.LoadLibrary('D:/wamp/www/pyscript/PythonGetETClientVersion.dll')
     strversionlen = 0
     outstrlen = c_int(strversionlen)
@@ -171,7 +179,7 @@ def getCurVersionInfo() :
     try:
         pstr = dll.GetETClientVersionInfo(getAppType(), byref(outstrlen))
         strcontent = c_char_p(pstr)
-        if outstrlen.value < 50 :
+        if outstrlen.value < 50:
             return False, strcontent.value[:outstrlen.value]
 
         rst = json.loads(strcontent.value[:outstrlen.value])
@@ -179,34 +187,35 @@ def getCurVersionInfo() :
     except Exception as error:
         return False, u'从服务端获取版本信息失败'
 
+
 def updateversionModulesinfo(filelist, appversioninfo):
     if len(filelist) < 1:
         return False
-    
+
     modules = []
-    if gAppName == 'EasyClient' :
+    if gAppName == 'EasyClient':
         updatebetamodules = False
-        if gIsBeta and 'BetaModules' in appversioninfo :
+        if gIsBeta and 'BetaModules' in appversioninfo:
             updatebetamodules = True
-        else :
-            if 'Modules' not in appversioninfo :
-                print (u'当前为正式版本发布，从服务端获取的版本信息没有正式版本数据')
+        else:
+            if 'Modules' not in appversioninfo:
+                print(u'当前为正式版本发布，从服务端获取的版本信息没有正式版本数据')
                 return False
 
-        if updatebetamodules :
+        if updatebetamodules:
             modules = appversioninfo['BetaModules']
-        else :
+        else:
             modules = appversioninfo['Modules']
-    else :
+    else:
         modules = appversioninfo['Modules']
 
     moduleslen = len(modules)
-    for filepath in filelist :
+    for filepath in filelist:
         if not os.path.exists(filepath):
             continue
 
         fileversion = '0.0.0.0'
-        if filepath.find('.dll') > 0 or filepath.find('.exe') > 0 :
+        if filepath.find('.dll') > 0 or filepath.find('.exe') > 0:
             fileversion = getFileVersion(filepath)
 
         filename = os.path.basename(filepath)
@@ -228,13 +237,13 @@ def updateversionModulesinfo(filelist, appversioninfo):
         modulename = filename[:index]
         isBeta = False
 
-        if moduleslen > 0 :
-            for i in range(0, len(modules)) :
-                if modules[i]['name'].find(shortname) >= 0 :
+        if moduleslen > 0:
+            for i in range(0, len(modules)):
+                if modules[i]['name'].find(shortname) >= 0:
                     modules[i]['name'] = modulename
                     modules[i]['MD5'] = strmd5
                     modules[i]['bytes'] = filesize
-                    if fileversion == '0.0.0.0' :
+                    if fileversion == '0.0.0.0':
                         modules[i]['mustupdate'] = 'true'
 
                     modules[i]['version'] = fileversion
@@ -242,52 +251,54 @@ def updateversionModulesinfo(filelist, appversioninfo):
 
     return True
 
-def updateETClientNsisScript(version) :
+
+def updateETClientNsisScript(version):
     scriptfilepath = getAppPackScriptFilePath()
-    if not os.path.exists(scriptfilepath) :
-        print ('error1')
+    if not os.path.exists(scriptfilepath):
+        print('error1')
         return False, None
-    
+
     fp = codecs.open(scriptfilepath, 'rb')
     filecontent = fp.read()
     fp.close()
-    
+
     index = filecontent.find('PRODUCT_VERSION')
-    if index < 0 :
-        print ('error2')
+    if index < 0:
+        print('error2')
         return False, None
     start = filecontent.find('\"', index)
     end = filecontent.find('\"', start + 1)
     substr = filecontent[start + 1: end]
     filecontent = filecontent.replace(substr, version, 3)
 
-    if gAppName == 'EasyClient' :
+    if gAppName == 'EasyClient':
         start = version.rfind('.')
-        filename = 'easyclientv' + version[start + 1 :] + '.exe'
-    else :
+        filename = 'easyclientv' + version[start + 1:] + '.exe'
+    else:
         filename = gAppName + 'Setup' + version + '.exe'
 
     index = filecontent.find('OutFile')
-    if index < 0 :
-        print ('error4')
+    if index < 0:
+        print('error4')
         return False, None
     start = filecontent.find('\"', index)
     end = filecontent.find('\"', start + 1)
     newversion = version.replace('.', ',')
     substr = filecontent[start + 1: end]
     filecontent = filecontent.replace(substr, filename)
-    
+
     fp = codecs.open(scriptfilepath, 'wb')
     filecontent = fp.write(filecontent)
     fp.close()
-    
+
     cmd = '"C:/Program Files (x86)/NSIS/makensis.exe" ' + scriptfilepath
     os.system(cmd)
     filepath = os.path.join(os.path.dirname(scriptfilepath), filename)
-    if not os.path.exists(filepath) :
+    if not os.path.exists(filepath):
         return False, None
 
     return True, filepath
+
 
 def updateversioninfo(curversion, appversioninfo):
     strnewversion = '/' + curversion + '/'
@@ -297,48 +308,51 @@ def updateversioninfo(curversion, appversioninfo):
         updatebetainfo = False
         if gIsBeta and 'BetaDownloadUrls' in appversioninfo:
             updatebetainfo = True
-        if updatebetainfo :
+        if updatebetainfo:
             urls = appversioninfo['BetaDownloadUrls']
             appversioninfo['BetaMainVersion'] = curversion
             appversioninfo['Beta'] = '1'
-        else :
+        else:
             urls = appversioninfo['DownloadUrls']
             appversioninfo['MainVersion'] = curversion
             appversioninfo['Beta'] = '0'
-    else :
+    else:
         urls = appversioninfo['DownloadUrls']
         appversioninfo['MainVersion'] = curversion
 
-    for i in range(0, len(urls)) :
+    for i in range(0, len(urls)):
         index = urls[i].rfind('/')
         suburl = urls[i][:index]
         index = suburl.rfind('/')
         newurl = suburl[:index] + strnewversion
         urls[i] = newurl
 
-def getAppVersionInfoFromOld(versioninfo) :
+
+def getAppVersionInfoFromOld(versioninfo):
     appupdatelist = versioninfo['AppUpdateList']
     appversioninfo = {}
 
     for info in appupdatelist:
-        if info['AppName'] == gAppName :
+        if info['AppName'] == gAppName:
             appversioninfo = info
             break
 
     return appversioninfo
 
-def getAppVersionInfo() :
+
+def getAppVersionInfo():
     appversioninfo = {}
     ret, versioninfo = getCurVersionInfo()
-    if not ret :
+    if not ret:
         return False, versioninfo
 
-    if 'AppUpdateList' in versioninfo :
+    if 'AppUpdateList' in versioninfo:
         appversioninfo = getAppVersionInfoFromOld(versioninfo)
-    else :
+    else:
         appversioninfo = versioninfo
 
     return True, appversioninfo
+
 
 def cleardir(rmdir):
     for root, dirs, files in os.walk(rmdir, topdown=False):
@@ -347,10 +361,11 @@ def cleardir(rmdir):
         for name in dirs:
             os.rmdir(os.path.join(root, name))
 
-def makeuploadgitscriptfile(version) :
+
+def makeuploadgitscriptfile(version):
     filename = 'uploadgit' + gAppName + '.bat'
     filepath = os.path.join('D:/wamp/www/pyscript', filename)
-    if os.path.exists(filepath) :
+    if os.path.exists(filepath):
         os.remove(filepath)
 
     gitinfo = 'git pull && git add * && git commit -m "upload publish file ' + gAppName + ' ' + version + '" && git push -u origin master \r\n'
@@ -360,10 +375,11 @@ def makeuploadgitscriptfile(version) :
     fwrite.close()
     os.system(filepath)
 
-def clearappgitdir() :
+
+def clearappgitdir():
     filename = 'cleargit' + gAppName + '.bat'
     filepath = os.path.join('D:/wamp/www/pyscript', filename)
-    if os.path.exists(filepath) :
+    if os.path.exists(filepath):
         os.remove(filepath)
 
     filecontent = '@echo off\r\n\r\n cd /d ' + getAppGitDir() + '\r\n git reset --hard && git pull \r\n'
@@ -372,57 +388,59 @@ def clearappgitdir() :
     fwrite.close()
     os.system(filepath)
 
-def writejsonfile(filepath, info) :
+
+def writejsonfile(filepath, info):
     fwrite = codecs.open(filepath, 'wb')
     strContent = json.dumps(info)
     fwrite.write(strContent)
     fwrite.close()
 
-def makeupdateinfojsonfile(basedir, offlineexefilepath, appversioninfo) :
+
+def makeupdateinfojsonfile(basedir, offlineexefilepath, appversioninfo):
     jsonfilename = getAppVersionInfoJsonFileName()
-    if len(jsonfilename) < 1 :
+    if len(jsonfilename) < 1:
         return False, u'客户端类型错误'
 
     versioninfo = {}
-    if gAppName == 'EasyClient' :
-        if 'BetaModules' in appversioninfo :
-            if not gIsBeta :
-                if 'Modules' not in appversioninfo :
+    if gAppName == 'EasyClient':
+        if 'BetaModules' in appversioninfo:
+            if not gIsBeta:
+                if 'Modules' not in appversioninfo:
                     return False, u'当前为正式版本发布，从服务端获取的版本信息没有正式版本数据'
-                else :
+                else:
                     versioninfo['Modules'] = appversioninfo['Modules']
                     versioninfo['MainVersion'] = appversioninfo['MainVersion']
                     versioninfo['DownloadUrls'] = appversioninfo['DownloadUrls']
                     versioninfo['AppName'] = appversioninfo['AppName']
-            else :
-                if 'Modules' in appversioninfo :
+            else:
+                if 'Modules' in appversioninfo:
                     versioninfo['BetaModules'] = appversioninfo['BetaModules']
                     versioninfo['BetaMainVersion'] = appversioninfo['BetaMainVersion']
                     versioninfo['BetaDownloadUrls'] = appversioninfo['BetaDownloadUrls']
                     versioninfo['AppName'] = appversioninfo['AppName']
                     versioninfo['Beta'] = '1'
-                else :
+                else:
                     versioninfo = appversioninfo
-        else :
-            if gIsBeta :
+        else:
+            if gIsBeta:
                 versioninfo['BetaModules'] = appversioninfo['Modules']
                 versioninfo['BetaMainVersion'] = appversioninfo['MainVersion']
                 versioninfo['BetaDownloadUrls'] = appversioninfo['DownloadUrls']
                 versioninfo['AppName'] = appversioninfo['AppName']
                 versioninfo['Beta'] = '1'
-            else :
+            else:
                 versioninfo = appversioninfo
-    else :
+    else:
         versioninfo = appversioninfo
 
     strdownloadurl = ''
-    if gIsBeta :
+    if gIsBeta:
         strdownloadurl = versioninfo['BetaDownloadUrls'][0]
-    else :
+    else:
         strdownloadurl = versioninfo['DownloadUrls'][0]
 
     zipofflinefilepath = offlineexefilepath
-    if gAppName != 'EasyClient' :
+    if gAppName != 'EasyClient':
         index = offlineexefilepath.rfind('.exe')
         zipofflinefilepath = offlineexefilepath[0:index] + '.zip'
 
@@ -431,51 +449,53 @@ def makeupdateinfojsonfile(basedir, offlineexefilepath, appversioninfo) :
     versioninfo['Tip'] = gupdateinfo
     versioninfo['Size'] = str(os.path.getsize(zipofflinefilepath) / 1024 / 1024)
     versioninfo['OS'] = 'XP/Vista/Win7/Win8/Win8.1/Win10'
-    versioninfo['Date'] = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    versioninfo['Date'] = time.strftime('%Y-%m-%d', time.localtime(time.time()))
 
     jsonFilePath = os.path.join(basedir, jsonfilename)
     writejsonfile(jsonFilePath, versioninfo)
     return True, 'ok'
 
-def updatepublishfile(publishfilesdir, modulename, updatefiledir) :
+
+def updatepublishfile(publishfilesdir, modulename, updatefiledir):
     bupdate = False
     updatefilepath = ''
-    for rootdir, dirs, files in os.walk(updatefiledir) :
-        for filename in files :
-            if filename.rfind('.gz') > 0 :
+    for rootdir, dirs, files in os.walk(updatefiledir):
+        for filename in files:
+            if filename.rfind('.gz') > 0:
                 index = filename.rfind('-')
                 name = filename[:index]
-                if name == modulename :
+                if name == modulename:
                     shutil.copy(os.path.join(updatefiledir, filename), os.path.join(publishfilesdir, filename))
                     bupdate = True
                     updatefilepath = os.path.join(updatefiledir, filename)
                     break
-        if bupdate :
+        if bupdate:
             break
 
     return bupdate, updatefilepath
 
-def checkpublishfiles(srcdir, bupdate, newfiles) :
+
+def checkpublishfiles(srcdir, bupdate, newfiles):
     publishfilesdir = getAppPublishDir()
-    if not os.path.exists(publishfilesdir) :
+    if not os.path.exists(publishfilesdir):
         return False, '历史发布文件错误'
 
     updatefiles = []
     updatefilepaths = []
-    for rootpath, dirs, files in os.walk(publishfilesdir) :
-        for filename in files :
+    for rootpath, dirs, files in os.walk(publishfilesdir):
+        for filename in files:
             index = filename.rfind('-')
             name = filename[:index]
-            if name in newfiles :
+            if name in newfiles:
                 ret, updatefilepath = updatepublishfile(publishfilesdir, filename[:index], srcdir)
-                if ret :
-                    #os.remove(os.path.join(publishfilesdir, filename))
+                if ret:
+                    # os.remove(os.path.join(publishfilesdir, filename))
                     updatefiles.append(name)
-            elif not bupdate :
+            elif not bupdate:
                 shutil.copy(os.path.join(publishfilesdir, filename), os.path.join(srcdir, filename))
         break
 
-    if len(updatefiles) < len(newfiles) :
+    if len(updatefiles) < len(newfiles):
         jsonfilename = getAppVersionInfoJsonFileName()
         jsonfilepath = os.path.join(srcdir, jsonfilename)
         appversioninfo = {}
@@ -484,15 +504,15 @@ def checkpublishfiles(srcdir, bupdate, newfiles) :
 
         modules = []
         unnetdir = getAppPackDir()
-        if gIsBeta :
+        if gIsBeta:
             modules = appversioninfo['BetaModules']
-        else :
+        else:
             modules = appversioninfo['Modules']
 
-        for filename in newfiles :
-            if filename not in updatefiles :
+        for filename in newfiles:
+            if filename not in updatefiles:
                 ret, updatefilepath = updatepublishfile(publishfilesdir, filename, srcdir)
-                if ret :
+                if ret:
                     filename = os.path.basename(updatefilepath)
                     index = filename.rfind('.gz')
                     subname = filename[:index]
@@ -521,7 +541,8 @@ def checkpublishfiles(srcdir, bupdate, newfiles) :
 
     return True, 'ok'
 
-def dogitremoveaction(gitdir, rmfilename) :
+
+def dogitremoveaction(gitdir, rmfilename):
     filename = 'updategit' + gAppName + '.bat'
     filepath = os.path.join('D:/wamp/www/pyscript', filename)
 
@@ -531,45 +552,48 @@ def dogitremoveaction(gitdir, rmfilename) :
     fwrite.close()
     os.system(filepath)
 
-def updategitfiles(gitdir, srcdir, newfilenames) :
-    for rootpath, dirs, files in os.walk(gitdir) :
-        for filename in files :
+
+def updategitfiles(gitdir, srcdir, newfilenames):
+    for rootpath, dirs, files in os.walk(gitdir):
+        for filename in files:
             index = filename.rfind('-')
             name = filename[:index]
-            if name in newfilenames :
+            if name in newfilenames:
                 dogitremoveaction(gitdir, filename)
 
-    for rootpath, dirs, files in os.walk(srcdir) :
-        for filename in files :
-            shutil.move(os.path.join(srcdir, filename), os.path.join(gitdir,filename))
+    for rootpath, dirs, files in os.walk(srcdir):
+        for filename in files:
+            shutil.move(os.path.join(srcdir, filename), os.path.join(gitdir, filename))
 
-def checkunusedir(srcdir) :
-    for rootpath, dirs, files in os.walk(srcdir) :
-        for dir in dirs :
+
+def checkunusedir(srcdir):
+    for rootpath, dirs, files in os.walk(srcdir):
+        for dir in dirs:
             cleardir(dir)
             os.rmdir(dir)
 
-def updateunupdatefileinfo(newfilenames, appversioninfo) :
+
+def updateunupdatefileinfo(newfilenames, appversioninfo):
     if len(newfilenames) < 1:
         return False
-    
+
     modules = []
-    if gAppName == 'EasyClient' :
+    if gAppName == 'EasyClient':
         updatebetamodules = False
-        if gIsBeta and 'BetaModules' in appversioninfo :
+        if gIsBeta and 'BetaModules' in appversioninfo:
             updatebetamodules = True
 
-        if updatebetamodules :
+        if updatebetamodules:
             modules = appversioninfo['BetaModules']
-        else :
+        else:
             modules = appversioninfo['Modules']
-    else :
+    else:
         modules = appversioninfo['Modules']
 
-    if len(modules) < 1 :
+    if len(modules) < 1:
         return False
 
-    for i in range(0, len(modules)) :
+    for i in range(0, len(modules)):
         modulename = modules[i]['name']
         index = modulename.rfind('-')
         subname = modulename[:index]
@@ -578,15 +602,16 @@ def updateunupdatefileinfo(newfilenames, appversioninfo) :
 
     return True
 
-def makepackfile(srcfilepath) :
+
+def makepackfile(srcfilepath):
     index = srcfilepath.rfind('.')
-    if index < 0 :
+    if index < 0:
         return False, '文件上传失败'
     basedir = srcfilepath[0:index]
     if os.path.exists(basedir):
         cleardir(basedir)
 
-    try :
+    try:
         dir = os.path.dirname(srcfilepath)
         myzip = ZFile(srcfilepath)
         myzip.extract_to(dir)
@@ -602,7 +627,7 @@ def makepackfile(srcfilepath) :
     newfiles = []
     newfilenames = []
     for filename in os.listdir(basedir):
-        if filename == '.' or filename == '..' :
+        if filename == '.' or filename == '..':
             continue
         filepath = os.path.join(basedir, filename)
         newfilepath = os.path.join(packfiledir, filename)
@@ -616,8 +641,8 @@ def makepackfile(srcfilepath) :
         elif not os.path.exists(filepath):
             os.mkdir(filepath)
 
-    ret , packfilepath = updateETClientNsisScript(version)
-    if not ret :
+    ret, packfilepath = updateETClientNsisScript(version)
+    if not ret:
         return False, '更新离线包脚本失败'
 
     os.system('D:/DigiSign/sign-with-pwd.bat ' + packfilepath)
@@ -625,7 +650,7 @@ def makepackfile(srcfilepath) :
     shutil.move(packfilepath, newfilepath)
     index = newfilepath.rfind('.')
     zipfilepath = newfilepath[:index] + '.zip'
-    try :
+    try:
         myzip = ZFile(zipfilepath, 'w')
         myzip.addfile(newfilepath)
         myzip.close()
@@ -633,43 +658,44 @@ def makepackfile(srcfilepath) :
         return False, str(error)
 
     ret, appversioninfo = getAppVersionInfo()
-    if not ret :
+    if not ret:
         return False, appversioninfo
 
-    if not updateversionModulesinfo(newfiles, appversioninfo) :
+    if not updateversionModulesinfo(newfiles, appversioninfo):
         return False, '更新版本信息模块失败'
     updateversioninfo(version, appversioninfo)
     updateunupdatefileinfo(newfilenames, appversioninfo)
     ret, error = makeupdateinfojsonfile(basedir, newfilepath, appversioninfo)
-    if not ret :
+    if not ret:
         return False, u'更新版本信息文件失败'
 
     gitdir = getAppGitDir()
     newgitdir = os.path.join(gitdir, version)
     bupdate = False
-    if os.path.exists(newgitdir) :
+    if os.path.exists(newgitdir):
         bupdate = True
 
     ret, error = checkpublishfiles(basedir, bupdate, newfilenames)
-    if not ret :
+    if not ret:
         return False, error
 
     checkunusedir(basedir)
 
-    if os.path.exists(newgitdir) :
+    if os.path.exists(newgitdir):
         updategitfiles(newgitdir, basedir, newfilenames)
-    else :
+    else:
         shutil.move(basedir, gitdir)
     makeuploadgitscriptfile(version)
 
-    if os.path.exists(basedir) :
+    if os.path.exists(basedir):
         os.rmdir(basedir)
-    
+
     return True, '操作成功'
 
-def getupdateinfo() :
+
+def getupdateinfo():
     global gupdateinfo
-    try :
+    try:
         filename = gAppName + 'updateinfo.txt'
         fp = codecs.open(os.path.join('D:/wamp/www', filename), 'rb')
         filecontent = fp.read()
@@ -678,16 +704,17 @@ def getupdateinfo() :
     except Exception as error:
         gupdateinfo = ''
 
+
 if __name__ == "__main__":
     if len(sys.argv) < 5:
         print('not enough args')
         quit()
     if len(sys.argv) == 5:
-        if sys.argv[2] == 'packfile' :
-            try :
+        if sys.argv[2] == 'packfile':
+            try:
                 global gIsBeta
                 gIsBeta = False
-                if sys.argv[3] == '1' :
+                if sys.argv[3] == '1':
                     gIsBeta = True
                 global gAppName
                 gAppName = sys.argv[4]
@@ -695,9 +722,7 @@ if __name__ == "__main__":
                 clearappgitdir()
                 ret, info = makepackfile(sys.argv[1])
                 os.remove(sys.argv[1])
-                print (info)
+                print(info)
             except Exception as error:
                 os.remove(sys.argv[1])
-                print (str(error))
-
-
+                print(str(error))
