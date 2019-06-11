@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 
 def get_mongo():
-    DATABASE="guideclass_ceshi2"
+    DATABASE = "guideclass_ceshi2"
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(DATABASE)
     client = MongoClient(uri)
     collection = client[DATABASE]
@@ -16,8 +16,8 @@ def get_seqidgens_collect(collect):
 
 
 def get_meetingtimes_collect(collect):
-    return collect["meetingtimes"]
-    # return collect["test"]
+    # return collect["meetingtimes"]
+    return collect["test"]
 
 
 def get_id(collect, user, init=123):
@@ -39,7 +39,7 @@ def create_id(sid):
 
 # exec()用来执行储存在字符串或文件中的Python语句,支持Python代码的动态执行
 def exec(meetingtimes_collect, seqidgens_collect):
-    book = xlrd.open_workbook("直播班会时间安排.xlsx")
+    book = xlrd.open_workbook("直播班会时间安排str.xlsx")
 
     sheet = book.sheet_by_index(0)
     colnum = sheet.nrows
@@ -49,22 +49,35 @@ def exec(meetingtimes_collect, seqidgens_collect):
 
         # 过滤年级为空的情况
         grade = sheet.cell_value(i, 2)
-        if grade == "":
+        if grade == "" or grade == "年级":
             continue
 
         valid_num += 1
-        # book.datemode 以日期方式显示该单元数据
-        date_value = xlrd.xldate_as_tuple(sheet.cell_value(i, 1), book.datemode)
-        time_value = xlrd.xldate_as_tuple(sheet.cell_value(i, 3), book.datemode)
-        meeting_date = datetime.datetime(date_value[:3][0], date_value[:3][1], date_value[:3][2],
-                                         time_value[3:][0],
-                                         time_value[3:][1], time_value[3:][2])
+        if isinstance(sheet.cell_value(i, 1), str):
+            date1 = sheet.cell_value(i, 1).split("/")
+            year = date1[0]
+            month = date1[1]
+            day = date1[2]
+        else:
+            # book.datemode 以日期方式显示该单元数据
+            date_value = xlrd.xldate_as_tuple(sheet.cell_value(i, 1), book.datemode)
+            year = date_value[:3][0]
+            month = date_value[:3][1]
+            day = date_value[:3][2]
+        if isinstance(sheet.cell_value(i, 3), str):
+            time1 = sheet.cell_value(i, 3).split(":")
+            hour = time1[0]
+            minute = time1[1]
+        else:
+            time_value = xlrd.xldate_as_tuple(sheet.cell_value(i, 3), book.datemode)
+            hour = time_value[3:][0]
+            minute = time_value[3:][1]
+        meeting_date = datetime.datetime(int(year), int(month), int(day), int(hour), int(minute), 0)
         meeting_date = meeting_date + datetime.timedelta(hours=-8)
         if grade == "初中":
             gradeType = "cz"
         else:
             gradeType = "gz"
-        # "id": create_id(get_id(seqidgens_collect, "meetingTimeId", 1000000)),
         records = {
             "isValid": True,
             "classTime": meeting_date,
