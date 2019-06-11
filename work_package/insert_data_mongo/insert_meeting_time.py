@@ -37,62 +37,66 @@ def create_id(sid):
     return "mt_" + str(sid)
 
 
+def utc_dateTime(book_datemode, date_value, time_value):
+    if isinstance(date_value, str):
+        date1 = date_value.split("/")
+        year = date1[0]
+        month = date1[1]
+        day = date1[2]
+    else:
+        # book.datemode 以日期方式显示该单元数据
+        date2 = xlrd.xldate_as_tuple(date_value, book_datemode)
+        year = date2[:3][0]
+        month = date2[:3][1]
+        day = date2[:3][2]
+    if isinstance(time_value, str):
+        time1 = time_value.split(":")
+        hour = time1[0]
+        minute = time1[1]
+    else:
+        time2 = xlrd.xldate_as_tuple(date_value, book_datemode)
+        hour = time2[3:][0]
+        minute = time2[3:][1]
+    date_time = datetime.datetime(int(year), int(month), int(day), int(hour), int(minute), 0)
+    utc_date_time = date_time + datetime.timedelta(hours=-8)
+    return utc_date_time
+
+
 # exec()用来执行储存在字符串或文件中的Python语句,支持Python代码的动态执行
 def exec(meetingtimes_collect, seqidgens_collect):
     book = xlrd.open_workbook("直播班会时间安排str.xlsx")
-
     sheet = book.sheet_by_index(0)
     colnum = sheet.nrows
     valid_num = 0
-
+    insert_num = 0
     for i in range(1, colnum):
-
         # 过滤年级为空的情况
         grade = sheet.cell_value(i, 2)
         if grade == "" or grade == "年级":
             continue
-
-        valid_num += 1
-        if isinstance(sheet.cell_value(i, 1), str):
-            date1 = sheet.cell_value(i, 1).split("/")
-            year = date1[0]
-            month = date1[1]
-            day = date1[2]
-        else:
-            # book.datemode 以日期方式显示该单元数据
-            date_value = xlrd.xldate_as_tuple(sheet.cell_value(i, 1), book.datemode)
-            year = date_value[:3][0]
-            month = date_value[:3][1]
-            day = date_value[:3][2]
-        if isinstance(sheet.cell_value(i, 3), str):
-            time1 = sheet.cell_value(i, 3).split(":")
-            hour = time1[0]
-            minute = time1[1]
-        else:
-            time_value = xlrd.xldate_as_tuple(sheet.cell_value(i, 3), book.datemode)
-            hour = time_value[3:][0]
-            minute = time_value[3:][1]
-        meeting_date = datetime.datetime(int(year), int(month), int(day), int(hour), int(minute), 0)
-        meeting_date = meeting_date + datetime.timedelta(hours=-8)
-        if grade == "初中":
-            gradeType = "cz"
-        else:
-            gradeType = "gz"
+        date_value = sheet.cell_value(i, 1)
+        time_value = sheet.cell_value(i, 3)
+        book_datemode = book.datemode
+        utc_meeting_date = utc_dateTime(book_datemode, date_value, time_value)
+        gradeType = "cz" if grade == "初中" else "gz"
+        id = create_id(get_id(seqidgens_collect, "meetingTimeId", 1000000)),
         records = {
             "isValid": True,
-            "classTime": meeting_date,
+            "classTime": utc_meeting_date,
             "duration": 30,
             "gradeType": gradeType,
             "createdAt": datetime.datetime.utcnow(),
             "updatedAt": datetime.datetime.utcnow()
         }
+        valid_num += 1
         meetingtimes_collect.insert_one(records)
-
+        insert_num += 1
     ############################################
     ############################################
 
     print("===================")
     print("=有效数据为: " + str(valid_num) + " 条=")
+    print("=插入数据为: " + str(valid_num) + " 条=")
     print("===================")
 
 
