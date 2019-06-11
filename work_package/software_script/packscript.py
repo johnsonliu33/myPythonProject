@@ -7,7 +7,7 @@ from ctypes import *
 import win32api
 import time
 import json
-from pyzip import *
+from work_package.software_script.pyzip import ZFile
 
 global gIsBeta
 global gAppName
@@ -129,9 +129,8 @@ def getAppPublishDir() :
     return packdir
 
 def ZipFile(srcfilepath):
-    localfile = file(srcfilepath, "rb")
-    filecontent = localfile.read()
-    localfile.close()
+    with open(srcfilepath, "rb")as localfile:
+        filecontent = localfile.read()
 
     destfilepath = srcfilepath + ".gz"
     gf = gzip.open(destfilepath, "wb")
@@ -142,13 +141,12 @@ def GetFileMd5(filename):
     if not os.path.isfile(filename):
         return
     myhash = hashlib.md5()
-    f = file(filename,'rb')
-    while True:
-        b = f.read(8096)
-        if not b :
-            break
-        myhash.update(b)
-    f.close()
+    with open(filename,'rb')as f:
+        while True:
+            b = f.read(8096)
+            if not b :
+                break
+            myhash.update(b)
     md5value = myhash.hexdigest()
     return md5value[8:-8]
 
@@ -192,7 +190,7 @@ def updateversionModulesinfo(filelist, appversioninfo):
             updatebetamodules = True
         else :
             if 'Modules' not in appversioninfo :
-                print u'当前为正式版本发布，从服务端获取的版本信息没有正式版本数据'
+                print (u'当前为正式版本发布，从服务端获取的版本信息没有正式版本数据')
                 return False
 
         if updatebetamodules :
@@ -247,7 +245,7 @@ def updateversionModulesinfo(filelist, appversioninfo):
 def updateETClientNsisScript(version) :
     scriptfilepath = getAppPackScriptFilePath()
     if not os.path.exists(scriptfilepath) :
-        print 'error1'
+        print ('error1')
         return False, None
     
     fp = codecs.open(scriptfilepath, 'rb')
@@ -256,7 +254,7 @@ def updateETClientNsisScript(version) :
     
     index = filecontent.find('PRODUCT_VERSION')
     if index < 0 :
-        print 'error2'
+        print ('error2')
         return False, None
     start = filecontent.find('\"', index)
     end = filecontent.find('\"', start + 1)
@@ -271,7 +269,7 @@ def updateETClientNsisScript(version) :
 
     index = filecontent.find('OutFile')
     if index < 0 :
-        print 'error4'
+        print ('error4')
         return False, None
     start = filecontent.find('\"', index)
     end = filecontent.find('\"', start + 1)
@@ -697,9 +695,9 @@ if __name__ == "__main__":
                 clearappgitdir()
                 ret, info = makepackfile(sys.argv[1])
                 os.remove(sys.argv[1])
-                print info
+                print (info)
             except Exception as error:
                 os.remove(sys.argv[1])
-                print str(error)
+                print (str(error))
 
 
