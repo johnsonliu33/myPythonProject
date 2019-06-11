@@ -1,0 +1,1 @@
+python packscript.py D:\wamp\www\upload\3.39.8.1807.zip "packfile" 0 "EasyClient"
