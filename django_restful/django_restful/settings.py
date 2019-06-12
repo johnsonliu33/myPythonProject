@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 """
 Django settings for django_restful project.
 
@@ -121,3 +122,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     )
 }
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')]

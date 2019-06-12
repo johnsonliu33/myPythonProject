@@ -6,6 +6,7 @@ from api.serializers import UserSerializer, GroupSerializer
 
 
 # creat your views here
+# viewsets通过serializer_class找到对应的serializers
 class UserViewSet(viewsets.ModelViewSet):
     """
     retrieve:
