@@ -1,16 +1,18 @@
 import zipfile
-import os.path
 import os
 
-class ZFile(object):
+
+class ZFile:
+    """解压文件"""
+
     def __init__(self, filename, mode='r', basedir=''):
         self.filename = filename
         self.mode = mode
+        self.basedir = basedir
         if self.mode in ('w', 'a'):
             self.zfile = zipfile.ZipFile(filename, self.mode, compression=zipfile.ZIP_DEFLATED)
         else:
             self.zfile = zipfile.ZipFile(filename, self.mode)
-        self.basedir = basedir
         if not self.basedir:
             self.basedir = os.path.dirname(filename)
 
@@ -46,3 +48,7 @@ class ZFile(object):
             wzfile = open(f, 'wb')
             wzfile.write(self.zfile.read(filename))
             wzfile.close()
+
+if __name__ == '__main__':
+    zfile=ZFile("E:/1.0.1.1905.zip")
+    zfile.addfile("D://")
