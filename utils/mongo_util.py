@@ -31,7 +31,8 @@ def collec_mongo2():
 
 class TestMongo:
     def __init__(self):
-        client = MongoClient("mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi")
+        uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi"
+        client = MongoClient(uri)
         self.collection = client["guideclass_ceshi"]["test"]
 
     def test_insert_one(self):
@@ -78,14 +79,14 @@ class TestMongo:
 
 
 # insert(),save(),update(),remove()已启用
-
-coll = TestMongo()
-coll.test_insert_one()
-coll.test_insert_many()
-coll.test_find_one()
-coll.test_find_many()
-coll.test_update_one()
-coll.test_update_many()
-coll.test_delete_one()
-coll.test_delete_many()
-coll.test_clear_collection()
+if __name__ == '__main__':
+    coll = TestMongo()
+    coll.test_insert_one()
+    coll.test_insert_many()
+    coll.test_find_one()
+    coll.test_find_many()
+    coll.test_update_one()
+    coll.test_update_many()
+    coll.test_delete_one()
+    coll.test_delete_many()
+    coll.test_clear_collection()

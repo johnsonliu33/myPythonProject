@@ -2,7 +2,7 @@
 import hashlib
 import os, sys, shutil, codecs
 import gzip
-from ctypes import cdll, c_int, c_char_p, byref
+from ctypes import *
 import win32api
 import time
 import json
@@ -14,44 +14,47 @@ global gupdateinfo
 
 
 def getAppPackDir():
+    """获取客户端应用程序路径"""
     packdir = ''
     if gAppName == 'EasyClient':
-        packdir = 'D:/wamp/www/AppPack/ETClientPack'
+        packdir = 'D:/AppPack/ETClientPack'
     elif gAppName == 'EClassStudent':
-        packdir = 'D:/wamp/www/AppPack/EClassStudentPack'
+        packdir = 'D:/AppPack/EClassStudentPack'
     elif gAppName == 'EClassTeacher':
-        packdir = 'D:/wamp/www/AppPack/EClassTeacherPack'
+        packdir = 'D:/AppPack/EClassTeacherPack'
     elif gAppName == 'ETutorTeacher':
-        packdir = 'D:/wamp/www/AppPack/ETutorTeacherPack'
+        packdir = 'D:/AppPack/ETutorTeacherPack'
     elif gAppName == 'ETutorStudent':
-        packdir = 'D:/wamp/www/AppPack/ETutorStudentPack'
+        packdir = 'D:/AppPack/ETutorStudentPack'
     elif gAppName == 'GuideClassTeacher':
-        packdir = 'D:/wamp/www/AppPack/GuideClassTeacherPack'
+        packdir = 'D:/AppPack/GuideClassTeacherPack'
     elif gAppName == 'GuideClassStudent':
-        packdir = 'D:/wamp/www/AppPack/GuideClassStudentPack'
+        packdir = 'D:/AppPack/GuideClassStudentPack'
     return packdir
 
 
 def getAppPackScriptFilePath():
+    """获取客户端打包文件"""
     packdir = ''
     if gAppName == 'EasyClient':
-        packdir = 'D:/wamp/www/AppPack/ETClientinstall.nsi'
+        packdir = 'D:/AppPack/ETClientinstall.nsi'
     elif gAppName == 'EClassStudent':
-        packdir = 'D:/wamp/www/AppPack/EClassStudentinstall.nsi'
+        packdir = 'D:/AppPack/EClassStudentinstall.nsi'
     elif gAppName == 'EClassTeacher':
-        packdir = 'D:/wamp/www/AppPack/EClassTeacherinstall.nsi'
+        packdir = 'D:/AppPack/EClassTeacherinstall.nsi'
     elif gAppName == 'ETutorTeacher':
-        packdir = 'D:/wamp/www/AppPack/ETutorTeacherinstall.nsi'
+        packdir = 'D:/AppPack/ETutorTeacherinstall.nsi'
     elif gAppName == 'ETutorStudent':
-        packdir = 'D:/wamp/www/AppPack/ETutorStudentinstall.nsi'
+        packdir = 'D:/AppPack/ETutorStudentinstall.nsi'
     elif gAppName == 'GuideClassTeacher':
-        packdir = 'D:/wamp/www/AppPack/GuideClassTeacherinstall.nsi'
+        packdir = 'D:/AppPack/GuideClassTeacherinstall.nsi'
     elif gAppName == 'GuideClassStudent':
-        packdir = 'D:/wamp/www/AppPack/GuideClassStudentinstall.nsi'
+        packdir = 'D:/AppPack/GuideClassStudentinstall.nsi'
     return packdir
 
 
 def getAppVersionInfoJsonFileName():
+    """获取json文件"""
     filename = ''
     if gAppName == 'EasyClient':
         filename = 'EasyClient.json'
@@ -73,6 +76,7 @@ def getAppVersionInfoJsonFileName():
 
 
 def getAppGitDir():
+    """获取客户端git路径"""
     packdir = ''
     if gAppName == 'EasyClient':
         packdir = 'D:/AutomaticPublish/AutomaticPublishETClient'
@@ -90,13 +94,13 @@ def getAppGitDir():
         packdir = 'D:/AutomaticPublish/AutomaticPublishGuideClassTeacher'
     elif gAppName == 'GuideClassStudent':
         packdir = 'D:/AutomaticPublish/AutomaticPublishGuideClassStudent'
-
     if not os.path.exists(packdir):
         os.mkdir(packdir)
     return packdir
 
 
 def getAppType():
+    """获取客户端类型"""
     type = 0
     if gAppName == 'EClassStudent':
         type = 1
@@ -110,32 +114,32 @@ def getAppType():
         type = 5
     elif gAppName == 'GuideClassStudent':
         type = 6
-
     return type
 
 
 def getAppPublishDir():
+    """获取客户顿发布文件路径"""
     packdir = ''
     if gAppName == 'EasyClient':
-        packdir = 'D:/wamp/www/AppPack/ETClientPublishFiles'
+        packdir = 'D:/AppPack/ETClientPublishFiles'
     elif gAppName == 'EClassStudent':
-        packdir = 'D:/wamp/www/AppPack/EClassStudentPublishFiles'
+        packdir = 'D:/AppPack/EClassStudentPublishFiles'
     elif gAppName == 'EClassTeacher':
-        packdir = 'D:/wamp/www/AppPack/EClassTeacherPublishFiles'
+        packdir = 'D:/AppPack/EClassTeacherPublishFiles'
     elif gAppName == 'ETutorTeacher':
-        packdir = 'D:/wamp/www/AppPack/ETutorTeacherPublishFiles'
+        packdir = 'D:/AppPack/ETutorTeacherPublishFiles'
     elif gAppName == 'ETutorStudent':
-        packdir = 'D:/wamp/www/AppPack/ETutorStudentPublishFiles'
+        packdir = 'D:/AppPack/ETutorStudentPublishFiles'
     elif gAppName == 'GuideClassTeacher':
-        packdir = 'D:/wamp/www/AppPack/GuideClassTeacherPublishFiles'
+        packdir = 'D:/AppPack/GuideClassTeacherPublishFiles'
     elif gAppName == 'GuideClassStudent':
-        packdir = 'D:/wamp/www/AppPack/GuideClassStudentPublishFiles'
+        packdir = 'D:/AppPack/GuideClassStudentPublishFiles'
 
     return packdir
 
 
 def ZipFile(srcfilepath):
-    with open(srcfilepath, "rb")as localfile:
+    with open(srcfilepath, "rb") as localfile:
         filecontent = localfile.read()
 
     destfilepath = srcfilepath + ".gz"
@@ -145,6 +149,7 @@ def ZipFile(srcfilepath):
 
 
 def GetFileMd5(filename):
+    """获取文件MD5码"""
     if not os.path.isfile(filename):
         return
     myhash = hashlib.md5()
@@ -172,7 +177,7 @@ def getFileVersion(file_name):
 
 
 def getCurVersionInfo():
-    dll = cdll.LoadLibrary('D:/wamp/www/pyscript/PythonGetETClientVersion.dll')
+    dll = cdll.LoadLibrary('"D:/pyscript/PythonGetETClientVersion.dll')
     strversionlen = 0
     outstrlen = c_int(strversionlen)
 
@@ -248,7 +253,6 @@ def updateversionModulesinfo(filelist, appversioninfo):
 
                     modules[i]['version'] = fileversion
                     break
-
     return True
 
 
@@ -364,7 +368,7 @@ def cleardir(rmdir):
 
 def makeuploadgitscriptfile(version):
     filename = 'uploadgit' + gAppName + '.bat'
-    filepath = os.path.join('D:/wamp/www/pyscript', filename)
+    filepath = os.path.join('"D:/pyscript', filename)
     if os.path.exists(filepath):
         os.remove(filepath)
 
@@ -378,7 +382,7 @@ def makeuploadgitscriptfile(version):
 
 def clearappgitdir():
     filename = 'cleargit' + gAppName + '.bat'
-    filepath = os.path.join('D:/wamp/www/pyscript', filename)
+    filepath = os.path.join('"D:/pyscript', filename)
     if os.path.exists(filepath):
         os.remove(filepath)
 
@@ -544,7 +548,7 @@ def checkpublishfiles(srcdir, bupdate, newfiles):
 
 def dogitremoveaction(gitdir, rmfilename):
     filename = 'updategit' + gAppName + '.bat'
-    filepath = os.path.join('D:/wamp/www/pyscript', filename)
+    filepath = os.path.join('"D:/pyscript', filename)
 
     filecontent = '@echo off\r\n\r\n cd /d ' + gitdir + ' \r\n git rm -r ' + rmfilename
     fwrite = codecs.open(filepath, 'wb')
