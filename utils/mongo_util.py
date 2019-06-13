@@ -29,11 +29,11 @@ def collec_mongo2():
         print(item2)
 
 
-class TestMongo:
-    def __init__(self):
-        uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi"
+class MongoUtil:
+    def __init__(self, database="guideclass_ceshi", collect="test"):
+        uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/%s" % database
         client = MongoClient(uri)
-        self.collection = client["guideclass_ceshi"]["test"]
+        self.collection = client[database][collect]
 
     def test_insert_one(self):
         # insert接收字典，返回object
@@ -80,7 +80,7 @@ class TestMongo:
 
 # insert(),save(),update(),remove()已启用
 if __name__ == '__main__':
-    coll = TestMongo()
+    coll = MongoUtil()
     coll.test_insert_one()
     coll.test_insert_many()
     coll.test_find_one()
