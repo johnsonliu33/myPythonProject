@@ -17,7 +17,7 @@ def mysqlUtil(sqlStr, username):
             for i in cursor.fetchall():
                 print(i)
         else:
-            print(username+" 运行失败!!!")
+            print(username + " 运行失败!!!")
     except Exception as e:
         print(e)
     finally:
@@ -51,10 +51,13 @@ def get_user():
     db = mongo_datebase()
     cellec_users = db.users
     data_users = cellec_users.find()
+    num = 0
     for user in data_users:
         # print("user: " + user["username"])
         insert_user(user["username"])
         update_usePass(user["username"])
+        num += 1
+
 
 if __name__ == '__main__':
     get_user()
