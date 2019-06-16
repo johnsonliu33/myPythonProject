@@ -9,8 +9,8 @@ class MySqlUtil:
         self.user = user
         self.passwd = passwd
         self.db = db
-        self.conn = pymysql.connect(host=self.host, port=self.port, user=self.user, passwd=self.passwd, db=self.db,
-                                    charset="utf8")
+        # charset默认值'utf8mb4'
+        self.conn = pymysql.connect(host=self.host, port=self.port, user=self.user, passwd=self.passwd, db=self.db, )
 
     def mysql_select(self, sql):
         result = ()
