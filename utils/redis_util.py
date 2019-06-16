@@ -3,7 +3,7 @@ import redis
 
 
 class redisUtil:
-    def __init__(self, host="172.16.0.211", port="6379", db=13, password=""):
+    def __init__(self, host="172.16.0.211", db=13, password="", port="6379"):
         self.database = redis.Redis(host=host, port=port, db=db, password=password)
         print("successfully connect to redis server.")
 
@@ -29,7 +29,7 @@ class redisUtil:
 
     def get_hash_keys(self, key):
         byteKeys = self.database.hkeys(key)
-        strKeys=[]
+        strKeys = []
         for key in byteKeys:
             strKeys.append(key.decode())
         return strKeys
@@ -43,4 +43,4 @@ if __name__ == '__main__':
         print(hashkey)
         key = redis_util.get_hash_keys(hashkey)
         redis_util.delete_data(key)
-        print("=======",key)
+        print("=======", key)

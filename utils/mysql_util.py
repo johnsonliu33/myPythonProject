@@ -4,13 +4,8 @@ import pymysql
 
 class MySqlUtil:
     def __init__(self, host, user, passwd, db, port=3306):
-        self.host = host
-        self.port = port
-        self.user = user
-        self.passwd = passwd
-        self.db = db
         # charset默认值'utf8mb4'
-        self.conn = pymysql.connect(host=self.host, port=self.port, user=self.user, passwd=self.passwd, db=self.db, )
+        self.conn = pymysql.connect(host=host, port=port, user=user, passwd=passwd, db=db)
 
     def mysql_select(self, sql):
         result = ()
