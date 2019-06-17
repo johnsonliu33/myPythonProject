@@ -35,9 +35,14 @@ def get_software(version):
 def get_json(modules):
     """读取json文件"""
     with open("./EasyClient.json", "r", encoding="utf-8")as file:
-        d = file.read()
+        # 读取json文件
+        # 方法一：json.loads()是用来读取字符串的
+        data = file.read()
+    params_json = json.loads(data)
+        # 方法二：json.load()是用来读取文件的
+        # params_json = json.load(file)
     json_list = []
-    params_json = json.loads(d)
+
     json_str = params_json.items()
     j_count = 0
     for key, value in json_str:
