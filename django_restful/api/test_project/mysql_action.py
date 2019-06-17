@@ -46,10 +46,14 @@ class MysqlDB():
 
 if __name__ == '__main__':
     db = MysqlDB()
-    db.clear("api_user")
-    db.clear("api_group")
-    user_data = {"id": 1, "username": "333nhvgccf", "email": "653654@163.com"}
-    db.insert("api_user", user_data)
-    group_data = {"id": 1, "name": "333hgfdhtyhy"}
-    db.insert("api_group", group_data)
-    db.close()
+    # db.clear("api_user")
+    # db.clear("api_group")
+    # user_data = {"id": 1, "username": "333nhvgccf", "email": "653654@163.com"}
+    # db.insert("api_user", user_data)
+    # group_data = {"id": 1, "name": "333hgfdhtyhy"}
+    # db.insert("api_group", group_data)
+    # db.close()
+
+    f = open("datas.yaml", "r")
+    datas = yaml.full_load(f)
+    db.init_data(datas)

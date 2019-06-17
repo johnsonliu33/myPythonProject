@@ -1,0 +1,14 @@
+api_user:
+ - id: 1
+   username: user1
+   email: 123456@163.com
+   groups: http://127.0.0.1:8000/groups/1
+ - id: 2
+   username: user2
+   email: 123456@163.com
+   groups: http://127.0.0.1:8000/groups/2
+api_group:
+ - id: 1
+   name: group1
+ - id: 2
+   name: group2

@@ -7,11 +7,11 @@ import unittest
 
 class TestUser(unittest.TestCase):
     def setUp(self):
-        self.base_url = "http://127.0.0.1:8000/users/"
-        self.auth = ("root", "123456")
+        self.base_url = "http://127.0.0.1:8000/users"
+        self.auth = ("admin", "123456")
 
     def test_get_user(self):
-        resp = requests.get(url=self.base_url + "1/", auth=self.auth)
+        resp = requests.get(url=self.base_url + "/1/", auth=self.auth)
         result = resp.json()
         print(result)
         self.assertEqual(result["username"], "root")
@@ -39,22 +39,21 @@ class TestUser(unittest.TestCase):
 
 class TestGroup(unittest.TestCase):
     def setUp(self):
-        self.base_url = "http://127.0.0.1:8000/groups/"
-        self.auth = ("root", "123456")
+        self.base_url = "http://127.0.0.1:8000/groups"
+        self.auth = ("admin", "123456")
 
     def test_get_group(self):
-        resp = requests.get(url=self.base_url + "1/", auth=self.auth)
+        resp = requests.get(url=self.base_url + "/1/", auth=self.auth)
         result = resp.json()
         print(result)
-        self.assertEqual(result["username"], "root")
-        self.assertEqual(result["email"], "779446928@qq.com")
+        self.assertEqual(result["name"], "group1")
 
     def test_add_group(self):
-        from_data = {"username": "xiaoming4", "email": "123@qq.com"}
+        from_data = {"name": "xiaoming4"}
         resp = requests.post(url=self.base_url, data=from_data, auth=self.auth)
         result = resp.json()
         print(result)
-        self.assertEqual(result["username"], "xiaoming4")
+        self.assertEqual(result["name"], "xiaoming4")
 
     def test_delete_group(self):
         self.assertEqual()
