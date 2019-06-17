@@ -17,7 +17,7 @@ def get_software(version):
     resp = requests.get(url, headers=heard)
     string = resp.content.decode("utf-8")
     software_list = []
-    keys = 'a title="(.+?)" href="/Package/AutomaticPublishETClient/blob/master/3.42.12.1905/.+?">'
+    keys = 'a title="(.+?)" href="/Package/AutomaticPublishETClient/blob/master/.+?">'
     pattern = re.compile(keys)
     result = pattern.findall(string)
     s_count = 0
