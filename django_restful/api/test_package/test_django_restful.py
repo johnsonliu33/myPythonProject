@@ -2,7 +2,7 @@
 import requests
 import unittest
 import yaml
-from api.test_project.mysql_action import MysqlDB
+from api.test_package.mysql_action import MysqlDB
 
 
 class TestUser(unittest.TestCase):

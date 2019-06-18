@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import unittest
 from HTMLTestRunner import BSTestRunner
-from api.test_project.mysql_action import MysqlDB
+from api.test_package.mysql_action import MysqlDB
 import time
 import yaml
 
