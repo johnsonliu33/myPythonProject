@@ -1,6 +1,6 @@
 import xlrd
 import datetime
-from pymongo import MongoClient
+from pymongo import MongoClient,errors
 
 
 def get_mongo():
@@ -16,8 +16,8 @@ def get_seqidgens_collect(collect):
 
 
 def get_meetingtimes_collect(collect):
-    # return collect["meetingtimes"]
-    return collect["test"]
+    return collect["meetingtimes"]
+    # return collect["test"]
 
 
 def get_id(collect, user, init=123):
@@ -64,7 +64,7 @@ def utc_dateTime(book_datemode, date_value, time_value):
 
 # exec()用来执行储存在字符串或文件中的Python语句,支持Python代码的动态执行
 def exec(meetingtimes_collect, seqidgens_collect):
-    book = xlrd.open_workbook("直播班会时间安排str.xlsx")
+    book = xlrd.open_workbook("直播班会时间安排.xlsx")
     sheet = book.sheet_by_index(0)
     colnum = sheet.nrows
     valid_num = 0
@@ -79,7 +79,7 @@ def exec(meetingtimes_collect, seqidgens_collect):
         book_datemode = book.datemode
         utc_meeting_date = utc_dateTime(book_datemode, date_value, time_value)
         gradeType = "cz" if grade == "初中" else "gz"
-        id = create_id(get_id(seqidgens_collect, "meetingTimeId", 1000000)),
+        create_id(get_id(seqidgens_collect, "meetingTimeId", 1000000)),
         records = {
             "isValid": True,
             "classTime": utc_meeting_date,
@@ -89,14 +89,18 @@ def exec(meetingtimes_collect, seqidgens_collect):
             "updatedAt": datetime.datetime.utcnow()
         }
         valid_num += 1
-        meetingtimes_collect.insert_one(records)
-        insert_num += 1
+        try:
+            meetingtimes_collect.insert_one(records)
+        except errors.DuplicateKeyError as e:
+            print(e)
+        else:
+            insert_num += 1
     ############################################
     ############################################
 
     print("===================")
     print("=有效数据为: " + str(valid_num) + " 条=")
-    print("=插入数据为: " + str(valid_num) + " 条=")
+    print("=插入数据为: " + str(insert_num) + " 条=")
     print("===================")
 
 
