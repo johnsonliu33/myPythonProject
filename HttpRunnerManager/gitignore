@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+ApiManager/__pycache__/
+ApiManager/logic/__pycache__/
+ApiManager/migrations/__pycache__/
+HttpRunnerManager/__pycache__/
+httprunner/__pycache__/
+pyunitreport/__pycache__/
+BeautifulReport/__pycache__/
+Test Report.html
+ApiManager/templatetags/*.pyc
