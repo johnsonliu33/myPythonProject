@@ -29,9 +29,8 @@ def get_json(version, modules):
     url_json = "http://download.jd100.com/GuideTeacher/{}/GuideClassGuider.json".format(version)
     resp = requests.get(url_json)
     params_json = json.loads(resp.text)  # 将 JSON 对象转换为 Python 字典
-    json_str = params_json.items()
     j_count = 0
-    for key, value in json_str:
+    for key, value in params_json.items():
         if key == modules:
             for v in value:
                 json_list.append(v["name"])
