@@ -19,6 +19,8 @@ logging.basicConfig(
     # 打开日志文件的方式
     filemode="w"
 )
+
+
 @ddt.ddt
 class TestDemo(StartEnd):
 

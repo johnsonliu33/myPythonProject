@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 import os
+
+import pysnooper
 import requests
 from lxml import html
 from threading import Thread
@@ -13,28 +15,32 @@ def get_proxies(param):
     proxies = []
     url = "https://www.xicidaili.com/nn/{}".format(param)
     header_dict = {
-        "User-Agent": """Mozilla/5.0 (Windows NT 6.1; WOW64)
-                         AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36""",
+        "User-Agent": "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 "
+                      "(KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
         "Connection": "keep - alive",
-        "Cookie": "_free_proxy_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWI1NDQ3Y2RiNzkwMjQ2OTkwNmIzYzdkOGJkODE4Y2RjBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMTFHSEJrNXRTTTZ1M0s2NWN5R0dmRjJad2tURWpRMlFZTVR6Y085c25qR289BjsARg%3D%3D--a5cf2f1542d86b22c3d23e4ba38c6322588d3010; Hm_lvt_0cf76c77469e965d2957f0553e6ecf59=1561128103,1561128748; Hm_lpvt_0cf76c77469e965d2957f0553e6ecf59=1561128748",
+        "Cookie": "_free_proxy_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWMwNmJjNTg1NGQ5OWE5YmU0NDM5MTA5MTYwMTY3ZT"
+                  "Y1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXBNcG5FWFErOGpObHBqRFlkNlkwMVlFU0hrR3lpWkVubXZNeHpETFg1SmM9"
+                  "BjsARg%3D%3D--5b3a942688ed8486d608d32440246cff4427f3d9; Hm_lvt_0cf76c77469e965d2957f0553e6ecf5"
+                  "9=1561128103,1561128748,1561202507,1561297313; Hm_lpvt_0cf76c77469e965d2957f0553e6ecf59=1561298382",
         "If - None - Match": 'W / "7a5542968a39ef844ed66c00a251d96d"',
         "Accept - Language": "zh - CN, zh; q = 0.9"
     }
     try:
-        time.sleep(randint(1, 5))
+        time.sleep(randint(3, 10))
         resp = requests.get(url, verify=False, headers=header_dict, timeout=10)
         tree = html.fromstring(resp.text)
         class_odd_list = tree.xpath("//tr[@class='odd']")
-        class_none_list = tree.xpath("//tr[@class='']")
-        class_odd_list.extend(class_none_list)
+        class_null_list = tree.xpath("//tr[@class='']")
+        class_odd_list.extend(class_null_list)
         for elem_odd in class_odd_list:
             element_ip = elem_odd.xpath("./td[2]/text()")[0]
             element_port = elem_odd.xpath("./td[3]/text()")[0]
-            proxy1 = element_ip + ":" + element_port
-            proxies.append(proxy1)
+            proxy_type = elem_odd.xpath("./td[6]/text()")[0]
+            proxy_ip = element_ip + ":" + element_port
+            proxies.append((proxy_ip, proxy_type))
         return proxies
-    except Exception:
-        print(url + " 请求失败！")
+    except Exception as e:
+        print(e)
 
 
 def read_proxies():
@@ -48,39 +54,43 @@ def read_proxies():
 
 def check_proxy(proxy):
     url = "http://www.jd100.com/"
-    proxy_list = []
     header_dict = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 "
+                      "(KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
         'Connection': 'close',
     }
     try:
-        resp = requests.get(url=url, headers=header_dict, proxies={"http": proxy}, verify=False,
-                            timeout=10)
+        session = requests.session()
+        session.keep_alive = False
+        http_ip = {"http": "http://" + proxy[0]}
+        https_ip = {"https": "https://" + proxy[0]}
+        if proxy[1] == "HTTP":
+            resp = session.get(url=url, headers=header_dict, proxies=http_ip, verify=False, timeout=10)
+        elif proxy[1] == "HTTPS":
+            resp = session.get(url=url, headers=header_dict, proxies=https_ip, verify=False, timeout=10)
         if resp.status_code == 200:
-            proxy_list.append(proxy)
-        else:
-            print(resp.status_code)
-    except Exception as e:
-        print(e)
-    return proxy_list
+            return proxy
+    except Exception:
+        pass
 
 
 def save_proxies(proxy):
-    proxy_list = check_proxy(proxy)
-    with open("proxies.txt", "a")as file:
-        file.write(time.strftime("%Y-%m-%d") + ":\n")
-        for p in proxy_list:
-            file.write(p + "\n")
+    proxy_true = check_proxy(proxy)
+    if proxy_true is not None:
+        with open("proxies.txt", "a")as file:
+            file.write(proxy_true + "\n")
 
 
-def main(param):
-    proxies_list = get_proxies(param)
+def main(page):
+    """多线程校验每页的IP是否可用,并保存到文件"""
+    proxies_list = get_proxies(page)
     thread_list = []
     starttime = time.clock()
     if proxies_list is None:
-        print("=====第", param, "页无代理IP=====")
+        print("=====第", page, "页无代理IP=====")
         return None
     for proxy in proxies_list:
+        print("========", proxy)
         thread_one = Thread(target=save_proxies, args=(proxy,))
         thread_list.append(thread_one)
     for temp in thread_list:
@@ -92,16 +102,18 @@ def main(param):
 
 
 if __name__ == '__main__':
-    uri_param = ([x for x in range(1, 9)])
-    uri_param = [""] + uri_param
+    """多线程抓取前9页代理IP"""
+    uri_page = ([x for x in range(1, 9)])
+    uri_page = [""] + uri_page
     main_list = []
-    for param in uri_param:
-        main_one = Thread(target=main, args=(param,))
+    for page in uri_page:
+        main_one = Thread(target=main, args=(page,))
         main_list.append(main_one)
     for item in main_list:
         item.start()
     for item in main_list:
         item.join()
     proxies = read_proxies()
-    for proxy in proxies:
-        check_proxy(proxy)
+    if proxies is not None:
+        for proxy in proxies:
+            check_proxy(proxy)
