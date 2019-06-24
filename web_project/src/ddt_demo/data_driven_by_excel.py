@@ -6,6 +6,7 @@ import traceback
 import ddt
 from selenium.common.exceptions import NoSuchElementException
 from web_project.src.common.myunit import StartEnd
+from web_project.src.ddt_demo.excel_util import ParseExcel
 
 # 初始化日志对象
 logging.basicConfig(
@@ -20,13 +21,15 @@ logging.basicConfig(
     filemode="w"
 )
 
+excle = ParseExcel("./ceshishuju.xlsx", "Sheet1")
+
 
 @ddt.ddt
 class TestDemo(StartEnd):
 
-    @ddt.data(["神奇动物在哪里", "叶茨"], ["疯狂动物城", "古德温"], ["大话西游", "周星驰"])
-    @ddt.unpack
-    def test_dataDrivenByObj(self, testdata, expectdata):
+    @ddt.data(*excle.getDataFromSheet())
+    def test_dataDrivenByObj(self, data):
+        testdata, expectdata = tuple(data)
         url = "http://www.baidu.com"
         self.driver.get(url)
         self.driver.implicitly_wait(8)
@@ -42,7 +45,7 @@ class TestDemo(StartEnd):
         except Exception:
             logging.error("未知错误，错误信息：" + str(traceback.format_exc()))
         else:
-            logging.info("搜索{}，期望{}，通过".format(testdata, expectdata))
+            print("搜索{}，期望{}，通过".format(testdata, expectdata))
 
 
 if __name__ == '__main__':
