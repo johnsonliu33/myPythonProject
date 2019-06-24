@@ -1,7 +1,6 @@
 # -*- coding:utf-8 -*-
 import os
 
-import pysnooper
 import requests
 from lxml import html
 from threading import Thread
@@ -37,7 +36,7 @@ def get_proxies(param):
             element_port = elem_odd.xpath("./td[3]/text()")[0]
             proxy_type = elem_odd.xpath("./td[6]/text()")[0]
             proxy_ip = element_ip + ":" + element_port
-            proxies.append((proxy_ip, proxy_type))
+            proxies.append(proxy_ip)
         return proxies
     except Exception as e:
         print(e)
@@ -53,7 +52,7 @@ def read_proxies():
 
 
 def check_proxy(proxy):
-    url = "http://www.jd100.com/"
+    url = "http://www.baidu.com/"
     header_dict = {
         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 "
                       "(KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
@@ -62,12 +61,7 @@ def check_proxy(proxy):
     try:
         session = requests.session()
         session.keep_alive = False
-        http_ip = {"http": "http://" + proxy[0]}
-        https_ip = {"https": "https://" + proxy[0]}
-        if proxy[1] == "HTTP":
-            resp = session.get(url=url, headers=header_dict, proxies=http_ip, verify=False, timeout=10)
-        elif proxy[1] == "HTTPS":
-            resp = session.get(url=url, headers=header_dict, proxies=https_ip, verify=False, timeout=10)
+        resp = session.get(url=url, headers=header_dict, proxies=proxy, verify=False, timeout=10)
         if resp.status_code == 200:
             return proxy
     except Exception:
@@ -90,7 +84,6 @@ def main(page):
         print("=====第", page, "页无代理IP=====")
         return None
     for proxy in proxies_list:
-        print("========", proxy)
         thread_one = Thread(target=save_proxies, args=(proxy,))
         thread_list.append(thread_one)
     for temp in thread_list:
