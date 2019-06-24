@@ -11,6 +11,11 @@ requests.packages.urllib3.disable_warnings()
 
 
 def get_proxies(param):
+    """
+    获取代理ip
+    :param param:
+    :return:
+    """
     proxies = []
     url = "https://www.xicidaili.com/nn/{}".format(param)
     header_dict = {
@@ -52,6 +57,11 @@ def read_proxies():
 
 
 def check_proxy(proxy):
+    """
+    校验代理ip是否可用
+    :param proxy:
+    :return:
+    """
     url = "http://www.baidu.com/"
     header_dict = {
         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 "
@@ -69,6 +79,11 @@ def check_proxy(proxy):
 
 
 def save_proxies(proxy):
+    """
+    保存可用的代理ip
+    :param proxy:
+    :return:
+    """
     proxy_true = check_proxy(proxy)
     if proxy_true is not None:
         with open("proxies.txt", "a")as file:
