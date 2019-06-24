@@ -8,7 +8,7 @@ class ParseExcel:
         # 加载Excel数据
         self.wb = load_workbook(excel_path)
         # 加载sheet_name工作表数据
-        self.ws = self.wb.get_sheet_by_name(sheet_name)
+        self.ws = self.wb[sheet_name]  #workbook.get_sheet_by_name(sheet_name) 已弃用
         # 获取sheet_name工作表中的最大行号
         self.row_num = self.ws.max_row
 
