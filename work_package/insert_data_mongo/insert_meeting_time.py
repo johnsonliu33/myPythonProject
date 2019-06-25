@@ -4,7 +4,7 @@ from pymongo import MongoClient,errors
 
 
 def get_mongo():
-    DATABASE = "guideclass_ceshi2"
+    DATABASE = "guideclass_ceshi"
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(DATABASE)
     client = MongoClient(uri)
     collection = client[DATABASE]
