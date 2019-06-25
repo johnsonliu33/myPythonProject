@@ -26,7 +26,8 @@ def get_software(version):
 def get_json(version, modules):
     """获取当前版本json文件"""
     json_list = []
-    url_json = "http://download.jd100.com/GuideTeacher/{}/GuideClassGuider.json".format(version)
+    url_json = "http://download.jd100.com/GuideTeacher/{}/GuideClassGuider.json".format(
+        version)
     resp = requests.get(url_json)
     params_json = json.loads(resp.text)  # 将 JSON 对象转换为 Python 字典
     j_count = 0

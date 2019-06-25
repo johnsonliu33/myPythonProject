@@ -13,7 +13,8 @@ def get_software(version):
         "Host": "gitlab.easytech-main.com",
         "Referer": "http://gitlab.easytech-main.com/Package/AutomaticPublishETClient"
     }
-    url = "http://gitlab.easytech-main.com/Package/AutomaticPublishETClient/tree/master/{}".format(version)
+    url = "http://gitlab.easytech-main.com/Package/AutomaticPublishETClient/tree/master/{}".format(
+        version)
     resp = requests.get(url, headers=heard)
     string = resp.content.decode("utf-8")
     software_list = []
@@ -39,8 +40,8 @@ def get_json(modules):
         # 方法一：json.loads()是用来读取字符串的
         data = file.read()
     params_json = json.loads(data)
-        # 方法二：json.load()是用来读取文件的
-        # params_json = json.load(file)
+    # 方法二：json.load()是用来读取文件的
+    # params_json = json.load(file)
     json_list = []
 
     json_str = params_json.items()
@@ -53,7 +54,7 @@ def get_json(modules):
                     up = v["mustupdate"]
                     if up == "true":
                         print(v["name"], "==", up)
-                except:
+                except BaseException:
                     pass
                 j_count += 1
     print("json count : {}\n".format(j_count))

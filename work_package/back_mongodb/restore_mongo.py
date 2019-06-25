@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*- 
+# -*- coding:utf-8 -*-
 """将数据导入该主机"""
 import sys
 from pymongo import MongoClient
@@ -7,7 +7,8 @@ import os
 
 
 def get_database(DATA_BASE):
-    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(DATA_BASE)
+    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(
+        DATA_BASE)
     try:
         client = MongoClient(uri)
         database = client[DATA_BASE]
