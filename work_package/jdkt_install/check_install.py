@@ -5,7 +5,7 @@ import json
 
 def get_software(version):
     """获取当前版本应用程序"""
-    url = "http://download.jd100.com/GuideTeacher/{}/".format(version)
+    url = "http://download.jd100.com/GuideStudent/{}/".format(version)
     res = requests.get(url)
     software_list = []
     keys = '<a href=".+?">(.+?)</a>'
@@ -26,7 +26,7 @@ def get_software(version):
 def get_json(version, modules):
     """获取当前版本json文件"""
     json_list = []
-    url_json = "http://download.jd100.com/GuideTeacher/{}/GuideClassGuider.json".format(
+    url_json = "http://download.jd100.com/GuideStudent/{}/GCStudent.json".format(
         version)
     resp = requests.get(url_json)
     params_json = json.loads(resp.text)  # 将 JSON 对象转换为 Python 字典
@@ -39,8 +39,7 @@ def get_json(version, modules):
                     up = v["mustupdate"]
                     if up == "true":
                         print(v["name"], "==", up)
-                except Exception as e:
-                    print(e)
+                except Exception :
                     pass
                 j_count += 1
     print("json count : {}\n".format(j_count))
@@ -52,12 +51,12 @@ def check_software(software_list, json_list):
         if item in json_list:
             print("ok\t{}".format(item))
         else:
-            print("[-] Not found ： {} ".format(item))
+            print("[-] json Not found ： {} ".format(item))
     print("====== end ======")
 
 
 if __name__ == '__main__':
-    version = "1.0.3.1906"
+    version = "1.0.2.1906"
     modules = "Modules"
     beta_modules = "BetaModules"
     software_list = get_software(version)
