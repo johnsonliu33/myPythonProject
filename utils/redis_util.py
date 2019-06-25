@@ -4,7 +4,8 @@ import redis
 
 class redisUtil:
     def __init__(self, host="172.16.0.211", db=13, password="", port="6379"):
-        self.database = redis.Redis(host=host, port=port, db=db, password=password)
+        self.database = redis.Redis(
+            host=host, port=port, db=db, password=password)
         print("successfully connect to redis server.")
 
     def set_data(self, key, value):

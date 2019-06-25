@@ -63,10 +63,12 @@ class MongoUtil:
             print("find-: {}".format(i))
 
     def mongo_update_one(self):  # 只修改第一个符合条件的数据
-        self.collection.update_one({"username": "test01"}, {"$set": {"username": "new_test01"}})
+        self.collection.update_one({"username": "test01"}, {
+                                   "$set": {"username": "new_test01"}})
 
     def mongo_update_many(self):  # 修改所有符合条件的数据
-        self.collection.update_many({"username": "test02"}, {"$set": {"username": "new_test02"}})
+        self.collection.update_many({"username": "test02"}, {
+                                    "$set": {"username": "new_test02"}})
 
     def mongo_delete_one(self):  # 只删除第一个符合条件的数据
         self.collection.delete_one({"username": "test03"})

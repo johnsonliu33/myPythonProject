@@ -37,7 +37,13 @@ class EmailUtil:
         # 设置附件头
         basename = os.path.basename(file_name)
         # 解决中文附件名乱码问题
-        file_msg.add_header('Content-Disposition', 'attachment', filename=('gbk', '', basename))
+        file_msg.add_header(
+            'Content-Disposition',
+            'attachment',
+            filename=(
+                'gbk',
+                '',
+                basename))
         main_msg.attach(file_msg)
 
         # 设置根容器属性
@@ -56,7 +62,11 @@ class EmailUtil:
             server = smtplib.SMTP("mail.jiandan100.cn")
             server.login("songqianqian@jiandan100.cn", "Mm9842")
             # 发送给多人、同时抄送给多人，发送人和抄送人放在同一个列表中
-            server.sendmail(self.From, self.To.split(',') + self.Cc.split(','), fullText)
+            server.sendmail(
+                self.From,
+                self.To.split(',') +
+                self.Cc.split(','),
+                fullText)
             print("发送成功！")
             server.quit()
         except Exception as e:

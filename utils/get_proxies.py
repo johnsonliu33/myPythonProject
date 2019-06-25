@@ -71,7 +71,12 @@ def check_proxy(proxy):
     try:
         session = requests.session()
         session.keep_alive = False
-        resp = session.get(url=url, headers=header_dict, proxies=proxy, verify=False, timeout=10)
+        resp = session.get(
+            url=url,
+            headers=header_dict,
+            proxies=proxy,
+            verify=False,
+            timeout=10)
         if resp.status_code == 200:
             return proxy
     except Exception:

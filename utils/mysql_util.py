@@ -5,7 +5,12 @@ import pymysql
 class MySqlUtil:
     def __init__(self, host, user, passwd, db, port=3306):
         # charset默认值'utf8mb4'
-        self.conn = pymysql.connect(host=host, port=port, user=user, passwd=passwd, db=db)
+        self.conn = pymysql.connect(
+            host=host,
+            port=port,
+            user=user,
+            passwd=passwd,
+            db=db)
 
     def mysql_select(self, sql):
         result = ()
@@ -44,9 +49,14 @@ class MySqlUtil:
 
 
 if __name__ == '__main__':
-    # sql_util = MySqlUtil(host="192.168.20.156", user="test_user", passwd="test_user!@#123", db="easyweb_new_trans")
+    # sql_util = MySqlUtil(host="192.168.20.156", user="test_user",
+    # passwd="test_user!@#123", db="easyweb_new_trans")
     sql = "select * from W_UserBaseInfo WHERE id = 17519255 "
-    sql_util = MySqlUtil(host="127.0.0.1", user="admin", passwd="123456", db="test_db")
+    sql_util = MySqlUtil(
+        host="127.0.0.1",
+        user="admin",
+        passwd="123456",
+        db="test_db")
     sql_s = "select * from api_user where email='653654@163.com'"
     print("select: ", sql_util.mysql_select(sql_s))
     sql_in = "insert into api_user (id,username,email,groups) values(9,'gfdhgfd','fdsgf@111.com','test')," \
