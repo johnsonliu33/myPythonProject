@@ -14,7 +14,10 @@ def start():
     suite = unittest.defaultTestLoader.discover(case_dir, pattern='test_*.py')
     result = BeautifulReport(suite)
     report_name = time.strftime("%Y_%m_%d %H_%M_%S") + "-report"
-    result.report(filename=report_name, description="selenium-测试报告", log_path=report_dir)
+    result.report(
+        filename=report_name,
+        description="selenium-测试报告",
+        log_path=report_dir)
 
 
 def reporty_path():

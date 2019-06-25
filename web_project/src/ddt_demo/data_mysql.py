@@ -12,16 +12,25 @@ creat_table = """
         bookname varchar(40) unique not null comment "书名",
         author varchar(30) not null comment "作者",
         primary key(id)
-        )engine = innodb character set utf8 comment "测试数据表"
+        )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 comment "测试数据表"
 """
 
+
+# ENGINE=InnoDB使用innodb存储引擎
+# DEFAULT CHARSET=utf8 数据库默认编码为utf-8
+# AUTO_INCREMENT=1 自增键的起始序号为1
 
 class DataBaseInfo:
     def __init__(self, host, port, db, username, password, charset):
         self.db = db
-        self.conn = MySQLdb.connect(host=host, port=port, user=username, password=password, charset=charset)
+        self.conn = MySQLdb.connect(
+            host=host,
+            port=port,
+            db=db,
+            user=username,
+            password=password,
+            charset=charset)
 
-    @pysnooper.snoop()
     def creat(self):
         try:
             # 获取数据库游标
@@ -38,18 +47,27 @@ class DataBaseInfo:
         else:
             cursor.close()
 
-    @pysnooper.snoop()
     def insert_data(self):
         try:
             self.conn.select_db(self.db)
             cursor = self.conn.cursor()
-            sql = "insert info test_data_db(bookname,author) values(%s,%s);"
-            cursor.execute(sql, [("时间简史", "斯蒂芬·威廉·霍金"), ("人类简史", "尤瓦尔·赫拉利"), ("未来简史", "尤瓦尔·赫拉利")])
+            sql = "insert info test_data(bookname,author) values('时间简史', '斯蒂芬·威廉·霍金'), ('人类简史', '尤瓦尔·赫拉利'), ('未来简史', '尤瓦尔·赫拉利');"
+            cursor.execute(sql)
             self.conn.commit()
         except MySQLdb.Error as e:
             raise e
         else:
             cursor.close()
+
+    def get_data(self):
+        self.conn.select_db(self.db)
+        cursor = self.conn.cursor()
+        sql = "select * from test_data;"
+        cursor.execute(sql)
+        data_tupl = cursor.fetchall()
+        self.conn.commit()
+        cursor.close()
+        return data_tupl
 
     def close_conn(self):
         self.conn.close()
@@ -62,6 +80,5 @@ if __name__ == '__main__':
                       username="admin",
                       password="123456",
                       charset="utf8mb4")
-    db.creat()
     db.insert_data()
     db.close_conn()

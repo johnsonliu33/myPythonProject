@@ -53,10 +53,11 @@ class TestUnit(StartEnd):
         self.sleep_three()
         try:
             self.assertEqual(self.driver.title, "java-百度搜索", "title is fail")
-        except:
+        except BaseException:
             save_img(self.driver, "java_百度搜索.png")
 
-    @unittest.skipUnless(sys.platform.startswith("Linux"), "request windows")  # 如果系统不是Linux，则跳过
+    @unittest.skipUnless(sys.platform.startswith("Linux"),
+                         "request windows")  # 如果系统不是Linux，则跳过
     def test_demo3(self):
         """百度搜索unittest"""
         self.driver.get("http://www.baidu.com")
