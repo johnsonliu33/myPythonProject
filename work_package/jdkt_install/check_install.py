@@ -39,7 +39,7 @@ def get_json(version, modules):
                     up = v["mustupdate"]
                     if up == "true":
                         print(v["name"], "==", up)
-                except Exception :
+                except Exception:
                     pass
                 j_count += 1
     print("json count : {}\n".format(j_count))

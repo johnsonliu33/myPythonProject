@@ -1,6 +1,6 @@
 import xlrd
 import datetime
-from pymongo import MongoClient,errors
+from pymongo import MongoClient, errors
 
 
 def get_mongo():
