@@ -3,7 +3,7 @@ user = {
     'Age': 18,
     'sex': '男'
 }
-print(user.get('name'))  # None
+print(user.get('names'))  # None
 print(user.keys())  # dict_keys(['Name', 'Age', 'sex'])
 print(user.values())  # dict_values(['Jack', 18, '男'])
 print(user.items())  # dict_items([('Name', 'Jack'), ('Age', 18), ('sex', '男')])

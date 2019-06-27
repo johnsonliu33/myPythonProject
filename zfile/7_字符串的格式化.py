@@ -17,5 +17,5 @@ print(new_str4)
 
 name_s = "史泰龙"
 age_s = 55
-new_str4 = f"我叫{name_s}，今年{age_s}岁啦"
+new_str4 = "我叫{name_s}，今年{age_s}岁啦"
 print(new_str4)

@@ -19,10 +19,15 @@ def get_database(DATA_BASE):
 
 
 def clear_collection(database):
-    for clear in database.collection_names():
-        print("clear : ", clear)
-        action = database[clear]
-        action.delete_many({})
+    """清空所有collection，刪除meetingtime"""
+    for temp in database.collection_names():
+        print("clear : ", temp)
+        collect = database[temp]
+        # 清除collection
+        collect.delete_many({})
+        if collect == "meetingtimes":
+            # 刪除meetingtime
+            collect.drop()
 
 
 def back_data(BACKITEMS):
@@ -36,10 +41,22 @@ def back_data(BACKITEMS):
         print("------" + e + "------")
 
 
+def update_username(database):
+    collect = database["users"]
+    user_list = collect.find()
+    for user in user_list:
+        for key in user:
+            if key == "realName":
+                user_name_old = user["realName"]
+                user_name_new = "内网-" + user_name_old
+                collect.update_one({"realName": user_name_old}, {
+                                   "$set": {"realName": user_name_new}})
+
+
 def main():
     usage = """[-]usage: restore_mongo.py <DATA_PATH> <DATA_BASE>
             eg : python restore_mongo.py guideclass_ceshi2 guideclass_ceshi2"""
-    if len(sys.argv) < 3:
+    if len(sys.argv) < 2:
         print(usage)
     else:
         IP = "172.16.0.166"
@@ -53,6 +70,7 @@ def main():
         database = get_database(DATA_BASE)
         clear_collection(database)
         back_data(BACKITEMS)
+        update_username(database)
 
 
 if __name__ == "__main__":

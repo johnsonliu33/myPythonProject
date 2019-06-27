@@ -33,7 +33,16 @@ class MongoUtil:
     def __init__(self, database="guideclass_ceshi", collect="test"):
         uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/%s" % database
         client = MongoClient(uri)
-        self.collection = client[database][collect]
+        self.db = client[database]
+        self.collection = self.db[collect]
+
+    def rename_collection(self):
+        """重命名"""
+        self.collection.rename("test_user")
+
+    def drop_collection(self):
+        """刪除collection"""
+        self.collection.drop()
 
     def mongo_insert_one(self):
         # insert接收字典，返回object
@@ -78,6 +87,8 @@ class MongoUtil:
 
     def mongo_clear_collection(self):  # 删除所有数据
         self.collection.delete_many({})
+        # 或者
+        self.collection.remove()
 
 
 # insert(),save(),update(),remove()已启用
