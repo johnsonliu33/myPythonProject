@@ -6,7 +6,8 @@ user = {
 print(user.get('names'))  # None
 print(user.keys())  # dict_keys(['Name', 'Age', 'sex'])
 print(user.values())  # dict_values(['Jack', 18, '男'])
-print(user.items())  # dict_items([('Name', 'Jack'), ('Age', 18), ('sex', '男')])
+# dict_items([('Name', 'Jack'), ('Age', 18), ('sex', '男')])
+print(user.items())
 
 it = {
     1: 1,
@@ -27,5 +28,11 @@ ie = {'a': 'a',
 # it.update(ie)
 # print(it)  # {1: 1, 2: 2, 'a': 'a', 'b': 'b'}
 # 更新二
-e = {**it, **ie}
+
+
+def func(**args):
+    print(args)
+
+
+e = func(**it)
 print(e)  # {1: 1, 2: 2, 'a': 'a', 'b': 'b'}
