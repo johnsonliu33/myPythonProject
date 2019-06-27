@@ -10,7 +10,7 @@ from web_project.src.common.common import save_img
 class TestUnit(StartEnd):
     a = 1
 
-    def sleep_three(self, num=1):
+    def sleep_time(self, num=1):
         sleep(num)
 
     @unittest.skip
@@ -18,18 +18,18 @@ class TestUnit(StartEnd):
         self.driver.get("http://www.baidu.com")
         self.driver.maximize_window()
         self.driver.find_element_by_id("kw").send_keys("selenium")
-        self.sleep_three()
+        self.sleep_time()
         self.driver.find_element_by_id("su").click()
-        self.sleep_three()
+        self.sleep_time()
         self.assertEqual(self.driver.title, "selenium_百度搜索", "title is fail")
         self.assertIn("selenium", self.driver.page_source, "title is fail")
-        self.sleep_three()
+        self.sleep_time()
         self.driver.refresh()
-        self.sleep_three()
+        self.sleep_time()
         self.driver.set_window_size(800, 800)
-        self.sleep_three()
+        self.sleep_time()
         self.driver.back()
-        self.sleep_three()
+        self.sleep_time()
 
     @unittest.skip("skipping")  # 无条件跳过
     def test_demo1(self):
@@ -37,9 +37,9 @@ class TestUnit(StartEnd):
         self.driver.get("http://www.baidu.com")
         self.driver.maximize_window()
         self.driver.find_element_by_id("kw").send_keys("python")
-        self.sleep_three()
+        self.sleep_time()
         self.driver.find_element_by_id("su").click()
-        self.sleep_three()
+        self.sleep_time()
         self.assertEqual(self.driver.title, "python_百度搜索", "title is fail")
 
     @unittest.skipIf(a > 5, "a>5=true")  # 如果a>5=true，则跳过
@@ -48,9 +48,9 @@ class TestUnit(StartEnd):
         self.driver.get("http://www.baidu.com")
         self.driver.maximize_window()
         self.driver.find_element_by_id("kw").send_keys("java")
-        self.sleep_three()
+        self.sleep_time()
         self.driver.find_element_by_id("su").click()
-        self.sleep_three()
+        self.sleep_time()
         try:
             self.assertEqual(self.driver.title, "java-百度搜索", "title is fail")
         except BaseException:
@@ -63,7 +63,7 @@ class TestUnit(StartEnd):
         self.driver.get("http://www.baidu.com")
         self.driver.maximize_window()
         self.driver.find_element_by_id("kw").send_keys("unittest")
-        self.sleep_three()
+        self.sleep_time()
         self.driver.find_element_by_id("su").click()
-        self.sleep_three()
+        self.sleep_time()
         self.assertEqual(self.driver.title, "unittest_百度搜索", "title is fail")

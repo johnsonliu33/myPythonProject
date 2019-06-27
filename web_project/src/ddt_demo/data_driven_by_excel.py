@@ -7,16 +7,27 @@ import ddt
 from selenium.common.exceptions import NoSuchElementException
 from web_project.src.common.myunit import StartEnd
 from web_project.src.ddt_demo.data_excel import ParseExcel
-from web_project.src.util.web_log import my_log
 
-excle = ParseExcel("./ceshishuju.xlsx", "Sheet1")
+# 初始化日志对象
+logging.basicConfig(
+    # 日志级别
+    level=logging.INFO,
+    # 日志格式：级别 时间 文件名[行号] 日志信息
+    format="[%(levelname)s] %(asctime)s %(filename)s[line:%(lineno)d] %(message)s",
+    # 打印日志的时间
+    datefmt="%a, %Y-%m-%d %H:%M:%S",
+    # 输出位置
+    # 打开日志文件的方式
+    filemode="w"
+)
+
+excel = ParseExcel("./ceshishuju.xlsx", "Sheet1")
 
 
 @ddt.ddt
 class TestDemo(StartEnd):
-    logging = my_log()
 
-    @ddt.data(*excle.getDataFromSheet())
+    @ddt.data(*excel.getDataFromSheet())
     def test_dataDrivenByObj(self, data):
         testdata, expectdata = tuple(data)
         url = "http://www.baidu.com"
