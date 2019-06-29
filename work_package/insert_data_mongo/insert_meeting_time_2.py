@@ -51,18 +51,19 @@ def guide_type_dict(var):
         "高一": "gz1",
         "高二": "gz2",
         "高三": "gz3",
-        "初中": "cz1,cz2,cz3,6,7,8,8",
+        "初中": "cz1,cz2,cz3,6,7,8,9",
         "高中": "gz1,gz2,gz3",
     }.get(var, "guide is not find")
+
 
 def get_guide_type_set(guide_type_list):
     if guide_type_list is None:
         return "guide_type_list is none"
-    gts=[]
+    gts = []
     for item_list in guide_type_list:
-        item=guide_type_dict(item_list).split(",")
+        item = guide_type_dict(item_list).split(",")
         gts.extend(item)
-    gts=list(set(gts))
+    gts = list(set(gts))
     gts.sort()
     return gts
 
@@ -111,9 +112,9 @@ def exec(meetingtimes_collect, seqidgens_collect):
         if grade == "" or grade == "年级":
             continue
         date_value = sheet.cell_value(i, 1)
-        guide_type=sheet.cell_value(i, 2)
-        guide_type_list=guide_type.split("、")
-        guide_type_set=get_guide_type_set(guide_type_list)
+        guide_type = sheet.cell_value(i, 2)
+        guide_type_list = guide_type.split("、")
+        guide_type_set = get_guide_type_set(guide_type_list)
         time_value = sheet.cell_value(i, 3)
         guide_username = sheet.cell_value(i, 4)
         book_datemode = book.datemode
@@ -138,10 +139,10 @@ def exec(meetingtimes_collect, seqidgens_collect):
     ############################################
     ############################################
 
-    print("="*10)
+    print("=" * 10)
     print("=有效数据为: " + str(valid_num) + " 条=")
     print("=插入数据为: " + str(insert_num) + " 条=")
-    print("="*10)
+    print("=" * 10)
 
 
 if __name__ == "__main__":
