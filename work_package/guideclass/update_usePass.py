@@ -10,7 +10,12 @@ def mysqlUtil(sqlStr, username):
     passwd = "test_user!@#123"
     db = "easyweb_new_trans"
     try:
-        conn = pymysql.connect(host=host, port=port, user=user, password=passwd, database=db)
+        conn = pymysql.connect(
+            host=host,
+            port=port,
+            user=user,
+            password=passwd,
+            database=db)
         cursor = conn.cursor()
         res = cursor.execute(sqlStr)
         if res == 1:
@@ -27,9 +32,10 @@ def mysqlUtil(sqlStr, username):
 
 
 def mongo_datebase():
-    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi2"
+    DATA_BASE = "guideclass_ceshi2"
+    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/%s" % DATA_BASE
     client = MongoClient(uri)
-    dataBase = client["guideclass_ceshi2"]
+    dataBase = client[DATA_BASE]
     return dataBase
 
 
@@ -43,7 +49,8 @@ def insert_user(username):
 
 
 def update_usePass(username):
-    sql_two = "update W_UserBaseInfo set userpwd='VMtLmys=', realname='定制学生'  where username ='{}';".format(username)
+    sql_two = "update W_UserBaseInfo set userpwd='VMtLmys=', realname='定制学生'  where username ='{}';".format(
+        username)
     mysqlUtil(sql_two, username)
 
 
@@ -53,9 +60,9 @@ def get_user():
     data_users = cellec_users.find()
     num = 0
     for user in data_users:
-        # print("user: " + user["username"])
-        insert_user(user["username"])
-        update_usePass(user["username"])
+        print("user: " + user["username"])
+        # insert_user(user["username"])
+        # update_usePass(user["username"])
         num += 1
 
 
