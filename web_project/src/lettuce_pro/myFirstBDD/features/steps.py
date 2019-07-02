@@ -3,7 +3,7 @@ from functools import reduce
 
 from lettuce import world, step
 
-
+"""lettuce 只支持Python2"""
 def factorial(number):
     # 计算整数的阶乘
     number = int(number)
