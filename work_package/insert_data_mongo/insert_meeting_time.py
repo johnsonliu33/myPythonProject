@@ -17,8 +17,8 @@ def get_seqidgens_collect(collect):
 
 
 def get_meetingtimes_collect(collect):
-    # return collect["meetingtimes"]
-    return collect["test"]
+    return collect["meetingtimes"]
+    # return collect["test"]
 
 
 def get_id(collect, user, init=123):
@@ -53,7 +53,7 @@ def guide_type_dict(var):
         "高三": "gz3",
         "初中": "cz1,cz2,cz3,6,7,8,9",
         "高中": "gz1,gz2,gz3",
-    }.get(var, "guide is not find")
+    }.get(var, "")
 
 
 def format_guide_type_list(guide_type_list):
