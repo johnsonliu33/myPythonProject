@@ -28,7 +28,7 @@ def mysqlUtil(sqlStr, username):
 
 
 def mongo_datebase():
-    DATA_BASE = "guideclass_ceshi2"
+    DATA_BASE = "guideclass_lh"
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/%s" % DATA_BASE
     client = MongoClient(uri)
     dataBase = client[DATA_BASE]
@@ -55,7 +55,7 @@ def get_user():
 
     num = 0
     for user in data_users:
-        # print("user: " + user["username"])
+        print("user: " + user["username"])
         # insert_user(user["username"])
         update_userPass(user["username"])
         num += 1

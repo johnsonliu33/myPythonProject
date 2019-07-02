@@ -53,13 +53,13 @@ def guide_type_dict(var):
         "高三": "gz3",
         "初中": "cz1,cz2,cz3,6,7,8,9",
         "高中": "gz1,gz2,gz3",
-    }.get(var, "")
+    }.get(var, "var is Failed")
 
 
 def format_guide_type_list(guide_type_list):
     # 年级转换成['cz1','cz2','cz3','6','7','8','9','gz1','gz2','gz3']并去重
     if guide_type_list is None:
-        print("guide_type_list is none")
+        print("guide_type_list is None")
         return None
     gts = []
     for item_list in guide_type_list:
