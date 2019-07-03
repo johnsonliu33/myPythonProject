@@ -122,7 +122,7 @@ def exec(meetingtimes_collect, seqidgens_collect):
         guide_type = sheet.cell_value(i, 2)
         guide_type_before_list = guide_type.split("、")
         guide_type_after_list = format_guide_type_list(guide_type_before_list)
-        if len(guide_type_after_list) ==0:
+        if len(guide_type_after_list) == 0:
             continue
         time_value = sheet.cell_value(i, 3)
         if time_value is None:
