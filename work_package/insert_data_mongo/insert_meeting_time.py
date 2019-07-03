@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 
 def get_mongo_db():
-    DATABASE = "guideclass_ceshi2"
+    DATABASE = "guideclass_ceshi"
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(
         DATABASE)
     client = MongoClient(uri)
@@ -17,8 +17,8 @@ def get_seqidgens_collect(collect):
 
 
 def get_meetingtimes_collect(collect):
-    # return collect["meetingtimes"]
-    return collect["test"]
+    return collect["meetingtimes"]
+    # return collect["test"]
 
 
 def get_id(collect, user, init=123):
@@ -117,11 +117,19 @@ def exec(meetingtimes_collect, seqidgens_collect):
         if grade == "" or grade == "年级":
             continue
         date_value = sheet.cell_value(i, 1)
+        if date_value is None:
+            continue
         guide_type = sheet.cell_value(i, 2)
         guide_type_before_list = guide_type.split("、")
         guide_type_after_list = format_guide_type_list(guide_type_before_list)
+        if len(guide_type_after_list) ==0:
+            continue
         time_value = sheet.cell_value(i, 3)
+        if time_value is None:
+            continue
         guide_username = sheet.cell_value(i, 4)
+        if guide_username is None:
+            continue
         book_datemode = book.datemode
         utc_meeting_date = utc_date_time(book_datemode, date_value, time_value)
         create_id(get_id(seqidgens_collect, "meetingTimeId", 1000000)),
