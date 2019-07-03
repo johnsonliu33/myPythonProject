@@ -23,7 +23,7 @@ def get_meetingtimes_collect(collect):
 
 def get_id(collect, user, init=123):
     # $inc:   ({"_id": "meetingTimeId"},{$inc:{"seq":1}})   -- 找到id是meetingTimeId的数据，把seq参数加1
-    # $set:   ({"_id": "meetingTimeId"},{$set:{"temp":"更新"}}) -- 找到id是meetingTimeId的数据，更新updatedAt时间为当前时间
+    # $set:   ({"_id": "meetingTimeId"},{$set:{"updatedAt":datetime.datetime.utcnow()}}) -- 找到id是meetingTimeId的数据，更新updatedAt时间为当前时间
     # upsert=true时，匹配不到数据会插入一条新数据
     getRes = collect.find_one_and_update({"_id": user}, {"$inc": {"seq": 1}, "$set": {
         "updatedAt": datetime.datetime.utcnow()}}, new=True, upsert=True, setDefaultsOnInsert=True)
