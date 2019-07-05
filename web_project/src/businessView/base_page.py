@@ -21,5 +21,5 @@ class BasePage:
     def open(self, api):
         self._open(api)
 
-    def find_element(self, *loc):
+    def get_element(self, *loc):
         return self.driver.find_element(*loc)
