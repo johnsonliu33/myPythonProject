@@ -16,7 +16,7 @@ logging.basicConfig(
 
 
 def get_mongo_db():
-    DATABASE = "guideclass_ceshi2"
+    DATABASE = "guideclass_lh"
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(
         DATABASE)
     client = MongoClient(uri)
@@ -29,8 +29,8 @@ def get_seqidgens_collect(collect):
 
 
 def get_meetingtimes_collect(collect):
-    # return collect["meetingtimes"]
-    return collect["test"]
+    return collect["meetingtimes"]
+    # return collect["test"]
 
 
 def get_id(collect, user, init=123):
