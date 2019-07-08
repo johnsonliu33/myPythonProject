@@ -8,7 +8,7 @@ all_size = 0
 
 
 def file_list(dir_name):
-    dir_list = os.listdir(dir_name)
+    dir_list = os.listdir(dir_name)     # 列出指定目录下的所有文件和子目录
     for child_name in dir_list:
         if os.path.isdir(os.path.join(dir_name, child_name)):
             dirs = os.path.join(dir_name, child_name)
