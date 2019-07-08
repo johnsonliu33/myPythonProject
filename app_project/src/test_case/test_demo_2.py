@@ -3,7 +3,7 @@ from time import sleep
 
 from BeautifulReport import BeautifulReport
 
-from app_project.src.common.myUnittest import StartEnd
+from app_project.src.common.my_unittest import StartEnd
 
 
 class Testing2(StartEnd):

@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from web_project.src.basepage.base_page import BasePage
+from src.businessView.base_page import BasePage
 from selenium.webdriver.common.by import By
 
 
@@ -9,7 +9,7 @@ class IndexView(BasePage):
     zentao_type = (By.ID, "zentaopro")
 
     def type_zentao(self):
-        self.find_element(*self.zentao_type).click()
+        self.get_element(*self.zentao_type).click()
 
     def test_zt_type(driver):
         viewindex=IndexView(driver)

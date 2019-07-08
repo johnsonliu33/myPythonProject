@@ -1,7 +1,7 @@
 # coding:utf-8
 import unittest
 
-from app_project.src.common.myUnittest import StartEnd
+from app_project.src.common.my_unittest import StartEnd
 
 from app_project.src.businessView.app_login import LoginView
 from app_project.src.util.app_log import my_log

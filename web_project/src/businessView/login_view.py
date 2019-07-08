@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
-from web_project.src.basepage.base_page import BasePage
+from src.businessView.base_page import BasePage
 from selenium.webdriver.common.by import By
+from time import sleep
 
 
 class LoginView(BasePage):
@@ -11,19 +12,21 @@ class LoginView(BasePage):
     submit_loc = (By.ID, "submit")
 
     def type_username(self, username):
-        self.find_element(*self.username_loc).clear()
-        self.find_element(*self.username_loc).send_keys(username)
+        self.get_element(*self.username_loc).clear()
+        self.get_element(*self.username_loc).send_keys(username)
 
     def type_password(self, password):
-        self.find_element(*self.password_loc).clear()
-        self.find_element(*self.password_loc).send_keys(password)
+        self.get_element(*self.password_loc).clear()
+        self.get_element(*self.password_loc).send_keys(password)
 
     def type_submit(self):
-        self.find_element(*self.submit_loc).click()
+        self.get_element(*self.submit_loc).click()
 
-    def test_user_login(driver, username, password):
-        viewlogin = LoginView(driver)
+    def test_user_login(b_driver, username, password):
+        viewlogin = LoginView(b_driver)
         viewlogin.open(viewlogin.api)
         viewlogin.type_username(username)
         viewlogin.type_password(password)
         viewlogin.type_submit()
+        sleep(3)
+
