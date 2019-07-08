@@ -17,20 +17,21 @@ def file_list(dir_name):
             file_name = os.path.join(dir_name, child_name)
             global count
             count += 1
-            size = os.path.getsize(file_name)
+            size = os.path.getsize(file_name)  # 获取文件大小，单位是Byte
             global all_size
             all_size = all_size + size
             print(file_name, "\t%.3f Kb" % (size / 1024))
-            if file_name.endswith(".zip"):
+            if file_name.endswith(".zip"):  # 做文件后缀是.zip,则if为TRUE
                 file_zip = zipfile.ZipFile(file_name, "r")
                 for f in file_zip.namelist():
-                    file_zip.extract(f, dir_name)
+                    file_zip.extract(f, dir_name)  # 提取压缩文件
                 file_zip.close()
-                os.remove(file_name)
+                os.remove(file_name)  # 解压完成后删除原文件
 
 
 def find_files():
-    file_path = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    # file_path = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    file_path = "D:\\"
     dir_name = os.path.join(file_path, "MyEclipse_WorkSpace")
     print("文件夹", dir_name)
     file_list(dir_name)
