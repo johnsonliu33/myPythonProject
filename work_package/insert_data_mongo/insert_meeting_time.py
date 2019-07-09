@@ -29,8 +29,8 @@ def get_seqidgens_collect(collect):
 
 
 def get_meetingtimes_collect(collect):
-    # return collect["meetingtimes"]
-    return collect["test"]
+    return collect["meetingtimes"]
+    # return collect["test"]
 
 
 def get_id(collect, user, init=123):

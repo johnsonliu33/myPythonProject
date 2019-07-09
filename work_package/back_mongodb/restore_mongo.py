@@ -52,6 +52,17 @@ def update_username(database):
                 collect.update_one({"realName": user_name_old}, {
                                    "$set": {"realName": user_name_new}})
 
+def update_studentname(database):
+    collect = database["students"]
+    user_list = collect.find()
+    for user in user_list:
+        for key in user:
+            if key == "realName":
+                user_name_old = user["realName"]
+                user_name_new = "内网-" + user_name_old
+                collect.update_one({"realName": user_name_old}, {
+                                   "$set": {"realName": user_name_new}})
+
 
 def main():
     usage = """[-]usage: restore_mongo.py <DATA_PATH> <DATA_BASE>
@@ -71,6 +82,7 @@ def main():
         clear_collection(database)
         back_data(BACKITEMS)
         update_username(database)
+        update_studentname(database)
 
 
 if __name__ == "__main__":

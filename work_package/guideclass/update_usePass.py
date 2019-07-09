@@ -28,7 +28,7 @@ def mysqlUtil(sqlStr, username):
 
 
 def mongo_datebase():
-    DATA_BASE = "guideclass_lh"
+    DATA_BASE = "guideclass_ceshi"
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/%s" % DATA_BASE
     client = MongoClient(uri)
     dataBase = client[DATA_BASE]
@@ -48,11 +48,11 @@ def update_userPass(username):
     mysqlUtil(sql_two, username)
 
 
+
 def get_user():
     db = mongo_datebase()
     cellec_users = db.users
     data_users = cellec_users.find()
-
     num = 0
     for user in data_users:
         print("user: " + user["username"])
@@ -61,5 +61,31 @@ def get_user():
         num += 1
     print("有效用户：%s 个"% num)
 
+
+def update_username():
+    database=mongo_datebase()
+    collect = database["users"]
+    user_list = collect.find()
+    for user in user_list:
+        for key in user:
+            if key == "realName":
+                user_name_old = user["realName"]
+                user_name_new = "内网-" + user_name_old
+                collect.update_one({"realName": user_name_old}, {
+                                   "$set": {"realName": user_name_new}})
+
+def update_studentname():
+    database=mongo_datebase()
+    collect = database["students"]
+    user_list = collect.find()
+    for user in user_list:
+        for key in user:
+            if key == "realName":
+                user_name_old = user["realName"]
+                user_name_new = "内网-" + user_name_old
+                collect.update_one({"realName": user_name_old}, {
+                                   "$set": {"realName": user_name_new}})
+
+
 if __name__ == '__main__':
-    get_user()
+    update_studentname()
