@@ -10,13 +10,13 @@ logging.basicConfig(
     level=logging.INFO,
     format="[%(levelname)s] %(asctime)s %(filename)s[line:%(lineno)d] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename=r"D:\代理学管师9月份排班\logs.log",
+    filename=r"D:\学管师排班\logs.log",
     filemode="w"
 )
 
 
 def get_mongo_db():
-    DATABASE = "guideclass_lh"
+    DATABASE = "guideclass_ceshi"
     uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(
         DATABASE)
     client = MongoClient(uri)
@@ -29,8 +29,8 @@ def get_seqidgens_collect(collect):
 
 
 def get_meetingtimes_collect(collect):
-    return collect["meetingtimes"]
-    # return collect["test"]
+    # return collect["meetingtimes"]
+    return collect["test"]
 
 
 def get_id(collect, user, init=123):
@@ -181,7 +181,7 @@ def exec(meetingtimes_collect, seqidgens_collect, xlsx_name):
 
 if __name__ == "__main__":
     db = get_mongo_db()
-    dir_name = r"D:\代理学管师9月份排班"
+    dir_name = r"D:\学管师排班"
     dir_list = os.listdir(dir_name)
     for child_name in dir_list:
         if child_name.endswith(".xlsx"):
