@@ -9,6 +9,8 @@ def mysqlUtil(sqlStr):
     user = "test_user"
     passwd = "test_user!@#123"
     db = "easyweb_new_trans"
+    conn=""
+    cursor=""
     try:
         conn = pymysql.connect(
             host=host,
@@ -17,12 +19,12 @@ def mysqlUtil(sqlStr):
             password=passwd,
             database=db)
         cursor = conn.cursor()
-        res = cursor.execute(sqlStr)
+        cursor.execute(sqlStr)
+        conn.commit()
     except Exception as e:
         conn.rollback()
         print(e)
     finally:
-        conn.commit()
         cursor.close()
         conn.close()
 
