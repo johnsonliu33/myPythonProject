@@ -51,12 +51,12 @@ def check_software(software_list, json_list):
         if item in json_list:
             print("ok\t{}".format(item))
         else:
-            print("[-] json Not found ： {} ".format(item))
+            print("[-]  Not found software ： {} ".format(item))
     print("====== end ======")
 
 
 if __name__ == '__main__':
-    version = "1.0.2.1906"
+    version = "1.0.3.1906"
     modules = "Modules"
     beta_modules = "BetaModules"
     software_list = get_software(version)
