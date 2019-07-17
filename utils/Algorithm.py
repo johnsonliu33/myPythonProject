@@ -4,11 +4,11 @@
 # 一、冒泡排序：
 # 每轮依次比较相邻两个数的大小，后面比前面小则交换
 def bubble_sort(temp_list):
-    n=len(temp_list)
+    n = len(temp_list)
     for i in range(n):
-        for j in range(n-i-1):
-            if temp_list[j]>temp_list[j+1]:
-                temp_list[j],temp_list[j+1]=temp_list[j+1],temp_list[j]
+        for j in range(n - i - 1):
+            if temp_list[j] > temp_list[j + 1]:
+                temp_list[j], temp_list[j + 1] = temp_list[j + 1], temp_list[j]
     print(temp_list)
 
 
@@ -30,12 +30,8 @@ def bubble_sort(temp_list):
 
 
 if __name__ == '__main__':
-    temp_list=[3,7,1,5,4,2,8,0]
+    temp_list = [3, 7, 1, 5, 4, 2, 8, 0]
     bubble_sort(temp_list)
-
-
-
-
 
 # 总结：
 # 1、选择排序不稳定，时间复杂度为 O(n2)
