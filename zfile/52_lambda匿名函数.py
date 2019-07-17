@@ -30,3 +30,15 @@ def add_n(n):
 f = add_n(10)  # 调用f函数时，传输参数x=1,f函数再调用add_n函数，传入参数n=10
 print(f(1))  # 11
 print(f(-20))  # -10
+
+
+# 与map/filter/reduce的联合使用
+# 使用lambda定义的匿名函数可与Python提供的map、filter、reduce等全局函数结合使用，其示例如下所示：
+#
+# >>> list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# >>> map(lambda x: x * 2, list)
+# [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+# >>> filter(lambda x: x % 3 == 0, list)
+# [3, 6, 9]
+# >>> reduce(lambda x, y: x + y, list)
+# 55
