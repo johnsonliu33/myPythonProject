@@ -52,16 +52,17 @@ def update_username(database):
                 collect.update_one({"realName": user_name_old}, {
                                    "$set": {"realName": user_name_new}})
 
+
 def update_studentname(database):
     collect = database["students"]
     user_list = collect.find()
     for user in user_list:
-        for key in user:
-            if key == "realName":
-                user_name_old = user["realName"]
-                user_name_new = "内网-" + user_name_old
-                collect.update_one({"realName": user_name_old}, {
-                                   "$set": {"realName": user_name_new}})
+        # if "realName" in user:
+        if "realName" in user.keys():
+            user_name_old = user["realName"]
+            user_name_new = "内网-" + user_name_old
+            collect.update_one({"realName": user_name_old}, {
+                               "$set": {"realName": user_name_new}})
 
 
 def main():
