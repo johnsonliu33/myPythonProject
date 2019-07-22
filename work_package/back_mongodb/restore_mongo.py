@@ -45,19 +45,18 @@ def update_username(database):
     collect = database["users"]
     user_list = collect.find()
     for user in user_list:
-        for key in user:
-            if key == "realName":
-                user_name_old = user["realName"]
-                user_name_new = "内网-" + user_name_old
-                collect.update_one({"realName": user_name_old}, {
-                                   "$set": {"realName": user_name_new}})
+        # if "realName" in user:
+        if "realName" in user.keys():
+            user_name_old = user["realName"]
+            user_name_new = "内网-" + user_name_old
+            collect.update_one({"realName": user_name_old}, {
+                               "$set": {"realName": user_name_new}})
 
 
 def update_studentname(database):
     collect = database["students"]
     user_list = collect.find()
     for user in user_list:
-        # if "realName" in user:
         if "realName" in user.keys():
             user_name_old = user["realName"]
             user_name_new = "内网-" + user_name_old
@@ -69,8 +68,8 @@ def restore(back_path, db_name):
     IP = "172.16.0.166"
     DBUSER = "guideclass"
     DBPASS = "zaq1xsw2"
-    DATA_BASE = "guideclass_"+db_name
-    DATA_PATH = "./back_data/{}".format("guideclass_"+back_path)
+    DATA_BASE = "guideclass_" + db_name
+    DATA_PATH = "./back_data/{}".format("guideclass_" + back_path)
     PATH_RES = "/usr/local/mongodb/bin/mongorestore"
     BACKITEMS = ['%s -h %s:27017 -u %s -p %s -d %s --dir %s' % (PATH_RES, IP, DBUSER, DBPASS, DATA_BASE, DATA_PATH),
                  'date +"%Y-%m-%d %T"']
