@@ -25,21 +25,18 @@ class OpenpyxlUtil:
 
     def getDataFromSheet(self):
         data_list = []
-        # 获取表格的标题
-        title_name = self.sheet.title
-        # 获取sheet_name工作表中的最大行号
-        max_row_num = self.sheet.max_row
-        # 获取sheet_name工作表中的最小行号
-        min_row_num = self.sheet.min_row
-        # 获取表格的最大列
-        max_column_num = self.sheet.max_column
-        # 获取表格的最小列
-        min_column_num = self.sheet.min_column
-        # 按行获取单元格(Cell对象) - 生成器
-        rows_Iterator = self.sheet.rows
-        # columns：按列获取单元格(Cell对象) - 生成器
-        columns_Iterator = self.sheet.columns
-        self.sheet.iter_rows  # 按行获取所有单元格，内置属性有(min_row,max_row,min_col,max_col)
+
+        title_name = self.sheet.title  # 获取表格的标题
+        max_row_num = self.sheet.max_row  # 获取sheet_name工作表中的最大行号
+        min_row_num = self.sheet.min_row  # 获取sheet_name工作表中的最小行号
+        max_column_num = self.sheet.max_column  # 获取表格的最大列
+        min_column_num = self.sheet.min_column  # 获取表格的最小列
+        rows_Iterator = self.sheet.rows  # 按行获取单元格(Cell对象) - 生成器
+        columns_Iterator = self.sheet.columns  # columns：按列获取单元格(Cell对象) - 生成器
+
+        # 按行获取所有单元格，内置属性有(min_row,max_row,min_col,max_col)
+        iter_rows = self.sheet.iter_rows
+
         self.sheet.append("星期一", "2019-06-25", "gz")
         for i in range(2, max_row_num + 1):
             temp_list = []
