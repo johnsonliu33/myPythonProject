@@ -65,25 +65,29 @@ def update_studentname(database):
                                "$set": {"realName": user_name_new}})
 
 
+def restore():
+    IP = "172.16.0.166"
+    DBUSER = "guideclass"
+    DBPASS = "zaq1xsw2"
+    DATA_BASE = sys.argv[2]
+    DATA_PATH = "./back_data/{}".format(sys.argv[1])
+    PATH_RES = "/usr/local/mongodb/bin/mongorestore"
+    BACKITEMS = ['%s -h %s:27017 -u %s -p %s -d %s --dir %s' % (PATH_RES, IP, DBUSER, DBPASS, DATA_BASE, DATA_PATH),
+                 'date +"%Y-%m-%d %T"']
+    database = get_database(DATA_BASE)
+    clear_collection(database)
+    back_data(BACKITEMS)
+    update_username(database)
+    update_studentname(database)
+
+
 def main():
     usage = """[-]usage: restore_mongo.py <DATA_PATH> <DATA_BASE>
             eg : python restore_mongo.py guideclass_ceshi2 guideclass_ceshi2"""
     if len(sys.argv) < 2:
         print(usage)
     else:
-        IP = "172.16.0.166"
-        DBUSER = "guideclass"
-        DBPASS = "zaq1xsw2"
-        DATA_BASE = sys.argv[2]
-        DATA_PATH = "./back_data/{}".format(sys.argv[1])
-        PATH_RES = "/usr/local/mongodb/bin/mongorestore"
-        BACKITEMS = ['%s -h %s:27017 -u %s -p %s -d %s --dir %s' % (PATH_RES, IP, DBUSER, DBPASS, DATA_BASE, DATA_PATH),
-                     'date +"%Y-%m-%d %T"']
-        database = get_database(DATA_BASE)
-        clear_collection(database)
-        back_data(BACKITEMS)
-        update_username(database)
-        update_studentname(database)
+        restore()
 
 
 if __name__ == "__main__":
