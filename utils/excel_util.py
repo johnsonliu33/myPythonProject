@@ -24,7 +24,7 @@ def write_excel(data):
 
 def read_excel(file_name):
     """读取Excel"""
-    data_list=[]
+    data_list = []
     if os.path.exists(file_name):
         workbook = xlrd.open_workbook(file_name)
         # sheet=workbook.sheet_by_name("Sheet1") #读取名字是Sheet1的工作表
@@ -37,13 +37,15 @@ def read_excel(file_name):
             data_list.append(value)
     return data_list
 
+
 def update_excel(file_name, data):
     """修改/新增Excel"""
     if not os.path.exists(file_name):
         workbook = xlwt.Workbook(encoding='utf-8')
         workbook.add_sheet('Sheet1')
         workbook.save("excel_file.xlsx")
-    workbook = xlrd.open_workbook(file_name)
+    workbook = xlrd.open_workbook(file_name, formatting_info=True)
+    # formatting_info=True: 保留原数据格式
     new_wb = copy.copy(workbook)
     sheet = new_wb.get_sheet(0)
     old_sheet = workbook.sheet_by_index(0)
@@ -60,6 +62,6 @@ if __name__ == '__main__':
     write_excel(data)
     filename = "excel_file.xlsx"
     update_excel(filename, data)
-    datas=read_excel(filename)
+    datas = read_excel(filename)
     for temp in datas:
         print(temp)
