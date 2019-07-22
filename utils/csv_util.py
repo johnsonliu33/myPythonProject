@@ -17,8 +17,8 @@ def insert_csv_data(file_name, data_list):
 
 
 if __name__ == '__main__':
-    csv_file = "../app_project/src/data/loginUser.csv"
-    data = get_csv_data(csv_file, 1)
+    file_name = "../app_project/src/data/loginUser.csv"
+    data = get_csv_data(file_name, 1)
     print(data)
-    user1 = [["https006", 11111], ["https008", 11111]]
-    insert_csv_data(csv_file, user1)
+    data_list = [["https006", 11111], ["https008", 11111]]
+    insert_csv_data(file_name, data_list)
