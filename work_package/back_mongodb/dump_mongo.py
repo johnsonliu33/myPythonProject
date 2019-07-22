@@ -4,8 +4,8 @@ import os
 import sys
 
 
-def dump():
-    DATA_BASE = sys.argv[1]  # 库名
+def dump(dn_name):
+    DATA_BASE = dn_name  # 库名
     DBUSER = "guideclass"  # 用户
     DBPASS = "zaq1xsw2"  # 密码
     IP = "172.16.0.166"  # 主机
@@ -29,7 +29,7 @@ def main():
     if len(sys.argv) < 2:
         print(usage)
     else:
-        dump()
+        dump(sys.argv[1])
 
 
 if __name__ == '__main__':
