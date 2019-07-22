@@ -33,7 +33,7 @@ def clear_collection(database):
 def back_data(BACKITEMS):
     try:
         for item in BACKITEMS:
-            print("============" + item + "============")
+            # print("============" + item + "============")
             print(os.system(item))
     except RuntimeError as r:
         print("------" + r + "------")
@@ -65,12 +65,12 @@ def update_studentname(database):
                                "$set": {"realName": user_name_new}})
 
 
-def restore():
+def restore(back_path, db_name):
     IP = "172.16.0.166"
     DBUSER = "guideclass"
     DBPASS = "zaq1xsw2"
-    DATA_BASE = sys.argv[2]
-    DATA_PATH = "./back_data/{}".format(sys.argv[1])
+    DATA_BASE = "guideclass_"+db_name
+    DATA_PATH = "./back_data/{}".format("guideclass_"+back_path)
     PATH_RES = "/usr/local/mongodb/bin/mongorestore"
     BACKITEMS = ['%s -h %s:27017 -u %s -p %s -d %s --dir %s' % (PATH_RES, IP, DBUSER, DBPASS, DATA_BASE, DATA_PATH),
                  'date +"%Y-%m-%d %T"']
@@ -82,12 +82,12 @@ def restore():
 
 
 def main():
-    usage = """[-]usage: restore_mongo.py <DATA_PATH> <DATA_BASE>
-            eg : python restore_mongo.py guideclass_ceshi2 guideclass_ceshi2"""
+    usage = """[-]usage: restore_mongo.py <FILE_NAME> <DB_NAME>
+            eg : python restore_mongo.py guideclass_0721 guideclass_ceshi2"""
     if len(sys.argv) < 2:
         print(usage)
     else:
-        restore()
+        restore(sys.argv[1], sys.argv[2])
 
 
 if __name__ == "__main__":
