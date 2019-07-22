@@ -24,6 +24,7 @@ def write_excel(data):
 
 def read_excel(file_name):
     """读取Excel"""
+    data_list=[]
     if os.path.exists(file_name):
         workbook = xlrd.open_workbook(file_name)
         # sheet=workbook.sheet_by_name("Sheet1") #读取名字是Sheet1的工作表
@@ -33,8 +34,8 @@ def read_excel(file_name):
         rows = sheet.nrows  # 获取总行数
         for i in range(rows):
             value = sheet.row_values(i)
-            print(value)
-
+            data_list.append(value)
+    return data_list
 
 def update_excel(file_name, data):
     """修改/新增Excel"""
@@ -59,4 +60,6 @@ if __name__ == '__main__':
     write_excel(data)
     filename = "excel_file.xlsx"
     update_excel(filename, data)
-    read_excel(filename)
+    datas=read_excel(filename)
+    for temp in datas:
+        print(temp)
