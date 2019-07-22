@@ -11,7 +11,7 @@ def get_csv_data(file_name, line):
 
 def insert_csv_data(file_name, data_list):
     with open(file_name, "a", newline="") as file:
-        csv_write = csv.writer(file, dialect="excel")
+        csv_write = csv.writer(file)
         for i in range(len(data_list)):
             csv_write.writerow(data_list[i])
 
