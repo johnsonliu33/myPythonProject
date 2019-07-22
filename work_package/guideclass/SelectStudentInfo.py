@@ -31,7 +31,7 @@ def time_fmt(times):
 
 # guideclass
 def get_mongodb():
-    #uri="mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi"
+    # uri="mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/guideclass_ceshi"
     uri = "mongodb://dev:dev123@172.16.0.167:27017/guideclass"
     client = MongoClient(uri)
     #guideclass_db = client["guideclass_ceshi"]
@@ -40,7 +40,12 @@ def get_mongodb():
 
 
 def get_lesson(sectionid):
-    conn=pymysql.connect(host="192.168.1.179",port=3306,user="etwebRead",passwd="etwebRead123",db="easyweb")
+    conn = pymysql.connect(
+        host="192.168.1.179",
+        port=3306,
+        user="etwebRead",
+        passwd="etwebRead123",
+        db="easyweb")
     cursor = conn.cursor()
     sql_one = "select lessonguid from W_SectionInfo where guid = '%s' " % sectionid
     res = cursor.execute(sql_one)
@@ -58,7 +63,12 @@ def get_lesson(sectionid):
 
 
 def get_section(sectionid):
-    conn=pymysql.connect(host="192.168.1.179",port=3306,user="etwebRead",passwd="etwebRead123",db="easyweb")
+    conn = pymysql.connect(
+        host="192.168.1.179",
+        port=3306,
+        user="etwebRead",
+        passwd="etwebRead123",
+        db="easyweb")
     # conn = pymysql.connect(host="192.168.1.181", port=3306, user="select", passwd="select123", db="easyweb")
     """创建游标"""
     cursor = conn.cursor()
@@ -117,7 +127,8 @@ def get_study(students, subjects):
 def get_exam_task(students, subjects):
     db = get_mongodb()
     exam_task_table = db.examtasks
-    exam_task_data = exam_task_table.find({"student": students, "subject": subjects, "isValid": True})
+    exam_task_data = exam_task_table.find(
+        {"student": students, "subject": subjects, "isValid": True})
     print(students + "\t" + subject_type(subjects))
     for tasks_one in exam_task_data:
         play_times = 0
@@ -127,9 +138,9 @@ def get_exam_task(students, subjects):
         myFile.write("\n学生账号 : " + students)
         myFile.write("\n学    科 : " + subject_type(subjects))
         myFile.write("\n考试类型 : " + is_first)
-	
+
         # print((tasks_one["doTime"] + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S"))
-        
+
         myFile.write(
             "\n考试时间 : " + (tasks_one["doTime"] + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S"))
         myFile.write("\n试卷内容 : ")
@@ -140,12 +151,26 @@ def get_exam_task(students, subjects):
             if tasks_one["isFirstExam"] == True and "nodeName" in temp.keys():
                 p_time = temp["playTime"]
                 pt = time_fmt(p_time)
-                myFile.write("\n\t" + get_lesson(temp["sectionId"]) + " \t" + temp["nodeName"] + " \t" + pt)
+                myFile.write(
+                    "\n\t" +
+                    get_lesson(
+                        temp["sectionId"]) +
+                    " \t" +
+                    temp["nodeName"] +
+                    " \t" +
+                    pt)
                 play_times = play_times + p_time
             elif tasks_one["isFirstExam"] == True and "name" in temp.keys():
                 p_time = temp["playTime"]
                 pt = time_fmt(p_time)
-                myFile.write("\n\t" + get_lesson(temp["sectionId"]) + " \t" + temp["name"] + " \t" + pt)
+                myFile.write(
+                    "\n\t" +
+                    get_lesson(
+                        temp["sectionId"]) +
+                    " \t" +
+                    temp["name"] +
+                    " \t" +
+                    pt)
                 play_times = play_times + p_time
             else:
                 myFile.write("\n\t" + get_lesson(temp["sectionId"]))
@@ -177,6 +202,10 @@ def start_select():
 
 
 if __name__ == "__main__":
-    myFile = open(datetime.datetime.now().strftime("%Y-%m-%d") + "_studentInfo.txt", "a", encoding='utf-8')
+    myFile = open(
+        datetime.datetime.now().strftime("%Y-%m-%d") +
+        "_studentInfo.txt",
+        "a",
+        encoding='utf-8')
     start_select()
     myFile.close()

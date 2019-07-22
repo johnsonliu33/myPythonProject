@@ -2,7 +2,6 @@
 import datetime
 
 from utils import excel_util
-from bson.tz_util import FixedOffset
 from pymongo import MongoClient
 
 
@@ -19,10 +18,8 @@ def get_students():
 
     query = {}
     query["$or"] = [{"$and": [{"enrollYear": {"$lte": "2016"}}, {"gradeType": "cz3"}]},
-                    {"$and": [{"enrollYear": {"$lte": "2016"}},
-                              {"gradeType": "gz3"}]},
+                    {"$and": [{"enrollYear": {"$lte": "2016"}}, {"gradeType": "gz3"}]},
                     {"$and": [{"enrollYear": {"$lte": "2015"}}, {"gradeType": "cz4"}]}]
-    # query["gradeType"] = "cz3"
     projection = {}
     projection["username"] = "$username"
     projection["gradeType"] = "$gradeType"
@@ -77,10 +74,10 @@ def subject_type(var):
 def get_exam():
     db = get_mongodb()
     c_guidereserves = db.guidereserves
-    bigin_time = datetime.datetime(2019,7,20,0,0,0)
-    bigin_time=bigin_time+datetime.timedelta(hours=-8)
-    end_time = datetime.datetime(2019,7,22,0,0,0)
-    end_time=end_time+datetime.timedelta(hours=-8)
+    bigin_time = datetime.datetime(2019, 7, 20, 0, 0, 0)
+    bigin_time = bigin_time + datetime.timedelta(hours=-8)
+    end_time = datetime.datetime(2019, 7, 22, 0, 0, 0)
+    end_time = end_time + datetime.timedelta(hours=-8)
     query = {}
     query["time"] = {
         "$lte": end_time,
@@ -89,7 +86,7 @@ def get_exam():
 
     query["firstTime"] = False
     # query["status"] ="attend"
-    query["submitSections"]= {"$gt": 0}
+    query["submitSections"] = {"$gt": 0}
 
     projection = {}
     projection["student"] = "$student"
@@ -104,7 +101,7 @@ def get_exam():
     for temp in cursor:
         if "dingzhi" not in temp["student"] and "jianeryou" not in temp["student"] and "https" not in temp["student"]:
             text = [temp["student"], subject_type(temp["subject"]), temp["guider"],
-                    datetime.datetime.strftime(temp["time"],"%Y-%m-%d"), datetime.datetime.strftime(temp["time"],"%H:%M")]
+                    datetime.datetime.strftime(temp["time"], "%Y-%m-%d"), datetime.datetime.strftime(temp["time"], "%H:%M")]
             stu_list.append(text)
     return stu_list
 
@@ -115,4 +112,4 @@ if __name__ == '__main__':
     # excel_util.write_excel("errorstudent.xlsx", err_stu_list)
     stu_list = get_exam()
     str_time = datetime.datetime.now().strftime("%Y-%m-%d")
-    excel_util.write_excel(str_time+"--月测学生.xlsx", stu_list)
+    excel_util.write_excel(str_time + "_月测学生.xlsx", stu_list)

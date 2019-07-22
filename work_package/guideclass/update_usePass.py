@@ -9,8 +9,8 @@ def mysqlUtil(sqlStr):
     user = "test_user"
     passwd = "test_user!@#123"
     db = "easyweb_new_trans"
-    conn=""
-    cursor=""
+    conn = ""
+    cursor = ""
     try:
         conn = pymysql.connect(
             host=host,
@@ -50,7 +50,6 @@ def update_userPass(username):
     mysqlUtil(sql_two)
 
 
-
 def upset_user():
     db = mongo_datebase()
     cellec_users = db.users
@@ -61,32 +60,31 @@ def upset_user():
         # insert_user(user["username"])
         update_userPass(user["username"])
         num += 1
-    print("有效用户：%s 个"% num)
+    print("有效用户：%s 个" % num)
 
 
-def update_realName():
-    database=mongo_datebase()
+def update_usersRealName():
+    database = mongo_datebase()
     collect = database["users"]
     user_list = collect.find()
     for user in user_list:
-        for key in user:
-            if key == "realName":
-                user_name_old = user["realName"]
-                user_name_new = "内网-" + user_name_old
-                collect.update_one({"realName": user_name_old}, {
-                                   "$set": {"realName": user_name_new}})
+        if "realName" in user:
+            user_name_old = user["realName"]
+            user_name_new = "内网-" + user_name_old
+            collect.update_one({"realName": user_name_old}, {
+                               "$set": {"realName": user_name_new}})
+
 
 def update_studentRealName():
-    database=mongo_datebase()
+    database = mongo_datebase()
     collect = database["students"]
     user_list = collect.find()
     for user in user_list:
-        for key in user:
-            if key == "realName":
-                user_name_old = user["realName"]
-                user_name_new = "内网-" + user_name_old
-                collect.update_one({"realName": user_name_old}, {
-                                   "$set": {"realName": user_name_new}})
+        if "realName" in user.keys():
+            user_name_old = user["realName"]
+            user_name_new = "内网-" + user_name_old
+            collect.update_one({"realName": user_name_old}, {
+                               "$set": {"realName": user_name_new}})
 
 
 if __name__ == '__main__':

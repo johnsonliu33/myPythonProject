@@ -49,7 +49,8 @@ def select_mongodb():
 def select_student_for_studentdatas(students, subjects):
     db = select_mongodb()
     studentdatas_table = db.studentdatas
-    studentdatas_data = studentdatas_table.find({"student": students, "subject": subjects})
+    studentdatas_data = studentdatas_table.find(
+        {"student": students, "subject": subjects})
     res1 = ""
     res2 = ""
     res3 = ""
@@ -63,7 +64,10 @@ def select_student_for_studentdatas(students, subjects):
         else:
             res2 = "-"
         if "firstExamTime" in stu_dt.keys():
-            res3 = (stu_dt["firstExamTime"] + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+            res3 = (
+                stu_dt["firstExamTime"] +
+                datetime.timedelta(
+                    hours=8)).strftime("%Y-%m-%d %H:%M:%S")
         else:
             res3 = "-"
     res = (res1, res2, res3)
@@ -74,11 +78,15 @@ def select_student_for_studentdatas(students, subjects):
 def select_student_for_studytasks(students, subjects, orderdates):
     db = select_mongodb()
     studytasks_table = db.studytasks
-    studytasks_data = studytasks_table.find({"student": students, "subject": subjects})
+    studytasks_data = studytasks_table.find(
+        {"student": students, "subject": subjects})
     miantan = select_student_for_studentdatas(students, subjects)
     for stu_tk in studytasks_data:
         if stu_tk["updatedAt"] is not None:
-            res_two = (stu_tk["updatedAt"] + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+            res_two = (
+                stu_tk["updatedAt"] +
+                datetime.timedelta(
+                    hours=8)).strftime("%Y-%m-%d %H:%M:%S")
         else:
             res_two = "-"
         result_date1 = (students, subject_type(subjects), orderdates, res_two)
@@ -93,7 +101,10 @@ def select_student_for_guider():
     for guide_rel in guiderels_data:
         students = guide_rel["student"]
         subjects = guide_rel["subject"]
-        orderdates = (guide_rel["orderDate"] + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+        orderdates = (
+            guide_rel["orderDate"] +
+            datetime.timedelta(
+                hours=8)).strftime("%Y-%m-%d %H:%M:%S")
         select_student_for_studytasks(students, subjects, orderdates)
 
 
