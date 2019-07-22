@@ -77,13 +77,19 @@ def subject_type(var):
 def get_exam():
     db = get_mongodb()
     c_guidereserves = db.guidereserves
+    bigin_time = datetime.datetime(2019,7,20,0,0,0)
+    bigin_time=bigin_time+datetime.timedelta(hours=-8)
+    end_time = datetime.datetime(2019,7,22,0,0,0)
+    end_time=end_time+datetime.timedelta(hours=-8)
     query = {}
     query["time"] = {
-        "$lte": datetime.datetime.strptime("2019-07-22 08:00:00.000000", "%Y-%m-%d %H:%M:%S.%f").replace(tzinfo=FixedOffset(480, "+0800")),
-        "$gte": datetime.datetime.strptime("2019-07-20 08:00:00.000000", "%Y-%m-%d %H:%M:%S.%f").replace(tzinfo=FixedOffset(480, "+0800"))
+        "$lte": end_time,
+        "$gte": bigin_time
     }
 
     query["firstTime"] = False
+    # query["status"] ="attend"
+    query["submitSections"]= {"$gt": 0}
 
     projection = {}
     projection["student"] = "$student"
@@ -97,18 +103,9 @@ def get_exam():
     stu_list = []
     for temp in cursor:
         if "dingzhi" not in temp["student"] and "jianeryou" not in temp["student"] and "https" not in temp["student"]:
-            d = [
-                temp["student"],
-                subject_type(
-                    temp["subject"]),
-                temp["guider"],
-                datetime.datetime.strftime(
-                    temp["time"],
-                    "%Y-%m-%d"),
-                datetime.datetime.strftime(
-                    temp["time"],
-                    "%H:%M:%S")]
-            stu_list.append(d)
+            text = [temp["student"], subject_type(temp["subject"]), temp["guider"],
+                    datetime.datetime.strftime(temp["time"],"%Y-%m-%d"), datetime.datetime.strftime(temp["time"],"%H:%M")]
+            stu_list.append(text)
     return stu_list
 
 
@@ -118,4 +115,4 @@ if __name__ == '__main__':
     # excel_util.write_excel("errorstudent.xlsx", err_stu_list)
     stu_list = get_exam()
     str_time = datetime.datetime.now().strftime("%Y-%m-%d")
-    excel_util.write_excel(str_time+"_exam_student.xlsx", stu_list)
+    excel_util.write_excel(str_time+"--月测学生.xlsx", stu_list)

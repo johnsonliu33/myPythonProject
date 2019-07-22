@@ -28,4 +28,4 @@ time.strftime("%Y_%m_%d %H_%M_%S")
 # 减一天
 (datetime.datetime.now() + datetime.timedelta(days=-1)).strftime("%Y-%m-%d %H:%M:%S")
 # 可以把days改为 hours / minutes，就可以提前XX小时/分钟。
-meeting_date = datetime.datetime(2019, 5, 13, 6, 30, 0) + datetime.timedelta(hours=-8)
+utc_time = datetime.datetime(2019, 5, 13, 6, 30, 0) + datetime.timedelta(hours=-8)
