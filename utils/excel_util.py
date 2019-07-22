@@ -6,7 +6,7 @@ from xlutils import copy
 """xlrd和xlwt处理的是xls文件，单个sheet最大行数是65535，如果有更大需要的，建议使用openpyxl函数，最大行数达到1048576"""
 
 
-def write_excel(data):
+def write_excel(filename,data):
     """创建/写入Excel"""
     workbook = xlwt.Workbook(encoding='utf-8')  # 创建一个Excel
     sheet = workbook.add_sheet('Sheet1')  # 在其中创建一个名为Sheet1的sheet
@@ -19,7 +19,7 @@ def write_excel(data):
     for row in range(len(data)):
         for cell in range(len(data[row])):
             sheet.write(row, cell, data[row][cell], style)  # 往sheet里第i行第j列写入数据
-    workbook.save("excel_file.xlsx")
+    workbook.save(filename)
 
 
 def read_excel(file_name):
@@ -53,7 +53,7 @@ def update_excel(file_name, data):
     for i in range(len(data)):
         for j in range(len(data[i])):
             sheet.write(old_rows + i, j, data[i][j])
-    new_wb.save("excel_file.xlsx")
+    new_wb.save(file_name)
 
 
 if __name__ == '__main__':
