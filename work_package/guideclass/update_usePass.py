@@ -57,7 +57,7 @@ def upset_user():
     num = 0
     for user in data_users:
         print("user: " + user["username"])
-        # insert_user(user["username"])
+        insert_user(user["username"])
         update_userPass(user["username"])
         num += 1
     print("有效用户：%s 个" % num)
@@ -88,4 +88,5 @@ def update_studentRealName():
 
 
 if __name__ == '__main__':
-    update_studentRealName()
+    upset_user()
+    # update_studentRealName()

@@ -111,5 +111,5 @@ if __name__ == '__main__':
     # err_stu_list = get_guider(err_students)
     # excel_util.write_excel("errorstudent.xlsx", err_stu_list)
     stu_list = get_exam()
-    str_time = datetime.datetime.now().strftime("%Y-%m-%d")
-    excel_util.write_excel(str_time + "_月测学生.xlsx", stu_list)
+    now_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
+    excel_util.write_excel(now_time + "_月测学生.xlsx", stu_list)

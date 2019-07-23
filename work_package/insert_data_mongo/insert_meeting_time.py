@@ -4,13 +4,13 @@ from pymongo import MongoClient
 import os
 import logging
 
-
+now_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
 # 初始化日志对象
 logging.basicConfig(
     level=logging.INFO,
     format="[%(levelname)s] %(asctime)s %(filename)s[line:%(lineno)d] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename=r"D:\学管师排班\logs.log",
+    filename=r"D:\学管师排班\%s_logs.log" % now_time,
     filemode="w"
 )
 
@@ -29,7 +29,7 @@ def get_seqidgens_collect(collect):
 
 
 def get_meetingtimes_collect(collect):
-    return collect["meetingtimes"]
+    return collect["meetingtimes_copy1"]
     # return collect["test"]
 
 
@@ -65,6 +65,7 @@ def guide_type_dict(var):
         "高三": "高三",
         "初中": "初一,初二,初三,六年级,七年级,八年级,九年级",
         "高中": "高一,高二,高三",
+        "初高中":"初一,初二,初三,六年级,七年级,八年级,九年级,高一,高二,高三"
     }.get(var, None)
 
 
@@ -142,6 +143,7 @@ def exec(meetingtimes_collect, seqidgens_collect, xlsx_name):
         if time_value is None:
             continue
         guide_username = sheet.cell_value(i, 4)
+        # guide_username = "xueguanshi60"
         if guide_username is None:
             continue
         book_datemode = book.datemode
@@ -184,7 +186,7 @@ if __name__ == "__main__":
     dir_name = r"D:\学管师排班"
     dir_list = os.listdir(dir_name)
     for child_name in dir_list:
-        if child_name.endswith(".xlsx"):
+        if child_name.endswith(".xlsx") or child_name.endswith(".xls"):
             file_name = os.path.join(dir_name, child_name)
             exec(
                 get_meetingtimes_collect(db),
