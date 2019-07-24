@@ -83,7 +83,7 @@ def restore(back_path, db_name):
 def main():
     usage = """[-]usage: restore_mongo.py <FILE_NAME> <DB_NAME>
             eg : python restore_mongo.py guideclass_0721 guideclass_ceshi2"""
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 3:
         print(usage)
     else:
         restore(sys.argv[1], sys.argv[2])
