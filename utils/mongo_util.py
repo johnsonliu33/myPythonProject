@@ -91,7 +91,7 @@ class MongoUtil:
         self.collection.remove()
 
 
-# insert(),save(),update(),remove()已启用
+# insert(),save(),update(),remove()已弃用
 if __name__ == '__main__':
     coll = MongoUtil()
     coll.mongo_insert_one()
