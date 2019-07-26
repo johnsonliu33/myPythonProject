@@ -48,10 +48,9 @@ def get_guider(err_students):
 
         sort = [("guider", -1)]
 
-        cursor = c_guiderels.find(
-            query, projection=projection, sort=sort, limit=1)
+        cursor = c_guiderels.find(query, projection=projection, sort=sort, limit=1)
         if "dingzhi" not in err_student["username"] and "jianeryou" not in err_student[
-                "username"]and "xued" not in err_student["username"]:
+            "username"] and "xued" not in err_student["username"]:
             for guider in cursor:
                 es = err_student["username"], err_student["gradeType"], err_student["enrollYear"], guider["guider"]
                 err_stu_list.append(es)
@@ -101,7 +100,8 @@ def get_exam():
     for temp in cursor:
         if "dingzhi" not in temp["student"] and "jianeryou" not in temp["student"] and "https" not in temp["student"]:
             text = [temp["student"], subject_type(temp["subject"]), temp["guider"],
-                    datetime.datetime.strftime(temp["time"], "%Y-%m-%d"), datetime.datetime.strftime(temp["time"], "%H:%M")]
+                    datetime.datetime.strftime(temp["time"], "%Y-%m-%d"),
+                    datetime.datetime.strftime(temp["time"], "%H:%M")]
             stu_list.append(text)
     return stu_list
 
@@ -111,5 +111,5 @@ if __name__ == '__main__':
     # err_stu_list = get_guider(err_students)
     # excel_util.write_excel("errorstudent.xlsx", err_stu_list)
     stu_list = get_exam()
-    now_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
-    excel_util.write_excel(now_time + "_月测学生.xlsx", stu_list)
+    str_time = datetime.datetime.now().strftime("%Y-%m-%d")
+    excel_util.write_excel(str_time + "_月测学生.xlsx", stu_list)

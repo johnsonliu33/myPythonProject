@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+import datetime
 from pymongo import MongoClient
 
 
@@ -73,11 +74,11 @@ class MongoUtil:
 
     def mongo_update_one(self):  # 只修改第一个符合条件的数据
         self.collection.update_one({"username": "test01"}, {
-                                   "$set": {"username": "new_test01"}})
+            "$set": {"username": "new_test01"}})
 
     def mongo_update_many(self):  # 修改所有符合条件的数据
         self.collection.update_many({"username": "test02"}, {
-                                    "$set": {"username": "new_test02"}})
+            "$set": {"username": "new_test02"}})
 
     def mongo_delete_one(self):  # 只删除第一个符合条件的数据
         self.collection.delete_one({"username": "test03"})
@@ -89,6 +90,20 @@ class MongoUtil:
         self.collection.delete_many({})
         # 或者
         self.collection.remove()
+
+    def mongo_aggregate(self):
+        query = {}
+        query["student"] = ["username"]
+        query["isValid"] = True
+        query["endDate"] = {"$gt": datetime.datetime.utcnow()}
+
+        projection = {}
+        projection["guider"] = "$guider"
+        projection["_id"] = 0
+
+        sort = [("guider", -1)]
+
+        cursor = self.collection.find(query, projection=projection, sort=sort, skip=0, limit=1)
 
 
 # insert(),save(),update(),remove()已弃用
