@@ -69,21 +69,6 @@ class ParseExcel:
         except Exception as e:
             raise e
 
-    def getCellValue(self, sheet, coordinate=None, rowNo=None, colNo=None):
-        # 获取某个单元格中的值，可以直接根据Excel中单元格的编码及坐标，也可以根据单元格所在位置的数字索引
-        if coordinate != None:
-            try:
-                return sheet.cell(coordinate=coordinate).value
-            except Exception as e:
-                raise e
-        elif coordinate is None and rowNo is not None and colNo is not None:
-            try:
-                return sheet.cell(row=rowNo, column=colNo).value
-            except Exception as e:
-                raise e
-        else:
-            raise Exception("Insufficient Coordinates of cell!")
-
     def getCellObject(self, sheet, coordinate=None, rowNo=None, colNo=None):
         # 获取某个单元格的对象，可以直接根据Excel中单元格的编码及坐标，也可以根据单元格所在位置的数字索引
         # sheet.cell(coordinate="A1")或者sheet.cell(row=1, column=1)
@@ -99,3 +84,21 @@ class ParseExcel:
                 raise e
         else:
             raise Exception("Insufficient Coordinates of cell!")
+
+    def getCellValue(self, sheet, coordinate=None, rowNo=None, colNo=None):
+        # 获取某个单元格中的值
+        if coordinate != None:
+            try:
+                return sheet.cell(coordinate=coordinate).value
+            except Exception as e:
+                raise e
+        elif coordinate is None and rowNo is not None and colNo is not None:
+            try:
+                return sheet.cell(row=rowNo, column=colNo).value
+            except Exception as e:
+                raise e
+        else:
+            raise Exception("Insufficient Coordinates of cell!")
+
+
+
