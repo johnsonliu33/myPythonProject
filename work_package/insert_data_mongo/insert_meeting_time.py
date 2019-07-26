@@ -10,22 +10,27 @@ logging.basicConfig(
     level=logging.INFO,
     format="[%(levelname)s] %(asctime)s %(filename)s[line:%(lineno)d] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename=r"D:\学管师排班\%s_log.log" % now_time,
+    filename=r"D:\学管师排班\%s_logs.log" % now_time,
     filemode="w"
 )
 
 
-def get_mongo_db(database):
-    print(database)
-    logging.info(database)
-    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(database)
+def get_mongo_db():
+    DATABASE = "guideclass_ceshi"
+    uri = "mongodb://guideclass:zaq1xsw2@172.16.0.166:27017/{}".format(
+        DATABASE)
     client = MongoClient(uri)
-    mongo_db = client[database]
-    return mongo_db
+    db = client[DATABASE]
+    return db
 
 
-def get_mongo_collect(mongodb_name, collection_name):
-    return mongodb_name[collection_name]
+def get_seqidgens_collect(collect):
+    return collect["seqidgens"]
+
+
+def get_meetingtimes_collect(collect):
+    return collect["meetingtimes_copy"]
+    # return collect["test"]
 
 
 def get_id(collect, user, init=123):
@@ -60,7 +65,7 @@ def guide_type_dict(var):
         "高三": "高三",
         "初中": "初一,初二,初三,六年级,七年级,八年级,九年级",
         "高中": "高一,高二,高三",
-        "初高中": "初一,初二,初三,六年级,七年级,八年级,九年级,高一,高二,高三"
+        "初高中":"初一,初二,初三,六年级,七年级,八年级,九年级,高一,高二,高三"
     }.get(var, None)
 
 
@@ -115,10 +120,9 @@ def utc_date_time(book_datemode, date_value, time_value):
 
 # exec()用来执行储存在字符串或文件中的Python语句,支持Python代码的动态执行
 def exec(meetingtimes_collect, seqidgens_collect, xlsx_name):
-    print(meetingtimes_collect.name)
-    logging.info(meetingtimes_collect.name)
-    workbook = xlrd.open_workbook(xlsx_name)
-    sheet = workbook.sheet_by_index(0)
+    # book = xlrd.open_workbook("demo-直播班会时间安排.xlsx")
+    book = xlrd.open_workbook(xlsx_name)
+    sheet = book.sheet_by_index(0)
     col_num = sheet.nrows
     valid_num = 0
     insert_num = 0
@@ -139,10 +143,10 @@ def exec(meetingtimes_collect, seqidgens_collect, xlsx_name):
         if time_value is None:
             continue
         guide_username = sheet.cell_value(i, 4)
-        # guide_username = "teacherhaomengli"
+        # guide_username = "xueguanshi60"
         if guide_username is None:
             continue
-        book_datemode = workbook.datemode
+        book_datemode = book.datemode
         utc_meeting_date = utc_date_time(book_datemode, date_value, time_value)
         create_id(get_id(seqidgens_collect, "meetingTimeId", 1000000)),
         records = {
@@ -168,23 +172,23 @@ def exec(meetingtimes_collect, seqidgens_collect, xlsx_name):
     ############################################
     print("=" * 10)
     logging.info("=" * 10)
-    print(file_name + "=插入数据 %s 条=" % insert_num)
-    logging.info(file_name + "=插入数据 %s 条=" % insert_num)
+    print(file_name + "=插入数据为: %s 条=" % insert_num)
+    logging.info(file_name + "=插入数据为: %s 条=" % insert_num)
     print("=" * 10)
     logging.info("=" * 10)
-    print(file_name + "=有效数据 %s 条=" % valid_num)
-    logging.info(file_name + "=有效数据 %s 条=" % valid_num)
+    print(file_name + "=有效数据为: %s 条=" % valid_num)
+    logging.info(file_name + "=有效数据为: %s 条=" % valid_num)
     logging.info("=" * 10)
-    print("=" * 5 + "Done" + "=" * 5)
 
 
 if __name__ == "__main__":
-    mongodb = get_mongo_db("guideclass_ceshi")
-    meetingtime_collect = get_mongo_collect(mongodb, "meetingtimes_copy")
-    seqidgens_collect = get_mongo_collect(mongodb, "seqidgens")
+    db = get_mongo_db()
     dir_name = r"D:\学管师排班"
     dir_list = os.listdir(dir_name)
     for child_name in dir_list:
         if child_name.endswith(".xlsx") or child_name.endswith(".xls"):
             file_name = os.path.join(dir_name, child_name)
-            exec(get_mongo_collect(mongodb, "meetingtimes"), get_mongo_collect(mongodb, "seqidgens"), file_name)
+            exec(
+                get_meetingtimes_collect(db),
+                get_seqidgens_collect(db),
+                file_name)
