@@ -16,8 +16,9 @@ level = 'debug'
 when = 'D'
 backCount = 3
 
-now_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+
 dirPath=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+now_time = datetime.datetime.now().strftime("%Y-%m-%d")
 filename = dirPath+"/logs/%s_log.log" % now_time
 # print(filename)
 logger = logging.getLogger(filename)

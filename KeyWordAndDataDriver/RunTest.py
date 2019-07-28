@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 
-from util.fileLog import *
+from util.logUtil import *
 
 logger.info("fileLog")
 
-from util.myLog import *
+from util.logConf import *
 
 logger.info("myLog")
