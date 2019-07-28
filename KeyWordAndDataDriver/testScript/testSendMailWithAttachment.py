@@ -35,7 +35,7 @@ def TestSendMailAndAttachment():
     print("登录成功")
     addressBook = wait_util.visibilityOfElementLocated("xpath", '//*[@id="_mail_tabitem_1_4"]')
     addressBook.click()
-    newContact = getElements(driver,"link text", "新建联系人")
+    newContact = getElements(driver, "link text", "新建联系人")
     newContact[1].click()
     contactName = wait_util.visibilityOfElementLocated("id", "_mail_input_7_366")
     contactName.send_keys("test")
@@ -45,11 +45,8 @@ def TestSendMailAndAttachment():
     assert "test" in driver.page_source
     print("添加联系人成功")
 
-
-
     time.sleep(3)
     driver.quit()
-
 
 
 if __name__ == '__main__':
