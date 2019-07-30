@@ -32,11 +32,14 @@ def TestSendMailAndAttachment():
     butten.click()
     time.sleep(3)
     assert "未读邮件" in driver.page_source
-    print("登录成功")
+    print("登录成功")               #welcomeIfr
     addressBook = wait_util.visibilityOfElementLocated("xpath", '//*[@id="_mail_tabitem_1_4"]')
     addressBook.click()
-    newContact = getElements(driver, "link text", "新建联系人")
+    print("进入通讯录")
+    wait_util.frameToBeAvailableAndSwitchToIt("id", 'welcomeIfr')
+    newContact = wait_util.visibilityOfElementLocated("link_text", "新建联系人")
     newContact[1].click()
+    print("新建联系人")
     contactName = wait_util.visibilityOfElementLocated("id", "_mail_input_7_366")
     contactName.send_keys("test")
     newEmail = wait_util.visibilityOfElementLocated("xpath", '//*[@id="_mail_input_8_369"]/input')
