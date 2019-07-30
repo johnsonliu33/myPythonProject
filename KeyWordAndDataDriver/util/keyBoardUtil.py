@@ -34,3 +34,4 @@ class KeyBoardKeys:
         KeyBoardKeys.keyDown(key2)
         KeyBoardKeys.keyUp(key1)
         KeyBoardKeys.keyUp(key2)
+
