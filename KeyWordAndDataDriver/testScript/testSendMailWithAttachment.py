@@ -7,10 +7,11 @@ from util.clipboardUtil import Clipboard
 from util.waitUtil import WaitUtil
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from config.varConfig import chromeDriverFilePath
 
 
 def TestSendMailAndAttachment():
-    driver = webdriver.Chrome(executable_path="./../driver/chromedriver.exe")
+    driver = webdriver.Chrome(executable_path=chromeDriverFilePath)
     driver.maximize_window()
     print("启动浏览器成功")
     driver.get("http://mail.163.com")
@@ -32,20 +33,21 @@ def TestSendMailAndAttachment():
     butten.click()
     time.sleep(3)
     assert "未读邮件" in driver.page_source
-    print("登录成功")               #welcomeIfr
+    print("登录成功")
     addressBook = wait_util.visibilityOfElementLocated("xpath", '//*[@id="_mail_tabitem_1_4"]')
     addressBook.click()
-    print("进入通讯录")
-    wait_util.frameToBeAvailableAndSwitchToIt("id", 'welcomeIfr')
-    newContact = wait_util.visibilityOfElementLocated("link_text", "新建联系人")
-    newContact[1].click()
+    print("通讯录")
+    newContact = wait_util.visibilityOfElementLocated("xpath", '//span[text()="新建联系人"]')
+    newContact.click()
     print("新建联系人")
-    contactName = wait_util.visibilityOfElementLocated("id", "_mail_input_7_366")
+    contactName = wait_util.visibilityOfElementLocated("id", "input_N")
     contactName.send_keys("test")
-    newEmail = wait_util.visibilityOfElementLocated("xpath", '//*[@id="_mail_input_8_369"]/input')
+    print("姓名")
+    newEmail = wait_util.visibilityOfElementLocated("xpath", '//*[@id="iaddress_MAIL_wrap"]//input')
     newEmail.send_keys("779446928@qq.com")
-    getElement(driver, "xpath", '//*[@id="_mail_button_37_484"]/span').click()
-    assert "test" in driver.page_source
+    print("邮箱")
+    getElement(driver, "xpath", '//span[text()="确 定"]').click()
+    assert "779446928@qq.com" in driver.page_source
     print("添加联系人成功")
 
     time.sleep(3)
