@@ -141,8 +141,8 @@ def exec(meetingtimes_collect, seqidgens_collect, xlsxName):
         if time_value is None:
             continue
         guide_username = sheet.cell_value(i, 4).strip()
-        # guide_username = "xueguanshi50"
-        if guide_username is None or guide_username =='':
+        # guide_username = "xueguanshi80"
+        if guide_username is None or guide_username == '':
             continue
         book_datemode = book.datemode
         utc_meeting_date = utc_date_time(book_datemode, date_value, time_value)

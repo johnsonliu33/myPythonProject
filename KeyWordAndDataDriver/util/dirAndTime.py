@@ -14,7 +14,7 @@ def getCurrentDate():
 # 获取当前的时间
 def getCurrentTime():
     timeStr = datetime.now()
-    nowTime = timeStr.strftime("%H - %M - %S - %f")
+    nowTime = timeStr.strftime("%H-%M-%S")
     return nowTime
 
 
