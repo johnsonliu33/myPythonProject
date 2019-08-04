@@ -1,17 +1,14 @@
-
-
-### mx4真机
-#platformVersion: 5.1
-#udid: 750BBKL22GDN
-#deviceName: MX4
-
+### 华为真机
+#platformVersion: 8.1.0
+#udid: FAJBB19521205897
+#deviceName: Honor 8c
 platformName: Android
-platformVersion: 5.1.1
-appPackage: com.suning.mobile.ebuy
-appActivity: com.suning.mobile.ebuy.host.InitialActivity
+platformVersion: 8.1.0
+appPackage: com.jiandan.mobilelesson
+appActivity: com.jiandan.mobilelesson.InstallOpenActivity
 unicodeKeyboard: true
 resetKeyboard: true
 noReset: true
-deviceName: 127.0.0.1:62001
+deviceName: FAJBB19521205897
 host: "127.0.0.1"
 port: "4723"
