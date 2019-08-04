@@ -3,7 +3,7 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
-from util.logUtil import logger
+from util.debugUtil import logger
 
 
 # 获取单个页面元素对象

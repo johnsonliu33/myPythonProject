@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-from util.logUtil import *
+from util.debugUtil import *
 
 logger.info("fileLog")
 
